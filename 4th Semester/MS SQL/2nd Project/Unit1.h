@@ -16,6 +16,9 @@
 #include <Vcl.WindowsStore.hpp>
 #include <Vcl.DBGrids.hpp>
 #include <Vcl.Grids.hpp>
+#include <System.ImageList.hpp>
+#include <Vcl.ControlList.hpp>
+#include <Vcl.ImgList.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -36,7 +39,15 @@ __published:	// IDE-managed Components
 	TPanel *Panel3;
 	TMemo *Memo2;
 	TDBGrid *DBGrid1;
+	TPanel *Panel4;
+	TComboBox *ComboBox1;
+	TControlListButton *ControlListButton1;
+	TImageList *ImageList1;
 	void __fastcall RadioButton1Click(TObject *Sender);
+	void __fastcall FormResize(TObject *Sender);
+
+
+
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
