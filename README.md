@@ -1,1 +1,1 @@
-# MSU-Home-Work
+# Projects from University classes
