@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/05/03 20:57:34.000.711,=C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2023/05/03 20:57:34.000.802,=C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2023/05/03 20:58:02.000.440,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.h=D:\Desktop\MSU\ForthSemester\MsSQLServer\Second Project\Unit1.h</Transaction>
+    <Transaction>2023/05/03 20:58:02.000.440,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Desktop\MSU\ForthSemester\MsSQLServer\Second Project\Unit1.dfm</Transaction>
+    <Transaction>2023/05/03 20:58:02.000.461,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\Desktop\MSU\ForthSemester\MsSQLServer\Second Project\Project1.cbproj</Transaction>
+    <Transaction>2023/05/03 20:58:02.000.418,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\Desktop\MSU\ForthSemester\MsSQLServer\Second Project\Project1PCH1.h</Transaction>
+    <Transaction>2023/05/03 20:58:02.000.440,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.cpp=D:\Desktop\MSU\ForthSemester\MsSQLServer\Second Project\Unit1.cpp</Transaction>
+    <Transaction>2023/05/03 20:58:05.000.731,D:\Desktop\MSU\ForthSemester\MsSQLServer\Second Project\Project1.cbproj=D:\Desktop\MSU\ForthSemester\MsSQLServer\Second Project\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
