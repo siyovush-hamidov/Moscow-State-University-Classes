@@ -34,7 +34,7 @@ void __fastcall TForm1::RadioButton1Click(TObject *Sender)
 		{
 			ListBox1->Items->Add(ADOQuery1->FieldByName("name")->AsString);
             ComboBox1->Items->Add(ADOQuery1->FieldByName("name")->AsString);
-            ADOQuery1->Next();
+			ADOQuery1->Next();
 		}
 
     }
@@ -101,7 +101,26 @@ void __fastcall TForm1::FormResize(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::ComboBox1Select(TObject *Sender)
+{
+    Memo1->Lines->Strings[0] = "use " + ComboBox1->Text;
+}
+//---------------------------------------------------------------------------
 
-
+void __fastcall TForm1::ListBox1Click(TObject *Sender)
+{
+	AnsiString SelectedDatabaseString = ListBox1->Items[ListBox1->ItemIndex].Text;
+	ADOQuery1->Close();
+	ADOQuery1->SQL->Clear();
+	ADOQuery1->SQL->Add("use "+SelectedDatabaseString+"; select * from sysobjects where xtype = 'U';");
+    ADOQuery1->Open();
+	ADOQuery1->First();
+    for(int i = 0; i < ADOQuery1->RecordCount; i++)
+	{
+		ListBox2->Items->Add(ADOQuery1->FieldByName("name")->AsString);
+		ADOQuery1->Next();
+	}
+}
+//---------------------------------------------------------------------------
 
 

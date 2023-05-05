@@ -19,6 +19,7 @@
 #include <System.ImageList.hpp>
 #include <Vcl.ControlList.hpp>
 #include <Vcl.ImgList.hpp>
+#include <Vcl.ComCtrls.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -45,6 +46,8 @@ __published:	// IDE-managed Components
 	TImageList *ImageList1;
 	void __fastcall RadioButton1Click(TObject *Sender);
 	void __fastcall FormResize(TObject *Sender);
+	void __fastcall ComboBox1Select(TObject *Sender);
+	void __fastcall ListBox1Click(TObject *Sender);
 
 
 

@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 424
-  ClientWidth = 753
+  ClientHeight = 423
+  ClientWidth = 748
   Color = clBtnFace
   Constraints.MinHeight = 420
   Constraints.MinWidth = 760
@@ -14,35 +14,9 @@ object Form1: TForm1
   Font.Style = []
   OnResize = FormResize
   DesignSize = (
-    753
-    424)
+    748
+    423)
   TextHeight = 15
-  object Panel2: TPanel
-    Left = 8
-    Top = 51
-    Width = 224
-    Height = 365
-    Anchors = [akLeft, akTop, akBottom]
-    TabOrder = 1
-    Visible = False
-    OnClick = RadioButton1Click
-    object ListBox1: TListBox
-      Left = 8
-      Top = 8
-      Width = 100
-      Height = 348
-      ItemHeight = 15
-      TabOrder = 0
-    end
-    object ListBox2: TListBox
-      Left = 116
-      Top = 8
-      Width = 100
-      Height = 348
-      ItemHeight = 15
-      TabOrder = 1
-    end
-  end
   object Panel1: TPanel
     Left = 8
     Top = 51
@@ -166,13 +140,41 @@ object Form1: TForm1
       Width = 129
       Height = 23
       TabOrder = 0
+      OnSelect = ComboBox1Select
+    end
+  end
+  object Panel2: TPanel
+    Left = 8
+    Top = 51
+    Width = 224
+    Height = 365
+    Anchors = [akLeft, akTop, akBottom]
+    TabOrder = 1
+    Visible = False
+    OnClick = RadioButton1Click
+    object ListBox1: TListBox
+      Left = 8
+      Top = 8
+      Width = 100
+      Height = 348
+      ItemHeight = 15
+      TabOrder = 0
+      OnClick = ListBox1Click
+    end
+    object ListBox2: TListBox
+      Left = 116
+      Top = 8
+      Width = 100
+      Height = 348
+      ItemHeight = 15
+      TabOrder = 1
     end
   end
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=master;Data Source=SIYOVUSH-PC'
+      'fo=False;Initial Catalog=master;Data Source=SIYOVUSH-LT;'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 552
