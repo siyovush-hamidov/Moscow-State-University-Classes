@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/04/08 06:59:55.000.538,=C:\Users\HP\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2023/04/08 06:59:55.000.602,=C:\Users\HP\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2023/04/15 16:45:49.000.692,=C:\Users\HP\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2023/04/15 16:45:49.000.582,=C:\Users\HP\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2023/04/15 16:47:05.000.394,C:\Users\HP\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Unit1.cpp</Transaction>
+    <Transaction>2023/04/15 16:47:05.000.394,C:\Users\HP\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Unit1.dfm</Transaction>
+    <Transaction>2023/04/15 16:47:05.000.373,C:\Users\HP\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Project1PCH1.h</Transaction>
+    <Transaction>2023/04/15 16:47:05.000.394,C:\Users\HP\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Unit1.h</Transaction>
+    <Transaction>2023/04/15 16:47:05.000.425,C:\Users\HP\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Project1.cbproj</Transaction>
+    <Transaction>2023/04/15 16:47:09.000.427,C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Project1.cbproj=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Project1.cbproj</Transaction>
+    <Transaction>2023/04/15 17:26:54.000.738,=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Unit2.cpp</Transaction>
+    <Transaction>2023/04/15 18:03:22.000.705,=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Unit3.cpp</Transaction>
+    <Transaction>2023/04/15 18:10:57.000.924,=C:\Users\HP\Desktop\MSU\4. SQL\First Project\Country\Unit4.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
