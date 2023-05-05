@@ -1,5 +1,6 @@
 //---------------------------------------------------------------------------
 
+#include <string>
 #include <vcl.h>
 #pragma hdrstop
 
@@ -23,7 +24,8 @@ void __fastcall TForm1::RadioButton1Click(TObject *Sender)
 	}
 	else
 	{
-        ListBox1->Clear();
+		ListBox1->Clear();
+        ComboBox1->Clear();
 		Panel2->Visible = True;
 		Panel1->Visible = False;
 
@@ -100,15 +102,14 @@ void __fastcall TForm1::FormResize(TObject *Sender)
 	ListBox2->Top = ListBox1->Top;
 }
 //---------------------------------------------------------------------------
-
 void __fastcall TForm1::ComboBox1Select(TObject *Sender)
 {
     Memo1->Lines->Strings[0] = "use " + ComboBox1->Text;
 }
 //---------------------------------------------------------------------------
-
 void __fastcall TForm1::ListBox1Click(TObject *Sender)
 {
+    ListBox2->Clear();
 	AnsiString SelectedDatabaseString = ListBox1->Items[ListBox1->ItemIndex].Text;
 	ADOQuery1->Close();
 	ADOQuery1->SQL->Clear();
@@ -122,5 +123,49 @@ void __fastcall TForm1::ListBox1Click(TObject *Sender)
 	}
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm1::ControlListButton1Click(TObject *Sender)
+{
+	try
+	{
+		ADOQuery2->Active = False;
+		ADOQuery2->SQL->Clear();
+		ADOQuery2->SQL->Add(Memo1->Text);
+		ADOQuery2->ExecSQL();
+		ADOQuery2->Active = True;
 
+		if(ADOQuery2->SQL->Text != "")
+		{
+			AnsiString str = ADOQuery2->SQL->Text;
+			AnsiString subStr = "select";
+			int index = str.Pos(subStr);
+
+			if (index > 0)
+			{
+				DBGrid1->Visible = True;
+				Memo2->Visible = False;
+			}
+			else
+			{
+				DBGrid1->Visible = False;
+				Memo2->Visible = True;
+                Memo2->Text = "Commands completed successfully.";
+			}
+		}
+	}
+	catch (Exception &Error)
+	{
+		Memo2->Font->Color = clRed;
+		Memo2->Text = Error.Message;
+        DBGrid1->Visible = False;
+		Memo2->Visible = True;
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ListBox1DblClick(TObject *Sender)
+{
+    Memo1->Clear();
+    Memo1->Lines->Strings[0] = "use "+ListBox1->Items[ListBox1->ItemIndex].Text+";";
+}
+//---------------------------------------------------------------------------
 

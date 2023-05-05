@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 423
+  ClientHeight = 424
   ClientWidth = 748
   Color = clBtnFace
   Constraints.MinHeight = 420
@@ -15,7 +15,7 @@ object Form1: TForm1
   OnResize = FormResize
   DesignSize = (
     748
-    423)
+    424)
   TextHeight = 15
   object Panel1: TPanel
     Left = 8
@@ -57,6 +57,19 @@ object Form1: TForm1
     Width = 505
     Height = 365
     TabOrder = 4
+    object DBGrid1: TDBGrid
+      Left = 8
+      Top = 186
+      Width = 490
+      Height = 170
+      DataSource = DataSource1
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -12
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+    end
     object Memo1: TMemo
       Left = 8
       Top = 8
@@ -69,20 +82,7 @@ object Form1: TForm1
       Top = 186
       Width = 490
       Height = 170
-      TabOrder = 1
-    end
-    object DBGrid1: TDBGrid
-      Left = 8
-      Top = 186
-      Width = 490
-      Height = 170
       TabOrder = 2
-      TitleFont.Charset = DEFAULT_CHARSET
-      TitleFont.Color = clWindowText
-      TitleFont.Height = -12
-      TitleFont.Name = 'Segoe UI'
-      TitleFont.Style = []
-      Visible = False
     end
   end
   object RadioButton1: TRadioButton
@@ -104,9 +104,9 @@ object Form1: TForm1
   end
   object RadioButton2: TRadioButton
     Left = 124
-    Top = 10
+    Top = 8
     Width = 100
-    Height = 35
+    Height = 37
     Caption = '*.mdf'
     Color = clSilver
     Font.Charset = DEFAULT_CHARSET
@@ -133,6 +133,7 @@ object Form1: TForm1
       Images = ImageList1
       ImageIndex = 0
       LinkHotColor = clHighlight
+      OnClick = ControlListButton1Click
     end
     object ComboBox1: TComboBox
       Left = 8
@@ -142,16 +143,25 @@ object Form1: TForm1
       TabOrder = 0
       OnSelect = ComboBox1Select
     end
+    object Button1: TButton
+      Left = 192
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      TabOrder = 1
+    end
   end
   object Panel2: TPanel
     Left = 8
     Top = 51
     Width = 224
-    Height = 365
+    Height = 366
     Anchors = [akLeft, akTop, akBottom]
     TabOrder = 1
     Visible = False
     OnClick = RadioButton1Click
+    ExplicitHeight = 365
     object ListBox1: TListBox
       Left = 8
       Top = 8
@@ -160,6 +170,7 @@ object Form1: TForm1
       ItemHeight = 15
       TabOrder = 0
       OnClick = ListBox1Click
+      OnDblClick = ListBox1DblClick
     end
     object ListBox2: TListBox
       Left = 116
@@ -174,11 +185,11 @@ object Form1: TForm1
     Connected = True
     ConnectionString = 
       'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=master;Data Source=SIYOVUSH-LT;'
+      'fo=False;Initial Catalog=master;Data Source=SIYOVUSH-PC;'
     LoginPrompt = False
     Provider = 'SQLOLEDB.1'
-    Left = 552
-    Top = 176
+    Left = 344
+    Top = 184
   end
   object ADOQuery1: TADOQuery
     Active = True
@@ -187,17 +198,17 @@ object Form1: TForm1
     Parameters = <>
     SQL.Strings = (
       'select * from sysdatabases where dbid > 4')
-    Left = 608
-    Top = 176
+    Left = 400
+    Top = 184
   end
   object DataSource1: TDataSource
-    DataSet = ADOQuery1
-    Left = 664
-    Top = 176
+    DataSet = ADOQuery2
+    Left = 456
+    Top = 184
   end
   object ImageList1: TImageList
-    Left = 480
-    Top = 176
+    Left = 272
+    Top = 184
     Bitmap = {
       494C010101000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
@@ -337,5 +348,11 @@ object Form1: TForm1
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       000000000000}
+  end
+  object ADOQuery2: TADOQuery
+    Connection = ADOConnection1
+    Parameters = <>
+    Left = 528
+    Top = 184
   end
 end

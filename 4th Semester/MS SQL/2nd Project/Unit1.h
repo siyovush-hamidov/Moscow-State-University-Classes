@@ -44,10 +44,14 @@ __published:	// IDE-managed Components
 	TComboBox *ComboBox1;
 	TControlListButton *ControlListButton1;
 	TImageList *ImageList1;
+	TADOQuery *ADOQuery2;
+	TButton *Button1;
 	void __fastcall RadioButton1Click(TObject *Sender);
 	void __fastcall FormResize(TObject *Sender);
 	void __fastcall ComboBox1Select(TObject *Sender);
 	void __fastcall ListBox1Click(TObject *Sender);
+	void __fastcall ControlListButton1Click(TObject *Sender);
+	void __fastcall ListBox1DblClick(TObject *Sender);
 
 
 
