@@ -1,0 +1,3 @@
+USE MSUDB
+
+SELECT F.FacultyId, D.DirectionId, T.SubjectId, T.TeacherId, T.TypeOfLessonId, T.ClassroomId, S.Subject, Te.Teacher, Ty.TypeOfLesson, C.Classroom FROM TimeTable T JOIN Faculties F ON F.Faculty = 'Естественнонаучный' JOIN Directions D ON D.Direction = 'Прикладная Математика и Информатика' JOIN Subjects S ON S.SubjectId = T.SubjectId JOIN Teachers Te ON Te.TeacherId = T.TeacherId JOIN TypesOfLesson Ty ON Ty.TypeOfLessonId = T.TypeOfLessonId JOIN Classrooms C ON C.ClassroomId = T.ClassroomId WHERE T.Date = '2023-09-04' AND T.Pair = 1 AND T.FacultyId = F.FacultyId AND T.DirectionId = D.DirectionId AND T.Course = 1

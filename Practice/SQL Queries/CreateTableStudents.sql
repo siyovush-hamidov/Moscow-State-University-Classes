@@ -1,0 +1,48 @@
+use MSUDB
+
+create table Students
+(
+	StudId int identity(1,1) not null primary key,
+	Surname varchar(30) not null,
+	Name varchar(30) not null,
+	MiddleName varchar(30) not null,
+	Nationality varchar(30) not null,
+	Gender varchar(1) not null,
+	DateOfBirth date not null,
+	CountryOfBirth varchar(40) not null,
+	MilitaryStatus varchar(40) not null,
+	FamilyStatus varchar(30) not null,
+	HomeAddress varchar(70) not null,
+	ActualAdress varchar(70) not null,
+	PhoneNumber varchar(30) not null,
+	Email varchar(50) not null,
+	Image image,
+	PassportSerialNumber varchar(50) not null,
+	DateOfIssueOfPassport date not null,
+	PlaceOfIssueOfPassport varchar(50) not null,
+	HighSchool varchar(60) not null,
+	CountryOfHighSchool varchar(40) not null,
+	HighSchoolDiploma varchar(50) not null,
+	HighSchoolDiplomaDateOfIssue date not null,
+	HighSchoolDiplomaSerialNumber varchar(50) not null,
+	EnrollmentYear int not null,
+	Degree varchar(50) not null,
+	Speciality varchar(50) not null,
+	Course int not null,
+	TypeOfEducation varchar(40) not null,
+	FormOfEducation varchar(40) not null,
+	TicketOfStudentNumber varchar(50) not null,
+	BoardingHouse varchar(20) not null,
+)
+
+
+insert into Students(Surname, Name, MiddleName, Nationality, Gender, DateOfBirth, CountryOfBirth, MilitaryStatus,
+					 FamilyStatus, HomeAddress, ActualAdress, PhoneNumber, Email, PassportSerialNumber,
+					 DateOfIssueOfPassport, PlaceOfIssueOfPassport, HighSchool, CountryOfHighSchool,
+					 HighSchoolDiploma, HighSchoolDiplomaDateOfIssue, HighSchoolDiplomaSerialNumber,
+					 EnrollmentYear, Degree, Speciality, Course, TypeOfEducation, FormOfEducation,
+					 TicketOfStudentNumber, BoardingHouse) values('Хамидов', 'Сиёвуш', 'Халифабобоевич',
+					 'Таджик', 'М', '2002-08-14', 'Таджикистан','Военнообязанный', 'Не женат', 'пр. Рудаки-70',
+					 'пр. Рудаки-70', '+992901643003', 'siyovushchik1414@gmail.com', 'A02143867', '2019-08-07',
+					 'ОМВД в р-не И.Сомони г.Душанбе', 'Лицей Филиала МГУ в городе Душанбе', 'Таджикистан',
+					 'Аттестат о среднем образовании', '2020-06-25', '???', 2021, 'Бакалавриат', 'ПМиИ', 2, 'Бюджет','Очная', '???', 'Нет')
