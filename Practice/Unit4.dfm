@@ -302,7 +302,7 @@ object MainWindow: TMainWindow
     Left = 324
     Top = 0
     Width = 781
-    Height = 703
+    Height = 702
     BevelOuter = bvNone
     TabOrder = 2
     object LessonEditor: TPanel
@@ -1173,7 +1173,7 @@ object MainWindow: TMainWindow
     Left = 322
     Top = 0
     Width = 781
-    Height = 703
+    Height = 702
     BevelOuter = bvNone
     TabOrder = 3
     object ScrollBoxAddStaff: TScrollBox
@@ -2811,7 +2811,7 @@ object MainWindow: TMainWindow
     Left = 323
     Top = 0
     Width = 781
-    Height = 740
+    Height = 702
     BevelOuter = bvNone
     TabOrder = 1
     object ScrollBoxTeachersLessons: TScrollBox
@@ -10825,12 +10825,12 @@ object MainWindow: TMainWindow
     Left = 325
     Top = 2
     Width = 781
-    Height = 740
+    Height = 702
     BevelOuter = bvNone
     TabOrder = 0
     object VirtualImageLightSwitcher: TVirtualImage
-      Left = 1015
-      Top = 16
+      Left = 689
+      Top = 15
       Width = 29
       Height = 20
       ImageCollection = ImageCollection1
@@ -10840,8 +10840,8 @@ object MainWindow: TMainWindow
       ImageName = 'TO_DARK'
     end
     object ToggleSwitch1: TToggleSwitch
-      Left = 1046
-      Top = 16
+      Left = 724
+      Top = 15
       Width = 50
       Height = 20
       Cursor = crHandPoint
