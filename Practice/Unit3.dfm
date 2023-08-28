@@ -14,7 +14,7 @@ object StudentRegistration: TStudentRegistration
   Position = poScreenCenter
   TextHeight = 32
   object VirtualImage1: TVirtualImage
-    Left = 8
+    Left = 0
     Top = 0
     Width = 377
     Height = 577
@@ -110,7 +110,6 @@ object StudentRegistration: TStudentRegistration
     Width = 34
     Height = 27
     Caption = #1051#1086#1075#1080#1085
-    Enabled = False
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWhite
     Font.Height = -16
@@ -121,10 +120,9 @@ object StudentRegistration: TStudentRegistration
   object Label6: TLabel
     Left = 15
     Top = 284
-    Width = 51
+    Width = 41
     Height = 27
     Caption = #1055#1072#1088#1086#1083#1100
-    Enabled = False
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWhite
     Font.Height = -16
@@ -138,7 +136,6 @@ object StudentRegistration: TStudentRegistration
     Width = 132
     Height = 27
     Caption = #1055#1086#1076#1090#1074#1077#1088#1078#1076#1077#1085#1080#1077' '#1087#1072#1088#1086#1083#1103
-    Enabled = False
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWhite
     Font.Height = -16

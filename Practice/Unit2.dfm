@@ -24,13 +24,6 @@ object PasswordWindow: TPasswordWindow
     ImageName = 'BlueBackground'
     Proportional = False
   end
-  object Label1: TLabel
-    Left = 120
-    Top = 358
-    Width = 114
-    Height = 32
-    Caption = #1047#1072#1073#1099#1083#1080' '#1087#1072#1088#1086#1083#1100'?'
-  end
   object Label2: TLabel
     Left = 101
     Top = 8

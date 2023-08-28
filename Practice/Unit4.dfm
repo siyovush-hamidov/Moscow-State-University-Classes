@@ -4,9 +4,13 @@ object MainWindow: TMainWindow
   AlphaBlend = True
   AlphaBlendValue = 0
   Caption = #1060#1080#1083#1080#1072#1083' '#1052#1043#1059' '#1080#1084'. '#1052'.'#1042'.'#1051#1086#1084#1086#1085#1086#1089#1086#1074#1072' '#1074' '#1075'. '#1044#1091#1096#1072#1085#1073#1077
-  ClientHeight = 700
-  ClientWidth = 1100
+  ClientHeight = 702
+  ClientWidth = 1108
   Color = clBtnFace
+  Constraints.MaxHeight = 1080
+  Constraints.MaxWidth = 1920
+  Constraints.MinHeight = 740
+  Constraints.MinWidth = 1120
   Enabled = False
   Font.Charset = ANSI_CHARSET
   Font.Color = clWhite
@@ -15,8 +19,10 @@ object MainWindow: TMainWindow
   Font.Style = []
   Position = poScreenCenter
   PrintScale = poPrintToFit
+  Scaled = False
   Visible = True
   OnCreate = FormCreate
+  OnResize = FormResize
   TextHeight = 27
   object VirtualImageBackground: TVirtualImage
     Left = 0
@@ -51,7 +57,7 @@ object MainWindow: TMainWindow
     ImageWidth = 0
     ImageHeight = 0
     ImageIndex = 6
-    ImageName = 'WHITE-PNG-ARROW'
+    ImageName = 'WhiteArrow'
     Visible = False
     OnClick = VirtualImageReturnToBackArrowClick
   end
@@ -68,6 +74,230 @@ object MainWindow: TMainWindow
     ImageName = 'MenuButtonWhite'
     OnClick = VirtualImageHamburgerClick
   end
+  object PanelForStudentsSidebar: TPanel
+    Left = 0
+    Top = 211
+    Width = 320
+    Height = 222
+    BevelOuter = bvNone
+    TabOrder = 4
+    object VirtualImage9: TVirtualImage
+      Left = -1
+      Top = 8
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = Label625Click
+      OnMouseEnter = VirtualImage9MouseEnter
+      OnMouseLeave = VirtualImage9MouseLeave
+    end
+    object VirtualImage11: TVirtualImage
+      Left = 37
+      Top = 0
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object VirtualImage12: TVirtualImage
+      Left = 37
+      Top = 70
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object Label625: TLabel
+      Left = 100
+      Top = 17
+      Width = 182
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1056#1040#1057#1055#1048#1057#1040#1053#1048#1045' '#1047#1040#1053#1071#1058#1048#1049
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = Label625Click
+      OnMouseEnter = VirtualImage9MouseEnter
+      OnMouseLeave = VirtualImage9MouseLeave
+    end
+    object VirtualImage61: TVirtualImage
+      Left = 0
+      Top = 80
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = Label626Click
+      OnMouseEnter = VirtualImage61MouseEnter
+      OnMouseLeave = VirtualImage61MouseLeave
+    end
+    object VirtualImage63: TVirtualImage
+      Left = 39
+      Top = 138
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object Label626: TLabel
+      Left = 105
+      Top = 85
+      Width = 193
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1053#1040#1049#1058#1048' '#1055#1056#1045#1055#1054#1044#1040#1042#1040#1058#1045#1051#1071
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = Label626Click
+      OnMouseEnter = VirtualImage61MouseEnter
+      OnMouseLeave = VirtualImage5MouseLeave
+    end
+  end
+  object PanelForStaffSidebar: TPanel
+    Left = 0
+    Top = 211
+    Width = 320
+    Height = 222
+    BevelOuter = bvNone
+    TabOrder = 5
+    object VirtualImage64: TVirtualImage
+      Left = 0
+      Top = 10
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = Label627Click
+      OnMouseEnter = VirtualImage64MouseEnter
+      OnMouseLeave = VirtualImage64MouseLeave
+    end
+    object VirtualImage65: TVirtualImage
+      Left = 37
+      Top = 0
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object VirtualImage72: TVirtualImage
+      Left = 37
+      Top = 70
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object Label627: TLabel
+      Left = 118
+      Top = 15
+      Width = 159
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1047#1040#1053#1071#1058#1048#1045
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = Label627Click
+      OnMouseEnter = VirtualImage64MouseEnter
+      OnMouseLeave = VirtualImage64MouseLeave
+    end
+    object VirtualImage73: TVirtualImage
+      Left = 0
+      Top = 80
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = Label628Click
+      OnMouseEnter = VirtualImage73MouseEnter
+      OnMouseLeave = VirtualImage73MouseLeave
+    end
+    object VirtualImage74: TVirtualImage
+      Left = 39
+      Top = 138
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object Label628: TLabel
+      Left = 105
+      Top = 85
+      Width = 239
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1056#1045#1044#1040#1050#1058#1048#1056#1054#1042#1040#1058#1068' '#1056#1040#1057#1055#1048#1057#1040#1053#1048#1045
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = Label628Click
+      OnMouseEnter = VirtualImage73MouseEnter
+      OnMouseLeave = VirtualImage73MouseLeave
+    end
+  end
   object PanelForStaff: TPanel
     Left = 324
     Top = 0
@@ -75,351 +305,6 @@ object MainWindow: TMainWindow
     Height = 703
     BevelOuter = bvNone
     TabOrder = 2
-    object LessonConstructor: TPanel
-      Left = 0
-      Top = 0
-      Width = 800
-      Height = 740
-      TabOrder = 0
-      Visible = False
-      object Label576: TLabel
-        Left = 40
-        Top = 63
-        Width = 26
-        Height = 27
-        Caption = #1044#1072#1090#1072
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label577: TLabel
-        Left = 40
-        Top = 123
-        Width = 28
-        Height = 27
-        Caption = #1055#1072#1088#1072
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label578: TLabel
-        Left = 40
-        Top = 183
-        Width = 57
-        Height = 27
-        Caption = #1060#1072#1082#1091#1083#1100#1090#1077#1090
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label579: TLabel
-        Left = 40
-        Top = 243
-        Width = 74
-        Height = 27
-        Caption = #1053#1072#1087#1088#1072#1074#1083#1077#1085#1080#1077
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label580: TLabel
-        Left = 40
-        Top = 303
-        Width = 27
-        Height = 27
-        Caption = #1050#1091#1088#1089
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label581: TLabel
-        Left = 40
-        Top = 363
-        Width = 60
-        Height = 27
-        Caption = #1040#1091#1076#1080#1090#1086#1088#1080#1103
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label582: TLabel
-        Left = 40
-        Top = 423
-        Width = 85
-        Height = 27
-        Caption = #1055#1088#1077#1087#1086#1076#1072#1074#1072#1090#1077#1083#1100
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label583: TLabel
-        Left = 40
-        Top = 483
-        Width = 70
-        Height = 27
-        Caption = #1044#1080#1089#1094#1080#1087#1083#1080#1085#1072
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label584: TLabel
-        Left = 40
-        Top = 543
-        Width = 67
-        Height = 27
-        Caption = #1058#1080#1087' '#1079#1072#1085#1103#1090#1080#1103
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label599: TLabel
-        Left = 40
-        Top = 6
-        Width = 237
-        Height = 54
-        Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1079#1072#1085#1103#1090#1080#1103
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -32
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object VirtualImage139: TVirtualImage
-        Left = 40
-        Top = 60
-        Width = 700
-        Height = 2
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 2
-        ImageName = 'BlueBackground'
-        Proportional = False
-      end
-      object Button1: TButton
-        Left = 391
-        Top = 623
-        Width = 165
-        Height = 40
-        Cursor = crHandPoint
-        Caption = #1054#1063#1048#1057#1058#1048#1058#1068
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWhite
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        StyleName = 'Tablet Dark'
-        OnClick = Button1Click
-      end
-      object ComboBox7: TComboBox
-        Left = 40
-        Top = 508
-        Width = 701
-        Height = 40
-        Cursor = crHandPoint
-        Style = csDropDownList
-        Enabled = False
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clMenuText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 1
-      end
-      object DateTimePicker1: TDateTimePicker
-        Left = 40
-        Top = 88
-        Width = 700
-        Height = 40
-        Cursor = crHandPoint
-        Hint = #1044#1072#1090#1072
-        Date = 45140.000000000000000000
-        Time = 0.752999374999490100
-        TabOrder = 2
-        OnChange = DateTimePicker1Change
-      end
-      object ComboBox8: TComboBox
-        Left = 40
-        Top = 208
-        Width = 700
-        Height = 40
-        Cursor = crHandPoint
-        Style = csDropDownList
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clMenuText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 3
-        OnDropDown = ComboBox8DropDown
-        OnSelect = ComboBox8Select
-      end
-      object ComboBox9: TComboBox
-        Left = 40
-        Top = 268
-        Width = 700
-        Height = 40
-        Cursor = crHandPoint
-        Style = csDropDownList
-        Enabled = False
-        ExtendedUI = True
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clMenuText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 4
-      end
-      object ComboBox10: TComboBox
-        Left = 40
-        Top = 328
-        Width = 700
-        Height = 40
-        Cursor = crHandPoint
-        Style = csDropDownList
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clMenuText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 5
-        OnDropDown = ComboBox10DropDown
-        Items.Strings = (
-          ''
-          ''
-          ''
-          '')
-      end
-      object ComboBox11: TComboBox
-        Left = 40
-        Top = 148
-        Width = 700
-        Height = 40
-        Cursor = crHandPoint
-        Style = csDropDownList
-        ExtendedUI = True
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clMenuText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        ParentShowHint = False
-        ShowHint = False
-        TabOrder = 6
-        Items.Strings = (
-          '1-'#1103' '#1087#1072#1088#1072
-          '2-'#1103' '#1087#1072#1088#1072
-          '3-'#1103' '#1087#1072#1088#1072
-          '4-'#1103' '#1087#1072#1088#1072)
-      end
-      object ComboBox12: TComboBox
-        Left = 40
-        Top = 388
-        Width = 700
-        Height = 40
-        Cursor = crHandPoint
-        Style = csDropDownList
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clMenuText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 7
-        OnDropDown = ComboBox12DropDown
-      end
-      object ComboBox13: TComboBox
-        Left = 40
-        Top = 448
-        Width = 700
-        Height = 40
-        Cursor = crHandPoint
-        Style = csDropDownList
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clMenuText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        Sorted = True
-        TabOrder = 8
-        OnDropDown = ComboBox13DropDown
-        OnSelect = ComboBox13Select
-      end
-      object ComboBox14: TComboBox
-        Left = 40
-        Top = 568
-        Width = 700
-        Height = 40
-        Cursor = crHandPoint
-        Style = csDropDownList
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clMenuText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 9
-        Items.Strings = (
-          #1051#1077#1082#1094#1080#1086#1085#1085#1086#1077' '#1079#1072#1085#1103#1090#1080#1077
-          #1055#1088#1072#1082#1090#1080#1095#1077#1089#1082#1086#1077' '#1079#1072#1085#1103#1090#1080#1077
-          #1047#1072#1095#1105#1090
-          #1069#1082#1079#1072#1084#1077#1085
-          #1050#1086#1085#1089#1091#1083#1100#1090#1072#1094#1080#1103)
-      end
-      object Button3: TButton
-        Left = 213
-        Top = 623
-        Width = 165
-        Height = 40
-        Cursor = crHandPoint
-        Caption = #1044#1054#1041#1040#1042#1048#1058#1068
-        Font.Charset = ANSI_CHARSET
-        Font.Color = clWhite
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 10
-        StyleName = 'Tablet Dark'
-        OnClick = Button3Click
-      end
-    end
     object LessonEditor: TPanel
       Left = 0
       Top = 0
@@ -938,778 +823,1988 @@ object MainWindow: TMainWindow
           '4-'#1081' '#1082#1091#1088#1089)
       end
     end
-  end
-  object PanelForStaffSidebar: TPanel
-    Left = 0
-    Top = 211
-    Width = 320
-    Height = 222
-    BevelOuter = bvNone
-    TabOrder = 6
-    object VirtualImage64: TVirtualImage
+    object LessonConstructor: TPanel
       Left = 0
-      Top = 10
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label627Click
-      OnMouseEnter = VirtualImage64MouseEnter
-      OnMouseLeave = VirtualImage64MouseLeave
-    end
-    object VirtualImage65: TVirtualImage
-      Left = 37
       Top = 0
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object VirtualImage72: TVirtualImage
-      Left = 37
-      Top = 70
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label627: TLabel
-      Left = 118
-      Top = 15
-      Width = 159
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1047#1040#1053#1071#1058#1048#1045
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label627Click
-      OnMouseEnter = VirtualImage64MouseEnter
-      OnMouseLeave = VirtualImage64MouseLeave
-    end
-    object VirtualImage73: TVirtualImage
-      Left = 0
-      Top = 80
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label628Click
-      OnMouseEnter = VirtualImage73MouseEnter
-      OnMouseLeave = VirtualImage73MouseLeave
-    end
-    object VirtualImage74: TVirtualImage
-      Left = 39
-      Top = 138
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label628: TLabel
-      Left = 105
-      Top = 85
-      Width = 239
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1056#1045#1044#1040#1050#1058#1048#1056#1054#1042#1040#1058#1068' '#1056#1040#1057#1055#1048#1057#1040#1053#1048#1045
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label628Click
-      OnMouseEnter = VirtualImage73MouseEnter
-      OnMouseLeave = VirtualImage73MouseLeave
+      Width = 800
+      Height = 740
+      TabOrder = 0
+      Visible = False
+      object Label576: TLabel
+        Left = 40
+        Top = 63
+        Width = 26
+        Height = 27
+        Caption = #1044#1072#1090#1072
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label577: TLabel
+        Left = 40
+        Top = 123
+        Width = 28
+        Height = 27
+        Caption = #1055#1072#1088#1072
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label578: TLabel
+        Left = 40
+        Top = 183
+        Width = 57
+        Height = 27
+        Caption = #1060#1072#1082#1091#1083#1100#1090#1077#1090
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label579: TLabel
+        Left = 40
+        Top = 243
+        Width = 74
+        Height = 27
+        Caption = #1053#1072#1087#1088#1072#1074#1083#1077#1085#1080#1077
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label580: TLabel
+        Left = 40
+        Top = 303
+        Width = 27
+        Height = 27
+        Caption = #1050#1091#1088#1089
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label581: TLabel
+        Left = 40
+        Top = 363
+        Width = 60
+        Height = 27
+        Caption = #1040#1091#1076#1080#1090#1086#1088#1080#1103
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label582: TLabel
+        Left = 40
+        Top = 423
+        Width = 85
+        Height = 27
+        Caption = #1055#1088#1077#1087#1086#1076#1072#1074#1072#1090#1077#1083#1100
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label583: TLabel
+        Left = 40
+        Top = 483
+        Width = 70
+        Height = 27
+        Caption = #1044#1080#1089#1094#1080#1087#1083#1080#1085#1072
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label584: TLabel
+        Left = 40
+        Top = 543
+        Width = 67
+        Height = 27
+        Caption = #1058#1080#1087' '#1079#1072#1085#1103#1090#1080#1103
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label599: TLabel
+        Left = 40
+        Top = 6
+        Width = 237
+        Height = 54
+        Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1079#1072#1085#1103#1090#1080#1103
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -32
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object VirtualImage139: TVirtualImage
+        Left = 40
+        Top = 60
+        Width = 700
+        Height = 2
+        ImageCollection = ImageCollection1
+        ImageWidth = 0
+        ImageHeight = 0
+        ImageIndex = 2
+        ImageName = 'BlueBackground'
+        Proportional = False
+      end
+      object Button1: TButton
+        Left = 391
+        Top = 623
+        Width = 165
+        Height = 40
+        Cursor = crHandPoint
+        Caption = #1054#1063#1048#1057#1058#1048#1058#1068
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        StyleName = 'Tablet Dark'
+        OnClick = Button1Click
+      end
+      object ComboBox7: TComboBox
+        Left = 40
+        Top = 508
+        Width = 701
+        Height = 40
+        Cursor = crHandPoint
+        Style = csDropDownList
+        Enabled = False
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clMenuText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+      end
+      object DateTimePicker1: TDateTimePicker
+        Left = 40
+        Top = 88
+        Width = 700
+        Height = 40
+        Cursor = crHandPoint
+        Hint = #1044#1072#1090#1072
+        Date = 45140.000000000000000000
+        Time = 0.752999374999490100
+        TabOrder = 2
+        OnChange = DateTimePicker1Change
+      end
+      object ComboBox8: TComboBox
+        Left = 40
+        Top = 208
+        Width = 700
+        Height = 40
+        Cursor = crHandPoint
+        Style = csDropDownList
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clMenuText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+        OnDropDown = ComboBox8DropDown
+        OnSelect = ComboBox8Select
+      end
+      object ComboBox9: TComboBox
+        Left = 40
+        Top = 268
+        Width = 700
+        Height = 40
+        Cursor = crHandPoint
+        Style = csDropDownList
+        Enabled = False
+        ExtendedUI = True
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clMenuText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 4
+      end
+      object ComboBox10: TComboBox
+        Left = 40
+        Top = 328
+        Width = 700
+        Height = 40
+        Cursor = crHandPoint
+        Style = csDropDownList
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clMenuText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 5
+        OnDropDown = ComboBox10DropDown
+        Items.Strings = (
+          ''
+          ''
+          ''
+          '')
+      end
+      object ComboBox11: TComboBox
+        Left = 40
+        Top = 148
+        Width = 700
+        Height = 40
+        Cursor = crHandPoint
+        Style = csDropDownList
+        ExtendedUI = True
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clMenuText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = False
+        TabOrder = 6
+        Items.Strings = (
+          '1-'#1103' '#1087#1072#1088#1072
+          '2-'#1103' '#1087#1072#1088#1072
+          '3-'#1103' '#1087#1072#1088#1072
+          '4-'#1103' '#1087#1072#1088#1072)
+      end
+      object ComboBox12: TComboBox
+        Left = 40
+        Top = 388
+        Width = 700
+        Height = 40
+        Cursor = crHandPoint
+        Style = csDropDownList
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clMenuText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 7
+        OnDropDown = ComboBox12DropDown
+      end
+      object ComboBox13: TComboBox
+        Left = 40
+        Top = 448
+        Width = 700
+        Height = 40
+        Cursor = crHandPoint
+        Style = csDropDownList
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clMenuText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        Sorted = True
+        TabOrder = 8
+        OnDropDown = ComboBox13DropDown
+        OnSelect = ComboBox13Select
+      end
+      object ComboBox14: TComboBox
+        Left = 40
+        Top = 568
+        Width = 700
+        Height = 40
+        Cursor = crHandPoint
+        Style = csDropDownList
+        Font.Charset = RUSSIAN_CHARSET
+        Font.Color = clMenuText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 9
+        Items.Strings = (
+          #1051#1077#1082#1094#1080#1086#1085#1085#1086#1077' '#1079#1072#1085#1103#1090#1080#1077
+          #1055#1088#1072#1082#1090#1080#1095#1077#1089#1082#1086#1077' '#1079#1072#1085#1103#1090#1080#1077
+          #1047#1072#1095#1105#1090
+          #1069#1082#1079#1072#1084#1077#1085
+          #1050#1086#1085#1089#1091#1083#1100#1090#1072#1094#1080#1103)
+      end
+      object Button3: TButton
+        Left = 213
+        Top = 623
+        Width = 165
+        Height = 40
+        Cursor = crHandPoint
+        Caption = #1044#1054#1041#1040#1042#1048#1058#1068
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWhite
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 10
+        StyleName = 'Tablet Dark'
+        OnClick = Button3Click
+      end
     end
   end
-  object PanelForStudentsSidebar: TPanel
-    Left = 0
-    Top = 211
-    Width = 320
-    Height = 222
-    BevelOuter = bvNone
-    TabOrder = 5
-    object VirtualImage9: TVirtualImage
-      Left = -1
-      Top = 8
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label625Click
-      OnMouseEnter = VirtualImage9MouseEnter
-      OnMouseLeave = VirtualImage9MouseLeave
-    end
-    object VirtualImage11: TVirtualImage
-      Left = 37
-      Top = 0
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object VirtualImage12: TVirtualImage
-      Left = 37
-      Top = 70
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label625: TLabel
-      Left = 100
-      Top = 17
-      Width = 182
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1056#1040#1057#1055#1048#1057#1040#1053#1048#1045' '#1047#1040#1053#1071#1058#1048#1049
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label625Click
-      OnMouseEnter = VirtualImage9MouseEnter
-      OnMouseLeave = VirtualImage9MouseLeave
-    end
-    object VirtualImage61: TVirtualImage
-      Left = 0
-      Top = 80
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label626Click
-      OnMouseEnter = VirtualImage61MouseEnter
-      OnMouseLeave = VirtualImage61MouseLeave
-    end
-    object VirtualImage63: TVirtualImage
-      Left = 39
-      Top = 138
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label626: TLabel
-      Left = 105
-      Top = 85
-      Width = 193
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1053#1040#1049#1058#1048' '#1055#1056#1045#1055#1054#1044#1040#1042#1040#1058#1045#1051#1071
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label626Click
-      OnMouseEnter = VirtualImage61MouseEnter
-      OnMouseLeave = VirtualImage5MouseLeave
-    end
-  end
-  object PanelMainMenu: TPanel
+  object PanelForAdmins: TPanel
     Left = 322
     Top = 0
     Width = 781
-    Height = 740
+    Height = 703
     BevelOuter = bvNone
-    TabOrder = 0
-    object VirtualImageLightSwitcher: TVirtualImage
-      Left = 1015
-      Top = 16
-      Width = 29
-      Height = 20
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 8
-      ImageName = 'TO_DARK'
+    TabOrder = 3
+    object ScrollBoxAddStaff: TScrollBox
+      Left = 0
+      Top = 0
+      Width = 785
+      Height = 704
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBackground
+      Font.Height = -16
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+      OnMouseWheel = ScrollBoxAddStaffMouseWheel
+      object Image3: TImage
+        Left = 22
+        Top = 41
+        Width = 145
+        Height = 190
+        Enabled = False
+      end
+      object Label615: TLabel
+        Left = 24
+        Top = 13
+        Width = 67
+        Height = 27
+        Caption = #1060#1086#1090#1086#1075#1088#1072#1092#1080#1103
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label616: TLabel
+        Left = 391
+        Top = 617
+        Width = 124
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+      end
+      object Label617: TLabel
+        Left = 24
+        Top = 749
+        Width = 196
+        Height = 27
+        Caption = #1054#1090#1085#1086#1096#1077#1085#1080#1077' '#1082' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1086#1073#1103#1079#1072#1085#1085#1086#1089#1090#1080
+        Enabled = False
+      end
+      object Label618: TLabel
+        Left = 24
+        Top = 299
+        Width = 85
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
+        Enabled = False
+      end
+      object Label619: TLabel
+        Left = 391
+        Top = 234
+        Width = 22
+        Height = 27
+        Caption = #1055#1086#1083
+        Enabled = False
+      end
+      object Label620: TLabel
+        Left = 24
+        Top = 942
+        Width = 222
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
+        Enabled = False
+      end
+      object Label621: TLabel
+        Left = 23
+        Top = 1005
+        Width = 131
+        Height = 27
+        Caption = #1040#1082#1072#1076#1077#1084#1080#1095#1077#1089#1082#1072#1103' '#1089#1090#1077#1087#1077#1085#1100
+        Enabled = False
+      end
+      object Label622: TLabel
+        Left = 23
+        Top = 1069
+        Width = 102
+        Height = 27
+        Caption = #1054#1090#1076#1077#1083' '#1091#1087#1088#1072#1074#1083#1077#1085#1080#1103
+        Enabled = False
+      end
+      object VirtualImage3: TVirtualImage
+        Left = 74
+        Top = 105
+        Width = 49
+        Height = 58
+        ImageCollection = ImageCollection1
+        ImageWidth = 0
+        ImageHeight = 0
+        ImageIndex = 11
+        ImageName = 'PlusSign'
+        OnClick = VirtualImage3Click
+      end
+      object VirtualImage4: TVirtualImage
+        Left = 184
+        Top = 229
+        Width = 561
+        Height = 2
+        ImageCollection = ImageCollection1
+        ImageWidth = 0
+        ImageHeight = 0
+        ImageIndex = 2
+        ImageName = 'BlueBackground'
+        Proportional = False
+      end
+      object Button10: TButton
+        Left = 391
+        Top = 1158
+        Width = 200
+        Height = 50
+        Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1087#1086#1083#1103
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 27
+        OnClick = Button10Click
+      end
+      object Button9: TButton
+        Left = 177
+        Top = 1158
+        Width = 200
+        Height = 50
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1057#1086#1090#1088#1091#1076#1085#1080#1082#1072
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 26
+        OnClick = Button9Click
+      end
+      object ComboBox38: TComboBox
+        Left = 391
+        Top = 264
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 4
+        OnDropDown = ComboBox1DropDown
+        Items.Strings = (
+          #1052#1091#1078#1089#1082#1086#1081
+          #1046#1077#1085#1089#1082#1080#1081)
+      end
+      object ComboBox39: TComboBox
+        Left = 24
+        Top = 782
+        Width = 721
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 16
+        OnDropDown = ComboBox2DropDown
+        Items.Strings = (
+          #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')'
+          #1053#1077#1074#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')')
+      end
+      object ComboBox40: TComboBox
+        Left = 23
+        Top = 1035
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 25
+        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+        Items.Strings = (
+          #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+          #1052#1072#1075#1080#1089#1090#1088#1072#1090#1091#1088#1072
+          'Ph.D.')
+      end
+      object ComboBox41: TComboBox
+        Left = 23
+        Top = 1097
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 30
+        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+        Items.Strings = (
+          #1040#1076#1084#1080#1085#1080#1089#1090#1088#1072#1094#1080#1103
+          #1041#1091#1093#1075#1072#1083#1090#1077#1088#1080#1103
+          #1054#1090#1076#1077#1083' '#1082#1072#1076#1088#1086#1074
+          #1054#1090#1076#1077#1083' '#1085#1072#1091#1082#1080)
+      end
+      object DateTimePicker10: TDateTimePicker
+        Left = 24
+        Top = 328
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 7
+      end
+      object DateTimePicker11: TDateTimePicker
+        Left = 391
+        Top = 650
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 14
+      end
+      object DateTimePicker12: TDateTimePicker
+        Left = 24
+        Top = 972
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 22
+      end
+      object LabeledEdit36: TLabeledEdit
+        Left = 184
+        Top = 41
+        Width = 561
+        Height = 35
+        EditLabel.Width = 51
+        EditLabel.Height = 27
+        EditLabel.Caption = #1060#1072#1084#1080#1083#1080#1103
+        TabOrder = 0
+        Text = ''
+        TextHint = #1040#1073#1076#1091#1088#1072#1093#1084#1086#1085#1086#1074
+        OnChange = LabeledEdit36Change
+      end
+      object LabeledEdit37: TLabeledEdit
+        Left = 184
+        Top = 104
+        Width = 561
+        Height = 35
+        EditLabel.Width = 22
+        EditLabel.Height = 27
+        EditLabel.Caption = #1048#1084#1103
+        TabOrder = 1
+        Text = ''
+        TextHint = #1057#1091#1083#1090#1086#1085
+      end
+      object LabeledEdit38: TLabeledEdit
+        Left = 184
+        Top = 169
+        Width = 561
+        Height = 35
+        EditLabel.Width = 48
+        EditLabel.Height = 27
+        EditLabel.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
+        TabOrder = 2
+        Text = ''
+        TextHint = #1052#1091#1093#1072#1084#1084#1072#1076#1102#1089#1091#1092#1086#1074#1080#1095
+      end
+      object LabeledEdit39: TLabeledEdit
+        Left = 24
+        Top = 264
+        Width = 354
+        Height = 35
+        EditLabel.Width = 91
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1072#1094#1080#1086#1085#1072#1083#1100#1085#1086#1089#1090#1100
+        Enabled = False
+        TabOrder = 3
+        Text = ''
+        TextHint = #1058#1072#1076#1078#1080#1082' ('#1058#1072#1076#1078#1080#1095#1082#1072')'
+      end
+      object LabeledEdit40: TLabeledEdit
+        Left = 391
+        Top = 328
+        Width = 354
+        Height = 35
+        EditLabel.Width = 98
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
+        Enabled = False
+        TabOrder = 6
+        Text = ''
+        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
+      end
+      object LabeledEdit41: TLabeledEdit
+        Left = 24
+        Top = 392
+        Width = 721
+        Height = 35
+        EditLabel.Width = 118
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1084#1077#1081#1085#1086#1077' '#1087#1086#1083#1086#1078#1077#1085#1080#1077
+        Enabled = False
+        TabOrder = 8
+        Text = ''
+        TextHint = #1046#1077#1085#1072#1090' ('#1047#1072#1084#1091#1078#1077#1084'), '#1053#1077' '#1078#1077#1085#1072#1090' ('#1053#1077' '#1079#1072#1084#1091#1078#1077#1084')'
+      end
+      object LabeledEdit42: TLabeledEdit
+        Left = 24
+        Top = 456
+        Width = 354
+        Height = 35
+        EditLabel.Width = 106
+        EditLabel.Height = 27
+        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
+        Enabled = False
+        TabOrder = 9
+        Text = ''
+        TextHint = #1059#1083#1080#1094#1072' '#1076#1088#1091#1078#1073#1099' '#1085#1072#1088#1086#1076#1086#1074', '#1076#1086#1084' 5'
+      end
+      object LabeledEdit43: TLabeledEdit
+        Left = 391
+        Top = 456
+        Width = 354
+        Height = 35
+        EditLabel.Width = 179
+        EditLabel.Height = 27
+        EditLabel.Caption = #1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1081' '#1072#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
+        Enabled = False
+        TabOrder = 10
+        Text = ''
+        TextHint = #1059#1083#1080#1094#1072' '#1059#1084#1072#1088#1072' '#1061#1072#1081#1103#1084#1072', '#1076#1086#1084' 2'
+      end
+      object LabeledEdit44: TLabeledEdit
+        Left = 24
+        Top = 523
+        Width = 721
+        Height = 35
+        EditLabel.Width = 91
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1086#1084#1077#1088' '#1090#1077#1083#1077#1092#1086#1085#1072
+        Enabled = False
+        TabOrder = 11
+        Text = ''
+        TextHint = '+992 919 - 64 - 30 - 03'
+      end
+      object LabeledEdit45: TLabeledEdit
+        Left = 24
+        Top = 584
+        Width = 721
+        Height = 35
+        EditLabel.Width = 144
+        EditLabel.Height = 27
+        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1101#1083#1077#1082#1090#1088#1086#1085#1085#1086#1081' '#1087#1086#1095#1090#1099
+        Enabled = False
+        TabOrder = 12
+        Text = ''
+        TextHint = 'adress@mail.com'
+      end
+      object LabeledEdit46: TLabeledEdit
+        Left = 24
+        Top = 650
+        Width = 354
+        Height = 35
+        EditLabel.Width = 148
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+        TabOrder = 13
+        Text = ''
+        TextHint = #1040'021407'
+      end
+      object LabeledEdit47: TLabeledEdit
+        Left = 24
+        Top = 716
+        Width = 721
+        Height = 35
+        EditLabel.Width = 131
+        EditLabel.Height = 27
+        EditLabel.Caption = #1052#1077#1089#1090#1086' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+        TabOrder = 15
+        Text = ''
+        TextHint = #1054#1052#1042#1044' '#1088'-'#1085#1072' '#1057#1086#1084#1086#1085#1080' '#1075'. '#1044#1091#1096#1072#1085#1073#1077
+      end
+      object LabeledEdit48: TLabeledEdit
+        Left = 24
+        Top = 841
+        Width = 721
+        Height = 35
+        EditLabel.Width = 204
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
+        Enabled = False
+        TabOrder = 18
+        Text = ''
+        TextHint = #1044#1080#1087#1083#1086#1084' '#1073#1072#1082#1072#1083#1072#1074#1088#1072', '#1076#1080#1087#1083#1086#1084' '#1084#1072#1075#1080#1089#1090#1088#1072
+      end
+      object LabeledEdit49: TLabeledEdit
+        Left = 24
+        Top = 908
+        Width = 354
+        Height = 35
+        EditLabel.Width = 166
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1091#1095#1077#1073#1085#1086#1075#1086' '#1079#1072#1074#1077#1076#1077#1085#1080#1103
+        Enabled = False
+        TabOrder = 19
+        Text = ''
+        TextHint = #1052#1058#1052#1059' '#8470'1'
+      end
+      object LabeledEdit50: TLabeledEdit
+        Left = 391
+        Top = 908
+        Width = 354
+        Height = 35
+        EditLabel.Width = 235
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1091#1095#1077#1073#1085#1086#1075#1086' '#1079#1072#1074#1077#1076#1077#1085#1080#1103
+        Enabled = False
+        TabOrder = 20
+        Text = ''
+        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
+      end
+      object LabeledEdit51: TLabeledEdit
+        Left = 391
+        Top = 972
+        Width = 354
+        Height = 35
+        EditLabel.Width = 246
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
+        Enabled = False
+        TabOrder = 21
+        Text = ''
+        TextHint = #1040'0241446436'
+      end
+      object LabeledEdit52: TLabeledEdit
+        Left = 391
+        Top = 1035
+        Width = 354
+        Height = 35
+        EditLabel.Width = 84
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
+        Enabled = False
+        TabOrder = 23
+        Text = ''
+        TextHint = '2022'
+      end
+      object MaskEdit12: TMaskEdit
+        Left = 24
+        Top = 782
+        Width = 702
+        Height = 35
+        Enabled = False
+        TabOrder = 17
+        Text = ''
+        TextHint = #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081
+      end
+      object MaskEdit13: TMaskEdit
+        Left = 23
+        Top = 1035
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 24
+        Text = ''
+        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+      end
+      object MaskEdit14: TMaskEdit
+        Left = 391
+        Top = 264
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 5
+        Text = ''
+        TextHint = #1052#1091#1078#1089#1082#1086#1081
+      end
+      object MaskEdit15: TMaskEdit
+        Left = 23
+        Top = 1097
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 29
+        Text = ''
+        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+      end
+      object Memo2: TMemo
+        Left = 150
+        Top = 1229
+        Width = 500
+        Height = 0
+        Lines.Strings = (
+          'Memo1')
+        TabOrder = 28
+      end
+      object LabeledEdit53: TLabeledEdit
+        Left = 391
+        Top = 1096
+        Width = 354
+        Height = 35
+        EditLabel.Width = 61
+        EditLabel.Height = 27
+        EditLabel.Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
+        Enabled = False
+        TabOrder = 31
+        Text = ''
+        TextHint = '2022'
+      end
     end
-    object ToggleSwitch1: TToggleSwitch
-      Left = 1046
-      Top = 16
-      Width = 50
-      Height = 20
-      Cursor = crHandPoint
-      ShowStateCaption = False
+    object ScrollBoxAddTeacher: TScrollBox
+      Left = 0
+      Top = 0
+      Width = 785
+      Height = 704
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBackground
+      Font.Height = -16
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      Visible = False
+      OnMouseWheel = ScrollBoxAddTeacherMouseWheel
+      object Image2: TImage
+        Left = 22
+        Top = 41
+        Width = 145
+        Height = 190
+        Enabled = False
+      end
+      object Label1: TLabel
+        Left = 24
+        Top = 13
+        Width = 67
+        Height = 27
+        Caption = #1060#1086#1090#1086#1075#1088#1072#1092#1080#1103
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 391
+        Top = 617
+        Width = 124
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+      end
+      object Label269: TLabel
+        Left = 24
+        Top = 749
+        Width = 196
+        Height = 27
+        Caption = #1054#1090#1085#1086#1096#1077#1085#1080#1077' '#1082' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1086#1073#1103#1079#1072#1085#1085#1086#1089#1090#1080
+        Enabled = False
+      end
+      object Label3: TLabel
+        Left = 24
+        Top = 299
+        Width = 85
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
+        Enabled = False
+      end
+      object Label4: TLabel
+        Left = 391
+        Top = 234
+        Width = 22
+        Height = 27
+        Caption = #1055#1086#1083
+        Enabled = False
+      end
+      object Label574: TLabel
+        Left = 24
+        Top = 942
+        Width = 222
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
+        Enabled = False
+      end
+      object Label575: TLabel
+        Left = 23
+        Top = 1005
+        Width = 131
+        Height = 27
+        Caption = #1040#1082#1072#1076#1077#1084#1080#1095#1077#1089#1082#1072#1103' '#1089#1090#1077#1087#1077#1085#1100
+        Enabled = False
+      end
+      object VirtualImage1: TVirtualImage
+        Left = 68
+        Top = 100
+        Width = 49
+        Height = 58
+        ImageCollection = ImageCollection1
+        ImageWidth = 0
+        ImageHeight = 0
+        ImageIndex = 11
+        ImageName = 'PlusSign'
+        OnClick = VirtualImage1Click
+      end
+      object VirtualImage2: TVirtualImage
+        Left = 184
+        Top = 229
+        Width = 561
+        Height = 2
+        ImageCollection = ImageCollection1
+        ImageWidth = 0
+        ImageHeight = 0
+        ImageIndex = 2
+        ImageName = 'BlueBackground'
+        Proportional = False
+      end
+      object Button7: TButton
+        Left = 177
+        Top = 1091
+        Width = 200
+        Height = 50
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1055#1088#1077#1087#1086#1076#1072#1074#1072#1090#1077#1083#1103
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 26
+        OnClick = Button7Click
+      end
+      object Button8: TButton
+        Left = 391
+        Top = 1091
+        Width = 200
+        Height = 50
+        Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1087#1086#1083#1103
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 27
+        OnClick = Button8Click
+      end
+      object ComboBox35: TComboBox
+        Left = 391
+        Top = 264
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 4
+        OnDropDown = ComboBox1DropDown
+        Items.Strings = (
+          #1052#1091#1078#1089#1082#1086#1081
+          #1046#1077#1085#1089#1082#1080#1081)
+      end
+      object ComboBox36: TComboBox
+        Left = 24
+        Top = 782
+        Width = 721
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 16
+        OnDropDown = ComboBox2DropDown
+        Items.Strings = (
+          #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')'
+          #1053#1077#1074#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')')
+      end
+      object ComboBox37: TComboBox
+        Left = 23
+        Top = 1035
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 25
+        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+        Items.Strings = (
+          #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+          #1052#1072#1075#1080#1089#1090#1088#1072#1090#1091#1088#1072
+          'Ph.D.')
+      end
+      object DateTimePicker7: TDateTimePicker
+        Left = 24
+        Top = 328
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 7
+      end
+      object DateTimePicker8: TDateTimePicker
+        Left = 391
+        Top = 650
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 14
+      end
+      object DateTimePicker9: TDateTimePicker
+        Left = 24
+        Top = 972
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 22
+      end
+      object LabeledEdit17: TLabeledEdit
+        Left = 184
+        Top = 41
+        Width = 561
+        Height = 35
+        EditLabel.Width = 51
+        EditLabel.Height = 27
+        EditLabel.Caption = #1060#1072#1084#1080#1083#1080#1103
+        TabOrder = 0
+        Text = ''
+        TextHint = #1040#1073#1076#1091#1088#1072#1093#1084#1086#1085#1086#1074
+        OnChange = LabeledEdit17Change
+      end
+      object LabeledEdit18: TLabeledEdit
+        Left = 184
+        Top = 104
+        Width = 561
+        Height = 35
+        EditLabel.Width = 22
+        EditLabel.Height = 27
+        EditLabel.Caption = #1048#1084#1103
+        TabOrder = 1
+        Text = ''
+        TextHint = #1057#1091#1083#1090#1086#1085
+        OnChange = LabeledEdit17Change
+      end
+      object LabeledEdit21: TLabeledEdit
+        Left = 184
+        Top = 169
+        Width = 521
+        Height = 35
+        EditLabel.Width = 48
+        EditLabel.Height = 27
+        EditLabel.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
+        TabOrder = 2
+        Text = ''
+        TextHint = #1052#1091#1093#1072#1084#1084#1072#1076#1102#1089#1091#1092#1086#1074#1080#1095
+        OnChange = LabeledEdit17Change
+      end
+      object LabeledEdit22: TLabeledEdit
+        Left = 24
+        Top = 264
+        Width = 354
+        Height = 35
+        EditLabel.Width = 91
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1072#1094#1080#1086#1085#1072#1083#1100#1085#1086#1089#1090#1100
+        Enabled = False
+        TabOrder = 3
+        Text = ''
+        TextHint = #1058#1072#1076#1078#1080#1082' ('#1058#1072#1076#1078#1080#1095#1082#1072')'
+      end
+      object LabeledEdit23: TLabeledEdit
+        Left = 391
+        Top = 328
+        Width = 354
+        Height = 35
+        EditLabel.Width = 98
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
+        Enabled = False
+        TabOrder = 6
+        Text = ''
+        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
+      end
+      object LabeledEdit24: TLabeledEdit
+        Left = 24
+        Top = 392
+        Width = 721
+        Height = 35
+        EditLabel.Width = 118
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1084#1077#1081#1085#1086#1077' '#1087#1086#1083#1086#1078#1077#1085#1080#1077
+        Enabled = False
+        TabOrder = 8
+        Text = ''
+        TextHint = #1046#1077#1085#1072#1090' ('#1047#1072#1084#1091#1078#1077#1084'), '#1053#1077' '#1078#1077#1085#1072#1090' ('#1053#1077' '#1079#1072#1084#1091#1078#1077#1084')'
+      end
+      object LabeledEdit25: TLabeledEdit
+        Left = 24
+        Top = 456
+        Width = 354
+        Height = 35
+        EditLabel.Width = 106
+        EditLabel.Height = 27
+        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
+        Enabled = False
+        TabOrder = 9
+        Text = ''
+        TextHint = #1059#1083#1080#1094#1072' '#1076#1088#1091#1078#1073#1099' '#1085#1072#1088#1086#1076#1086#1074', '#1076#1086#1084' 5'
+      end
+      object LabeledEdit26: TLabeledEdit
+        Left = 391
+        Top = 456
+        Width = 354
+        Height = 35
+        EditLabel.Width = 179
+        EditLabel.Height = 27
+        EditLabel.Caption = #1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1081' '#1072#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
+        Enabled = False
+        TabOrder = 10
+        Text = ''
+        TextHint = #1059#1083#1080#1094#1072' '#1059#1084#1072#1088#1072' '#1061#1072#1081#1103#1084#1072', '#1076#1086#1084' 2'
+      end
+      object LabeledEdit27: TLabeledEdit
+        Left = 24
+        Top = 523
+        Width = 721
+        Height = 35
+        EditLabel.Width = 91
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1086#1084#1077#1088' '#1090#1077#1083#1077#1092#1086#1085#1072
+        Enabled = False
+        TabOrder = 11
+        Text = ''
+        TextHint = '+992 919 - 64 - 30 - 03'
+      end
+      object LabeledEdit28: TLabeledEdit
+        Left = 24
+        Top = 584
+        Width = 721
+        Height = 35
+        EditLabel.Width = 144
+        EditLabel.Height = 27
+        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1101#1083#1077#1082#1090#1088#1086#1085#1085#1086#1081' '#1087#1086#1095#1090#1099
+        Enabled = False
+        TabOrder = 12
+        Text = ''
+        TextHint = 'adress@mail.com'
+      end
+      object LabeledEdit29: TLabeledEdit
+        Left = 24
+        Top = 650
+        Width = 354
+        Height = 35
+        EditLabel.Width = 148
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+        TabOrder = 13
+        Text = ''
+        TextHint = #1040'021407'
+      end
+      object LabeledEdit30: TLabeledEdit
+        Left = 24
+        Top = 716
+        Width = 721
+        Height = 35
+        EditLabel.Width = 131
+        EditLabel.Height = 27
+        EditLabel.Caption = #1052#1077#1089#1090#1086' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+        TabOrder = 15
+        Text = ''
+        TextHint = #1054#1052#1042#1044' '#1088'-'#1085#1072' '#1057#1086#1084#1086#1085#1080' '#1075'. '#1044#1091#1096#1072#1085#1073#1077
+      end
+      object LabeledEdit31: TLabeledEdit
+        Left = 24
+        Top = 841
+        Width = 721
+        Height = 35
+        EditLabel.Width = 204
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
+        Enabled = False
+        TabOrder = 18
+        Text = ''
+        TextHint = #1044#1080#1087#1083#1086#1084' '#1073#1072#1082#1072#1083#1072#1074#1088#1072', '#1076#1080#1087#1083#1086#1084' '#1084#1072#1075#1080#1089#1090#1088#1072
+      end
+      object LabeledEdit32: TLabeledEdit
+        Left = 24
+        Top = 908
+        Width = 354
+        Height = 35
+        EditLabel.Width = 166
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1091#1095#1077#1073#1085#1086#1075#1086' '#1079#1072#1074#1077#1076#1077#1085#1080#1103
+        Enabled = False
+        TabOrder = 19
+        Text = ''
+        TextHint = #1052#1058#1052#1059' '#8470'1'
+      end
+      object LabeledEdit33: TLabeledEdit
+        Left = 391
+        Top = 908
+        Width = 354
+        Height = 35
+        EditLabel.Width = 235
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1091#1095#1077#1073#1085#1086#1075#1086' '#1079#1072#1074#1077#1076#1077#1085#1080#1103
+        Enabled = False
+        TabOrder = 20
+        Text = ''
+        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
+      end
+      object LabeledEdit34: TLabeledEdit
+        Left = 391
+        Top = 972
+        Width = 354
+        Height = 35
+        EditLabel.Width = 246
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
+        Enabled = False
+        TabOrder = 21
+        Text = ''
+        TextHint = #1040'0241446436'
+      end
+      object LabeledEdit35: TLabeledEdit
+        Left = 391
+        Top = 1035
+        Width = 354
+        Height = 35
+        EditLabel.Width = 84
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
+        Enabled = False
+        TabOrder = 23
+        Text = ''
+        TextHint = '2022'
+      end
+      object MaskEdit10: TMaskEdit
+        Left = 24
+        Top = 782
+        Width = 702
+        Height = 35
+        Enabled = False
+        TabOrder = 17
+        Text = ''
+        TextHint = #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081
+      end
+      object MaskEdit11: TMaskEdit
+        Left = 23
+        Top = 1035
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 24
+        Text = ''
+        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+      end
+      object MaskEdit9: TMaskEdit
+        Left = 391
+        Top = 264
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 5
+        Text = ''
+        TextHint = #1052#1091#1078#1089#1082#1086#1081
+      end
+      object Memo1: TMemo
+        Left = 150
+        Top = 1165
+        Width = 500
+        Height = 0
+        Lines.Strings = (
+          'Memo1')
+        TabOrder = 28
+      end
+    end
+    object ScrollBoxAddStudent: TScrollBox
+      Left = 0
+      Top = 0
+      Width = 785
+      Height = 704
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clDefault
+      Font.Height = -16
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
-      OnClick = ToggleSwitch1Click
-    end
-  end
-  object PanelMainMenuSidebar: TPanel
-    Left = 0
-    Top = 211
-    Width = 320
-    Height = 222
-    BevelOuter = bvNone
-    TabOrder = 4
-    object VirtualImageStudents: TVirtualImage
-      Left = -6
-      Top = 10
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = LabelStudentsClick
-      OnMouseEnter = VirtualImageStudentsMouseEnter
-      OnMouseLeave = VirtualImageStudentsMouseLeave
-    end
-    object VirtualImageThinLine1: TVirtualImage
-      Left = 37
-      Top = 0
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object VirtualImageThinLine2: TVirtualImage
-      Left = 37
-      Top = 70
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object LabelStudents: TLabel
-      Left = 118
-      Top = 17
-      Width = 93
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1057#1058#1059#1044#1045#1053#1058#1040#1052
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = LabelStudentsClick
-      OnMouseEnter = VirtualImageStudentsMouseEnter
-      OnMouseLeave = VirtualImageStudentsMouseLeave
-    end
-    object VirtualImage5: TVirtualImage
-      Left = 0
-      Top = 80
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label623Click
-      OnMouseEnter = VirtualImage5MouseEnter
-      OnMouseLeave = VirtualImage5MouseLeave
-    end
-    object VirtualImage6: TVirtualImage
-      Left = 39
-      Top = 138
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label623: TLabel
-      Left = 105
-      Top = 85
-      Width = 118
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1057#1054#1058#1056#1059#1044#1053#1048#1050#1040#1052
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label623Click
-      OnMouseEnter = VirtualImage5MouseEnter
-      OnMouseLeave = VirtualImage5MouseLeave
-    end
-    object VirtualImage7: TVirtualImage
-      Left = 0
-      Top = 147
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label624Click
-      OnMouseEnter = VirtualImage7MouseEnter
-      OnMouseLeave = VirtualImage7MouseLeave
-    end
-    object VirtualImage8: TVirtualImage
-      Left = 39
-      Top = 206
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label624: TLabel
-      Left = 82
-      Top = 155
-      Width = 163
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1040#1044#1052#1048#1053#1048#1057#1058#1056#1040#1058#1054#1056#1040#1052
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label624Click
-      OnMouseEnter = VirtualImage7MouseEnter
-    end
-  end
-  object PanelForAdminsSidebarAddCard: TPanel
-    Left = 0
-    Top = 211
-    Width = 320
-    Height = 222
-    BevelOuter = bvNone
-    TabOrder = 8
-    object VirtualImage134: TVirtualImage
-      Left = -6
-      Top = 8
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = LabelStudentsClick
-      OnMouseEnter = VirtualImageStudentsMouseEnter
-      OnMouseLeave = VirtualImageStudentsMouseLeave
-    end
-    object VirtualImage135: TVirtualImage
-      Left = 37
-      Top = 0
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object VirtualImage136: TVirtualImage
-      Left = 37
-      Top = 70
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label632: TLabel
-      Left = 119
-      Top = 11
-      Width = 167
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1057#1058#1059#1044#1045#1053#1058#1040
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label632Click
-    end
-    object VirtualImage137: TVirtualImage
-      Left = 0
-      Top = 80
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label623Click
-      OnMouseEnter = VirtualImage5MouseEnter
-      OnMouseLeave = VirtualImage5MouseLeave
-    end
-    object VirtualImage138: TVirtualImage
-      Left = 39
-      Top = 138
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label633: TLabel
-      Left = 105
-      Top = 85
-      Width = 224
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1055#1056#1045#1055#1054#1044#1040#1042#1040#1058#1045#1051#1071
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label633Click
-    end
-    object VirtualImage143: TVirtualImage
-      Left = 0
-      Top = 147
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnMouseEnter = VirtualImage7MouseEnter
-      OnMouseLeave = VirtualImage7MouseLeave
-    end
-    object VirtualImage144: TVirtualImage
-      Left = 39
-      Top = 206
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label634: TLabel
-      Left = 82
-      Top = 155
-      Width = 192
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1057#1054#1058#1056#1059#1044#1053#1048#1050#1040
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-      OnClick = Label634Click
-    end
-  end
-  object PanelForAdminsSidebar: TPanel
-    Left = 0
-    Top = 211
-    Width = 320
-    Height = 222
-    BevelOuter = bvNone
-    TabOrder = 7
-    object VirtualImage75: TVirtualImage
-      Left = -6
-      Top = 8
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = LabelStudentsClick
-      OnMouseEnter = VirtualImageStudentsMouseEnter
-      OnMouseLeave = VirtualImageStudentsMouseLeave
-    end
-    object VirtualImage78: TVirtualImage
-      Left = 37
-      Top = 0
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object VirtualImage128: TVirtualImage
-      Left = 37
-      Top = 70
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label629: TLabel
-      Left = 118
-      Top = 17
-      Width = 168
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1050#1040#1056#1058#1054#1063#1050#1059
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-    end
-    object VirtualImage130: TVirtualImage
-      Left = 0
-      Top = 80
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label623Click
-      OnMouseEnter = VirtualImage5MouseEnter
-      OnMouseLeave = VirtualImage5MouseLeave
-    end
-    object VirtualImage131: TVirtualImage
-      Left = 39
-      Top = 138
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label630: TLabel
-      Left = 105
-      Top = 85
-      Width = 153
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1059#1063#1045#1041#1053#1067#1049' '#1055#1056#1054#1062#1045#1057#1057
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-    end
-  end
-  object PanelForAdminsSidebarProcess: TPanel
-    Left = 0
-    Top = 211
-    Width = 320
-    Height = 222
-    BevelOuter = bvNone
-    TabOrder = 9
-    object VirtualImage132: TVirtualImage
-      Left = -6
-      Top = 8
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = LabelStudentsClick
-      OnMouseEnter = VirtualImageStudentsMouseEnter
-      OnMouseLeave = VirtualImageStudentsMouseLeave
-    end
-    object VirtualImage133: TVirtualImage
-      Left = 37
-      Top = 0
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object VirtualImage145: TVirtualImage
-      Left = 37
-      Top = 70
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label631: TLabel
-      Left = 82
-      Top = 11
-      Width = 164
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1059#1063#1045#1058' '#1059#1057#1055#1045#1042#1040#1045#1052#1054#1057#1058#1048
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
-    end
-    object VirtualImage146: TVirtualImage
-      Left = 0
-      Top = 80
-      Width = 325
-      Height = 50
-      Cursor = crHandPoint
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 2
-      ImageName = 'BlueBackground'
-      Proportional = False
-      OnClick = Label623Click
-      OnMouseEnter = VirtualImage5MouseEnter
-      OnMouseLeave = VirtualImage5MouseLeave
-    end
-    object VirtualImage147: TVirtualImage
-      Left = 39
-      Top = 138
-      Width = 252
-      Height = 2
-      ImageCollection = ImageCollection1
-      ImageWidth = 0
-      ImageHeight = 0
-      ImageIndex = 10
-      ImageName = 'WhiteBackground'
-      Proportional = False
-    end
-    object Label635: TLabel
-      Left = 80
-      Top = 85
-      Width = 171
-      Height = 36
-      Cursor = crHandPoint
-      Caption = #1059#1063#1045#1058' '#1055#1054#1057#1045#1065#1040#1045#1052#1054#1057#1058#1048
-      Font.Charset = ANSI_CHARSET
-      Font.Color = clWhite
-      Font.Height = -21
-      Font.Name = 'Oswald Light'
-      Font.Style = []
-      ParentFont = False
-      Transparent = True
+      Visible = False
+      OnMouseWheel = ScrollBoxAddStudentMouseWheel
+      object Image1: TImage
+        Left = 14
+        Top = 33
+        Width = 145
+        Height = 190
+        Enabled = False
+        Stretch = True
+        OnClick = Image1Click
+      end
+      object Label601: TLabel
+        Left = 16
+        Top = 5
+        Width = 67
+        Height = 27
+        Caption = #1060#1086#1090#1086#1075#1088#1072#1092#1080#1103
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label602: TLabel
+        Left = 24
+        Top = 109
+        Width = 124
+        Height = 27
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1092#1086#1090#1086#1075#1088#1072#1092#1080#1102
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label603: TLabel
+        Left = 383
+        Top = 226
+        Width = 22
+        Height = 27
+        Caption = #1055#1086#1083
+        Enabled = False
+      end
+      object Label604: TLabel
+        Left = 16
+        Top = 291
+        Width = 85
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
+        Enabled = False
+      end
+      object VirtualImage142: TVirtualImage
+        Left = 176
+        Top = 221
+        Width = 561
+        Height = 2
+        ImageCollection = ImageCollection1
+        ImageWidth = 0
+        ImageHeight = 0
+        ImageIndex = 2
+        ImageName = 'BlueBackground'
+        Enabled = False
+        Proportional = False
+      end
+      object Label605: TLabel
+        Left = 16
+        Top = 739
+        Width = 196
+        Height = 27
+        Caption = #1054#1090#1085#1086#1096#1077#1085#1080#1077' '#1082' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1086#1073#1103#1079#1072#1085#1085#1086#1089#1090#1080
+        Enabled = False
+      end
+      object Label606: TLabel
+        Left = 383
+        Top = 609
+        Width = 124
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+      end
+      object Label607: TLabel
+        Left = 16
+        Top = 932
+        Width = 124
+        Height = 27
+        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1072#1090#1090#1077#1089#1090#1072#1090#1072
+        Enabled = False
+      end
+      object Label608: TLabel
+        Left = 16
+        Top = 1125
+        Width = 27
+        Height = 27
+        Caption = #1050#1091#1088#1089
+        Enabled = False
+      end
+      object Label609: TLabel
+        Left = 383
+        Top = 1125
+        Width = 93
+        Height = 27
+        Caption = #1054#1089#1085#1086#1074#1072' '#1086#1073#1091#1095#1077#1085#1080#1103
+        Enabled = False
+      end
+      object Label610: TLabel
+        Left = 16
+        Top = 1189
+        Width = 91
+        Height = 27
+        Caption = #1060#1086#1088#1084#1072' '#1086#1073#1091#1095#1077#1085#1080#1103
+        Enabled = False
+      end
+      object Label611: TLabel
+        Left = 16
+        Top = 1253
+        Width = 137
+        Height = 27
+        Caption = #1053#1091#1078#1076#1072#1077#1090#1089#1103' '#1074' '#1086#1073#1097#1077#1078#1080#1090#1080#1080
+        Enabled = False
+      end
+      object Label612: TLabel
+        Left = 16
+        Top = 1323
+        Width = 3
+        Height = 27
+        Enabled = False
+      end
+      object Label613: TLabel
+        Left = 383
+        Top = 995
+        Width = 198
+        Height = 27
+        Caption = #1055#1086#1083#1091#1095#1072#1077#1084#1072#1103' '#1072#1082#1072#1076#1077#1084#1080#1095#1077#1089#1082#1072#1103' '#1089#1090#1077#1087#1077#1085#1100
+        Enabled = False
+      end
+      object Label614: TLabel
+        Left = 16
+        Top = 1059
+        Width = 139
+        Height = 27
+        Caption = #1053#1072#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1087#1086#1076#1075#1086#1090#1086#1074#1082#1080
+        Enabled = False
+      end
+      object LabeledEdit1: TLabeledEdit
+        Left = 176
+        Top = 33
+        Width = 561
+        Height = 35
+        EditLabel.Width = 51
+        EditLabel.Height = 27
+        EditLabel.Caption = #1060#1072#1084#1080#1083#1080#1103
+        TabOrder = 0
+        Text = ''
+        TextHint = #1040#1073#1076#1091#1088#1072#1093#1084#1086#1085#1086#1074
+        OnChange = LabeledEdit1Change
+      end
+      object LabeledEdit2: TLabeledEdit
+        Left = 176
+        Top = 96
+        Width = 561
+        Height = 35
+        EditLabel.Width = 22
+        EditLabel.Height = 27
+        EditLabel.Caption = #1048#1084#1103
+        TabOrder = 1
+        Text = ''
+        TextHint = #1057#1091#1083#1090#1086#1085
+        OnChange = LabeledEdit1Change
+      end
+      object LabeledEdit3: TLabeledEdit
+        Left = 176
+        Top = 161
+        Width = 561
+        Height = 35
+        EditLabel.Width = 48
+        EditLabel.Height = 27
+        EditLabel.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
+        TabOrder = 2
+        Text = ''
+        TextHint = #1052#1091#1093#1072#1084#1084#1072#1076#1102#1089#1091#1092#1086#1074#1080#1095
+        OnChange = LabeledEdit1Change
+      end
+      object LabeledEdit4: TLabeledEdit
+        Left = 16
+        Top = 256
+        Width = 354
+        Height = 35
+        EditLabel.Width = 91
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1072#1094#1080#1086#1085#1072#1083#1100#1085#1086#1089#1090#1100
+        Enabled = False
+        TabOrder = 3
+        Text = ''
+        TextHint = #1058#1072#1076#1078#1080#1082' ('#1058#1072#1076#1078#1080#1095#1082#1072')'
+      end
+      object ComboBox27: TComboBox
+        Left = 383
+        Top = 256
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        ItemIndex = 0
+        TabOrder = 4
+        Text = #1052#1091#1078#1089#1082#1086#1081
+        OnDropDown = ComboBox1DropDown
+        Items.Strings = (
+          #1052#1091#1078#1089#1082#1086#1081
+          #1046#1077#1085#1089#1082#1080#1081)
+      end
+      object DateTimePicker4: TDateTimePicker
+        Left = 23
+        Top = 320
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 5
+      end
+      object LabeledEdit5: TLabeledEdit
+        Left = 383
+        Top = 320
+        Width = 354
+        Height = 35
+        EditLabel.Width = 98
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
+        Enabled = False
+        TabOrder = 6
+        Text = ''
+        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
+      end
+      object LabeledEdit6: TLabeledEdit
+        Left = 16
+        Top = 384
+        Width = 721
+        Height = 35
+        EditLabel.Width = 118
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1084#1077#1081#1085#1086#1077' '#1087#1086#1083#1086#1078#1077#1085#1080#1077
+        Enabled = False
+        TabOrder = 7
+        Text = ''
+        TextHint = #1046#1077#1085#1072#1090' ('#1047#1072#1084#1091#1078#1077#1084'), '#1053#1077' '#1078#1077#1085#1072#1090' ('#1053#1077' '#1079#1072#1084#1091#1078#1077#1084')'
+      end
+      object LabeledEdit7: TLabeledEdit
+        Left = 16
+        Top = 448
+        Width = 354
+        Height = 35
+        EditLabel.Width = 106
+        EditLabel.Height = 27
+        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
+        Enabled = False
+        TabOrder = 8
+        Text = ''
+        TextHint = #1059#1083#1080#1094#1072' '#1076#1088#1091#1078#1073#1099' '#1085#1072#1088#1086#1076#1086#1074', '#1076#1086#1084' 5'
+      end
+      object LabeledEdit8: TLabeledEdit
+        Left = 383
+        Top = 448
+        Width = 354
+        Height = 35
+        EditLabel.Width = 179
+        EditLabel.Height = 27
+        EditLabel.Caption = #1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1081' '#1072#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
+        Enabled = False
+        TabOrder = 9
+        Text = ''
+        TextHint = #1059#1083#1080#1094#1072' '#1059#1084#1072#1088#1072' '#1061#1072#1081#1103#1084#1072', '#1076#1086#1084' 2'
+      end
+      object LabeledEdit9: TLabeledEdit
+        Left = 16
+        Top = 515
+        Width = 721
+        Height = 35
+        EditLabel.Width = 91
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1086#1084#1077#1088' '#1090#1077#1083#1077#1092#1086#1085#1072
+        Enabled = False
+        TabOrder = 10
+        Text = ''
+        TextHint = '+992 919 - 64 - 30 - 03'
+      end
+      object LabeledEdit10: TLabeledEdit
+        Left = 16
+        Top = 576
+        Width = 721
+        Height = 35
+        EditLabel.Width = 144
+        EditLabel.Height = 27
+        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1101#1083#1077#1082#1090#1088#1086#1085#1085#1086#1081' '#1087#1086#1095#1090#1099
+        Enabled = False
+        TabOrder = 11
+        Text = ''
+        TextHint = 'adress@mail.com'
+      end
+      object LabeledEdit11: TLabeledEdit
+        Left = 16
+        Top = 642
+        Width = 354
+        Height = 35
+        EditLabel.Width = 148
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+        TabOrder = 12
+        Text = ''
+        TextHint = #1040'021407'
+      end
+      object LabeledEdit12: TLabeledEdit
+        Left = 16
+        Top = 706
+        Width = 721
+        Height = 35
+        EditLabel.Width = 131
+        EditLabel.Height = 27
+        EditLabel.Caption = #1052#1077#1089#1090#1086' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
+        Enabled = False
+        TabOrder = 13
+        Text = ''
+        TextHint = #1054#1052#1042#1044' '#1088'-'#1085#1072' '#1057#1086#1084#1086#1085#1080' '#1075'. '#1044#1091#1096#1072#1085#1073#1077
+      end
+      object ComboBox28: TComboBox
+        Left = 16
+        Top = 772
+        Width = 721
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 14
+        OnDropDown = ComboBox2DropDown
+        Items.Strings = (
+          #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')'
+          #1053#1077#1074#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')')
+      end
+      object LabeledEdit13: TLabeledEdit
+        Left = 16
+        Top = 898
+        Width = 354
+        Height = 35
+        EditLabel.Width = 143
+        EditLabel.Height = 27
+        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1089#1088#1077#1076#1085#1077#1081' '#1096#1082#1086#1083#1099
+        Enabled = False
+        TabOrder = 15
+        Text = ''
+        TextHint = #1052#1058#1052#1059' '#8470'1'
+      end
+      object LabeledEdit14: TLabeledEdit
+        Left = 383
+        Top = 898
+        Width = 354
+        Height = 35
+        EditLabel.Width = 212
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1089#1088#1077#1076#1085#1077#1081' '#1096#1082#1086#1083#1099
+        Enabled = False
+        TabOrder = 16
+        Text = ''
+        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
+      end
+      object DateTimePicker5: TDateTimePicker
+        Left = 383
+        Top = 642
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 17
+      end
+      object DateTimePicker6: TDateTimePicker
+        Left = 16
+        Top = 962
+        Width = 354
+        Height = 35
+        Date = 45159.000000000000000000
+        Time = 0.474727916669508000
+        Enabled = False
+        TabOrder = 18
+      end
+      object LabeledEdit15: TLabeledEdit
+        Left = 383
+        Top = 962
+        Width = 354
+        Height = 35
+        EditLabel.Width = 148
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1072#1090#1090#1077#1089#1090#1072#1090#1072
+        Enabled = False
+        TabOrder = 19
+        Text = ''
+        TextHint = #1040'0241446436'
+      end
+      object LabeledEdit16: TLabeledEdit
+        Left = 16
+        Top = 1026
+        Width = 354
+        Height = 35
+        EditLabel.Width = 93
+        EditLabel.Height = 27
+        EditLabel.Caption = #1043#1086#1076' '#1087#1086#1089#1090#1091#1087#1083#1077#1085#1080#1103
+        Enabled = False
+        TabOrder = 20
+        Text = ''
+        TextHint = '2022'
+      end
+      object ComboBox29: TComboBox
+        Left = 16
+        Top = 1152
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        ItemIndex = 0
+        TabOrder = 21
+        Text = '1-'#1081' '#1082#1091#1088#1089
+        Items.Strings = (
+          '1-'#1081' '#1082#1091#1088#1089
+          '2-'#1081' '#1082#1091#1088#1089
+          '3-'#1081' '#1082#1091#1088#1089
+          '4-'#1081' '#1082#1091#1088#1089)
+      end
+      object ComboBox30: TComboBox
+        Left = 383
+        Top = 1152
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        ItemIndex = 0
+        TabOrder = 22
+        Text = #1044#1086#1075#1086#1074#1086#1088#1085#1072#1103' '#1086#1089#1085#1086#1074#1072
+        Items.Strings = (
+          #1044#1086#1075#1086#1074#1086#1088#1085#1072#1103' '#1086#1089#1085#1086#1074#1072
+          #1041#1102#1076#1078#1077#1090#1085#1072#1103' '#1086#1089#1085#1086#1074#1072)
+      end
+      object LabeledEdit19: TLabeledEdit
+        Left = 16
+        Top = 834
+        Width = 721
+        Height = 35
+        EditLabel.Width = 187
+        EditLabel.Height = 27
+        EditLabel.Caption = #1044#1086#1082#1091#1084#1077#1085#1090' '#1086' '#1089#1088#1077#1076#1085#1077#1084' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
+        Enabled = False
+        TabOrder = 23
+        Text = ''
+        TextHint = #1040#1090#1090#1077#1089#1090#1072#1090' '#1086' '#1089#1088#1077#1076#1085#1077#1084' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
+      end
+      object ComboBox31: TComboBox
+        Left = 16
+        Top = 1216
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        ItemIndex = 0
+        TabOrder = 24
+        Text = #1044#1086#1075#1086#1074#1086#1088#1085#1072#1103' '#1086#1089#1085#1086#1074#1072
+        TextHint = #1054#1095#1085#1072#1103' ('#1076#1085#1077#1074#1085#1072#1103')'
+        OnDropDown = ComboBox5DropDown
+        Items.Strings = (
+          #1044#1086#1075#1086#1074#1086#1088#1085#1072#1103' '#1086#1089#1085#1086#1074#1072
+          #1041#1102#1076#1078#1077#1090#1085#1072#1103' '#1086#1089#1085#1086#1074#1072)
+      end
+      object LabeledEdit20: TLabeledEdit
+        Left = 383
+        Top = 1216
+        Width = 354
+        Height = 35
+        EditLabel.Width = 218
+        EditLabel.Height = 27
+        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1089#1090#1091#1076#1077#1085#1095#1077#1089#1082#1086#1075#1086' '#1073#1080#1083#1077#1090#1072
+        Enabled = False
+        TabOrder = 25
+        Text = ''
+        TextHint = #1040'0304325352'
+      end
+      object ComboBox32: TComboBox
+        Left = 16
+        Top = 1282
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 26
+        TextHint = #1044#1072
+        Items.Strings = (
+          #1044#1072
+          #1053#1077#1090)
+      end
+      object Button5: TButton
+        Left = 383
+        Top = 1282
+        Width = 170
+        Height = 35
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1057#1090#1091#1076#1077#1085#1090#1072
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 27
+        OnClick = Button5Click
+      end
+      object ComboBox33: TComboBox
+        Left = 383
+        Top = 1026
+        Width = 354
+        Height = 35
+        Style = csDropDownList
+        Enabled = False
+        TabOrder = 28
+        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+        Items.Strings = (
+          #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+          #1052#1072#1075#1080#1089#1090#1088#1072#1090#1091#1088#1072
+          'Ph.D.')
+      end
+      object ComboBox34: TComboBox
+        Left = 16
+        Top = 1088
+        Width = 721
+        Height = 35
+        Enabled = False
+        TabOrder = 29
+        OnDropDown = ComboBox8DropDown
+      end
+      object MaskEdit1: TMaskEdit
+        Left = 383
+        Top = 256
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 30
+        Text = ''
+        TextHint = #1052#1091#1078#1089#1082#1086#1081
+      end
+      object MaskEdit2: TMaskEdit
+        Left = 16
+        Top = 772
+        Width = 702
+        Height = 35
+        Enabled = False
+        TabOrder = 31
+        Text = ''
+        TextHint = #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081
+      end
+      object MaskEdit3: TMaskEdit
+        Left = 16
+        Top = 1152
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 32
+        Text = ''
+        TextHint = '1-'#1081' '#1082#1091#1088#1089
+      end
+      object MaskEdit4: TMaskEdit
+        Left = 383
+        Top = 1152
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 33
+        Text = ''
+        TextHint = #1041#1102#1076#1078#1077#1090#1085#1072#1103' '#1086#1089#1085#1086#1074#1072
+      end
+      object MaskEdit5: TMaskEdit
+        Left = 16
+        Top = 1216
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 34
+        Text = ''
+        TextHint = #1054#1095#1085#1072#1103' ('#1076#1085#1077#1074#1085#1072#1103')'
+      end
+      object MaskEdit6: TMaskEdit
+        Left = 16
+        Top = 1282
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 35
+        Text = ''
+        TextHint = #1053#1077#1090
+      end
+      object MaskEdit7: TMaskEdit
+        Left = 383
+        Top = 1026
+        Width = 335
+        Height = 35
+        Enabled = False
+        TabOrder = 36
+        Text = ''
+        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
+      end
+      object MaskEdit8: TMaskEdit
+        Left = 16
+        Top = 1088
+        Width = 702
+        Height = 35
+        Enabled = False
+        TabOrder = 37
+        Text = ''
+        TextHint = #1055#1088#1080#1082#1083#1072#1076#1085#1072#1103' '#1052#1072#1090#1077#1084#1072#1090#1080#1082#1072' '#1080' '#1048#1085#1092#1086#1088#1084#1072#1090#1080#1082#1072
+      end
+      object Button6: TButton
+        Left = 567
+        Top = 1281
+        Width = 170
+        Height = 35
+        Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1087#1086#1083#1103
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Oswald Light'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 38
+        OnClick = Button6Click
+      end
     end
   end
   object PanelForStudents: TPanel
@@ -5173,7 +6268,7 @@ object MainWindow: TMainWindow
     end
     object ScrollBoxTimeTable: TScrollBox
       Left = 0
-      Top = -4
+      Top = 0
       Width = 805
       Height = 705
       VertScrollBar.Smooth = True
@@ -9418,1812 +10513,341 @@ object MainWindow: TMainWindow
       end
     end
   end
-  object PanelForAdmins: TPanel
-    Left = 322
-    Top = 0
-    Width = 781
-    Height = 703
+  object PanelForAdminsSidebar: TPanel
+    Left = 0
+    Top = 211
+    Width = 320
+    Height = 222
     BevelOuter = bvNone
-    TabOrder = 3
-    object ScrollBoxAddStudent: TScrollBox
-      Left = 0
-      Top = 0
-      Width = 785
-      Height = 704
+    TabOrder = 6
+    object VirtualImage134: TVirtualImage
+      Left = -6
+      Top = 22
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = LabelStudentsClick
+      OnMouseEnter = VirtualImageStudentsMouseEnter
+      OnMouseLeave = VirtualImageStudentsMouseLeave
+    end
+    object VirtualImage135: TVirtualImage
+      Left = 45
+      Top = 8
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object VirtualImage136: TVirtualImage
+      Left = 45
+      Top = 78
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object VirtualImage137: TVirtualImage
+      Left = -5
+      Top = 86
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = Label623Click
+      OnMouseEnter = VirtualImage5MouseEnter
+      OnMouseLeave = VirtualImage5MouseLeave
+    end
+    object VirtualImage138: TVirtualImage
+      Left = 47
+      Top = 146
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object VirtualImage143: TVirtualImage
+      Left = -1
+      Top = 158
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnMouseEnter = VirtualImage7MouseEnter
+      OnMouseLeave = VirtualImage7MouseLeave
+    end
+    object VirtualImage144: TVirtualImage
+      Left = 47
+      Top = 214
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object Label633: TLabel
+      Left = 58
+      Top = 96
+      Width = 224
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1055#1056#1045#1055#1054#1044#1040#1042#1040#1058#1045#1051#1071
       Font.Charset = ANSI_CHARSET
-      Font.Color = clDefault
-      Font.Height = -16
+      Font.Color = clWhite
+      Font.Height = -21
       Font.Name = 'Oswald Light'
       Font.Style = []
       ParentFont = False
+      Transparent = True
+      OnClick = Label633Click
+    end
+    object Label634: TLabel
+      Left = 73
+      Top = 164
+      Width = 192
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1057#1054#1058#1056#1059#1044#1053#1048#1050#1040
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = Label634Click
+    end
+    object Label632: TLabel
+      Left = 82
+      Top = 28
+      Width = 167
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1044#1054#1041#1040#1042#1048#1058#1068' '#1057#1058#1059#1044#1045#1053#1058#1040
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = Label632Click
+    end
+  end
+  object PanelMainMenuSidebar: TPanel
+    Left = 0
+    Top = 211
+    Width = 320
+    Height = 222
+    BevelOuter = bvNone
+    TabOrder = 7
+    object VirtualImageStudents: TVirtualImage
+      Left = -6
+      Top = 10
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = LabelStudentsClick
+      OnMouseEnter = VirtualImageStudentsMouseEnter
+      OnMouseLeave = VirtualImageStudentsMouseLeave
+    end
+    object VirtualImageThinLine1: TVirtualImage
+      Left = 37
+      Top = 0
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object VirtualImageThinLine2: TVirtualImage
+      Left = 37
+      Top = 70
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object LabelStudents: TLabel
+      Left = 118
+      Top = 17
+      Width = 93
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1057#1058#1059#1044#1045#1053#1058#1040#1052
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = LabelStudentsClick
+      OnMouseEnter = VirtualImageStudentsMouseEnter
+      OnMouseLeave = VirtualImageStudentsMouseLeave
+    end
+    object VirtualImage5: TVirtualImage
+      Left = 0
+      Top = 80
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = Label623Click
+      OnMouseEnter = VirtualImage5MouseEnter
+      OnMouseLeave = VirtualImage5MouseLeave
+    end
+    object VirtualImage6: TVirtualImage
+      Left = 39
+      Top = 138
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object Label623: TLabel
+      Left = 105
+      Top = 85
+      Width = 118
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1057#1054#1058#1056#1059#1044#1053#1048#1050#1040#1052
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = Label623Click
+      OnMouseEnter = VirtualImage5MouseEnter
+      OnMouseLeave = VirtualImage5MouseLeave
+    end
+    object VirtualImage7: TVirtualImage
+      Left = 0
+      Top = 147
+      Width = 325
+      Height = 50
+      Cursor = crHandPoint
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 2
+      ImageName = 'BlueBackground'
+      Proportional = False
+      OnClick = Label624Click
+      OnMouseEnter = VirtualImage7MouseEnter
+      OnMouseLeave = VirtualImage7MouseLeave
+    end
+    object VirtualImage8: TVirtualImage
+      Left = 39
+      Top = 206
+      Width = 252
+      Height = 2
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 10
+      ImageName = 'WhiteBackground'
+      Proportional = False
+    end
+    object Label624: TLabel
+      Left = 82
+      Top = 155
+      Width = 163
+      Height = 36
+      Cursor = crHandPoint
+      Caption = #1040#1044#1052#1048#1053#1048#1057#1058#1056#1040#1058#1054#1056#1040#1052
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -21
+      Font.Name = 'Oswald Light'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+      OnClick = Label624Click
+      OnMouseEnter = VirtualImage7MouseEnter
+    end
+  end
+  object PanelMainMenu: TPanel
+    Left = 325
+    Top = 2
+    Width = 781
+    Height = 740
+    BevelOuter = bvNone
+    TabOrder = 0
+    object VirtualImageLightSwitcher: TVirtualImage
+      Left = 1015
+      Top = 16
+      Width = 29
+      Height = 20
+      ImageCollection = ImageCollection1
+      ImageWidth = 0
+      ImageHeight = 0
+      ImageIndex = 8
+      ImageName = 'TO_DARK'
+    end
+    object ToggleSwitch1: TToggleSwitch
+      Left = 1046
+      Top = 16
+      Width = 50
+      Height = 20
+      Cursor = crHandPoint
+      ShowStateCaption = False
       TabOrder = 0
-      Visible = False
-      OnMouseWheel = ScrollBoxAddStudentMouseWheel
-      object Label601: TLabel
-        Left = 16
-        Top = 5
-        Width = 67
-        Height = 27
-        Caption = #1060#1086#1090#1086#1075#1088#1072#1092#1080#1103
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label602: TLabel
-        Left = 27
-        Top = 136
-        Width = 124
-        Height = 27
-        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1092#1086#1090#1086#1075#1088#1072#1092#1080#1102
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label603: TLabel
-        Left = 383
-        Top = 226
-        Width = 22
-        Height = 27
-        Caption = #1055#1086#1083
-        Enabled = False
-      end
-      object Label604: TLabel
-        Left = 16
-        Top = 291
-        Width = 85
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
-        Enabled = False
-      end
-      object VirtualImage142: TVirtualImage
-        Left = 176
-        Top = 221
-        Width = 561
-        Height = 2
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 2
-        ImageName = 'BlueBackground'
-        Enabled = False
-        Proportional = False
-      end
-      object Label605: TLabel
-        Left = 16
-        Top = 739
-        Width = 196
-        Height = 27
-        Caption = #1054#1090#1085#1086#1096#1077#1085#1080#1077' '#1082' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1086#1073#1103#1079#1072#1085#1085#1086#1089#1090#1080
-        Enabled = False
-      end
-      object Label606: TLabel
-        Left = 383
-        Top = 609
-        Width = 124
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-      end
-      object Image1: TImage
-        Left = 14
-        Top = 33
-        Width = 145
-        Height = 190
-        Enabled = False
-      end
-      object Label607: TLabel
-        Left = 16
-        Top = 932
-        Width = 124
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1072#1090#1090#1077#1089#1090#1072#1090#1072
-        Enabled = False
-      end
-      object Label608: TLabel
-        Left = 16
-        Top = 1125
-        Width = 27
-        Height = 27
-        Caption = #1050#1091#1088#1089
-        Enabled = False
-      end
-      object Label609: TLabel
-        Left = 383
-        Top = 1125
-        Width = 93
-        Height = 27
-        Caption = #1054#1089#1085#1086#1074#1072' '#1086#1073#1091#1095#1077#1085#1080#1103
-        Enabled = False
-      end
-      object Label610: TLabel
-        Left = 16
-        Top = 1189
-        Width = 91
-        Height = 27
-        Caption = #1060#1086#1088#1084#1072' '#1086#1073#1091#1095#1077#1085#1080#1103
-        Enabled = False
-      end
-      object Label611: TLabel
-        Left = 16
-        Top = 1253
-        Width = 137
-        Height = 27
-        Caption = #1053#1091#1078#1076#1072#1077#1090#1089#1103' '#1074' '#1086#1073#1097#1077#1078#1080#1090#1080#1080
-        Enabled = False
-      end
-      object Label612: TLabel
-        Left = 16
-        Top = 1323
-        Width = 3
-        Height = 27
-        Enabled = False
-      end
-      object Label613: TLabel
-        Left = 383
-        Top = 995
-        Width = 198
-        Height = 27
-        Caption = #1055#1086#1083#1091#1095#1072#1077#1084#1072#1103' '#1072#1082#1072#1076#1077#1084#1080#1095#1077#1089#1082#1072#1103' '#1089#1090#1077#1087#1077#1085#1100
-        Enabled = False
-      end
-      object Label614: TLabel
-        Left = 16
-        Top = 1059
-        Width = 139
-        Height = 27
-        Caption = #1053#1072#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1087#1086#1076#1075#1086#1090#1086#1074#1082#1080
-        Enabled = False
-      end
-      object VirtualImage141: TVirtualImage
-        Left = 63
-        Top = 82
-        Width = 49
-        Height = 58
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 11
-        ImageName = 'PlusSign'
-        Enabled = False
-        OnClick = VirtualImage141Click
-      end
-      object LabeledEdit1: TLabeledEdit
-        Left = 176
-        Top = 33
-        Width = 561
-        Height = 35
-        EditLabel.Width = 51
-        EditLabel.Height = 27
-        EditLabel.Caption = #1060#1072#1084#1080#1083#1080#1103
-        TabOrder = 0
-        Text = ''
-        TextHint = #1040#1073#1076#1091#1088#1072#1093#1084#1086#1085#1086#1074
-        OnChange = LabeledEdit1Change
-      end
-      object LabeledEdit2: TLabeledEdit
-        Left = 176
-        Top = 96
-        Width = 561
-        Height = 35
-        EditLabel.Width = 22
-        EditLabel.Height = 27
-        EditLabel.Caption = #1048#1084#1103
-        TabOrder = 1
-        Text = ''
-        TextHint = #1057#1091#1083#1090#1086#1085
-        OnChange = LabeledEdit1Change
-      end
-      object LabeledEdit3: TLabeledEdit
-        Left = 176
-        Top = 161
-        Width = 561
-        Height = 35
-        EditLabel.Width = 48
-        EditLabel.Height = 27
-        EditLabel.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
-        TabOrder = 2
-        Text = ''
-        TextHint = #1052#1091#1093#1072#1084#1084#1072#1076#1102#1089#1091#1092#1086#1074#1080#1095
-        OnChange = LabeledEdit1Change
-      end
-      object LabeledEdit4: TLabeledEdit
-        Left = 16
-        Top = 256
-        Width = 354
-        Height = 35
-        EditLabel.Width = 91
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1072#1094#1080#1086#1085#1072#1083#1100#1085#1086#1089#1090#1100
-        Enabled = False
-        TabOrder = 3
-        Text = ''
-        TextHint = #1058#1072#1076#1078#1080#1082' ('#1058#1072#1076#1078#1080#1095#1082#1072')'
-      end
-      object ComboBox27: TComboBox
-        Left = 383
-        Top = 256
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 4
-        OnDropDown = ComboBox1DropDown
-        Items.Strings = (
-          #1052#1091#1078#1089#1082#1086#1081
-          #1046#1077#1085#1089#1082#1080#1081)
-      end
-      object DateTimePicker4: TDateTimePicker
-        Left = 16
-        Top = 320
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 5
-      end
-      object LabeledEdit5: TLabeledEdit
-        Left = 383
-        Top = 320
-        Width = 354
-        Height = 35
-        EditLabel.Width = 98
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
-        Enabled = False
-        TabOrder = 6
-        Text = ''
-        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
-      end
-      object LabeledEdit6: TLabeledEdit
-        Left = 16
-        Top = 384
-        Width = 721
-        Height = 35
-        EditLabel.Width = 118
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1084#1077#1081#1085#1086#1077' '#1087#1086#1083#1086#1078#1077#1085#1080#1077
-        Enabled = False
-        TabOrder = 7
-        Text = ''
-        TextHint = #1046#1077#1085#1072#1090' ('#1047#1072#1084#1091#1078#1077#1084'), '#1053#1077' '#1078#1077#1085#1072#1090' ('#1053#1077' '#1079#1072#1084#1091#1078#1077#1084')'
-      end
-      object LabeledEdit7: TLabeledEdit
-        Left = 16
-        Top = 448
-        Width = 354
-        Height = 35
-        EditLabel.Width = 106
-        EditLabel.Height = 27
-        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
-        Enabled = False
-        TabOrder = 8
-        Text = ''
-        TextHint = #1059#1083#1080#1094#1072' '#1076#1088#1091#1078#1073#1099' '#1085#1072#1088#1086#1076#1086#1074', '#1076#1086#1084' 5'
-      end
-      object LabeledEdit8: TLabeledEdit
-        Left = 383
-        Top = 448
-        Width = 354
-        Height = 35
-        EditLabel.Width = 179
-        EditLabel.Height = 27
-        EditLabel.Caption = #1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1081' '#1072#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
-        Enabled = False
-        TabOrder = 9
-        Text = ''
-        TextHint = #1059#1083#1080#1094#1072' '#1059#1084#1072#1088#1072' '#1061#1072#1081#1103#1084#1072', '#1076#1086#1084' 2'
-      end
-      object LabeledEdit9: TLabeledEdit
-        Left = 16
-        Top = 515
-        Width = 721
-        Height = 35
-        EditLabel.Width = 91
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1086#1084#1077#1088' '#1090#1077#1083#1077#1092#1086#1085#1072
-        Enabled = False
-        TabOrder = 10
-        Text = ''
-        TextHint = '+992 919 - 64 - 30 - 03'
-      end
-      object LabeledEdit10: TLabeledEdit
-        Left = 16
-        Top = 576
-        Width = 721
-        Height = 35
-        EditLabel.Width = 144
-        EditLabel.Height = 27
-        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1101#1083#1077#1082#1090#1088#1086#1085#1085#1086#1081' '#1087#1086#1095#1090#1099
-        Enabled = False
-        TabOrder = 11
-        Text = ''
-        TextHint = 'adress@mail.com'
-      end
-      object LabeledEdit11: TLabeledEdit
-        Left = 16
-        Top = 642
-        Width = 354
-        Height = 35
-        EditLabel.Width = 148
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-        TabOrder = 12
-        Text = ''
-        TextHint = #1040'021407'
-      end
-      object LabeledEdit12: TLabeledEdit
-        Left = 16
-        Top = 706
-        Width = 721
-        Height = 35
-        EditLabel.Width = 131
-        EditLabel.Height = 27
-        EditLabel.Caption = #1052#1077#1089#1090#1086' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-        TabOrder = 13
-        Text = ''
-        TextHint = #1054#1052#1042#1044' '#1088'-'#1085#1072' '#1057#1086#1084#1086#1085#1080' '#1075'. '#1044#1091#1096#1072#1085#1073#1077
-      end
-      object ComboBox28: TComboBox
-        Left = 16
-        Top = 772
-        Width = 721
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 14
-        OnDropDown = ComboBox2DropDown
-        Items.Strings = (
-          #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')'
-          #1053#1077#1074#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')')
-      end
-      object LabeledEdit13: TLabeledEdit
-        Left = 16
-        Top = 898
-        Width = 354
-        Height = 35
-        EditLabel.Width = 143
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1089#1088#1077#1076#1085#1077#1081' '#1096#1082#1086#1083#1099
-        Enabled = False
-        TabOrder = 15
-        Text = ''
-        TextHint = #1052#1058#1052#1059' '#8470'1'
-      end
-      object LabeledEdit14: TLabeledEdit
-        Left = 383
-        Top = 898
-        Width = 354
-        Height = 35
-        EditLabel.Width = 212
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1089#1088#1077#1076#1085#1077#1081' '#1096#1082#1086#1083#1099
-        Enabled = False
-        TabOrder = 16
-        Text = ''
-        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
-      end
-      object DateTimePicker5: TDateTimePicker
-        Left = 383
-        Top = 642
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 17
-      end
-      object DateTimePicker6: TDateTimePicker
-        Left = 16
-        Top = 962
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 18
-      end
-      object LabeledEdit15: TLabeledEdit
-        Left = 383
-        Top = 962
-        Width = 354
-        Height = 35
-        EditLabel.Width = 148
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1072#1090#1090#1077#1089#1090#1072#1090#1072
-        Enabled = False
-        TabOrder = 19
-        Text = ''
-        TextHint = #1040'0241446436'
-      end
-      object LabeledEdit16: TLabeledEdit
-        Left = 16
-        Top = 1026
-        Width = 354
-        Height = 35
-        EditLabel.Width = 93
-        EditLabel.Height = 27
-        EditLabel.Caption = #1043#1086#1076' '#1087#1086#1089#1090#1091#1087#1083#1077#1085#1080#1103
-        Enabled = False
-        TabOrder = 20
-        Text = ''
-        TextHint = '2022'
-      end
-      object ComboBox29: TComboBox
-        Left = 16
-        Top = 1152
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 21
-        Items.Strings = (
-          '1-'#1081' '#1082#1091#1088#1089
-          '2-'#1081' '#1082#1091#1088#1089
-          '3-'#1081' '#1082#1091#1088#1089
-          '4-'#1081' '#1082#1091#1088#1089)
-      end
-      object ComboBox30: TComboBox
-        Left = 383
-        Top = 1152
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 22
-        Items.Strings = (
-          #1044#1086#1075#1086#1074#1086#1088#1085#1072#1103' '#1086#1089#1085#1086#1074#1072
-          #1041#1102#1076#1078#1077#1090#1085#1072#1103' '#1086#1089#1085#1086#1074#1072)
-      end
-      object LabeledEdit19: TLabeledEdit
-        Left = 16
-        Top = 834
-        Width = 721
-        Height = 35
-        EditLabel.Width = 187
-        EditLabel.Height = 27
-        EditLabel.Caption = #1044#1086#1082#1091#1084#1077#1085#1090' '#1086' '#1089#1088#1077#1076#1085#1077#1084' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
-        Enabled = False
-        TabOrder = 23
-        Text = ''
-        TextHint = #1040#1090#1090#1077#1089#1090#1072#1090' '#1086' '#1089#1088#1077#1076#1085#1077#1084' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
-      end
-      object ComboBox31: TComboBox
-        Left = 16
-        Top = 1216
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 24
-        TextHint = #1054#1095#1085#1072#1103' ('#1076#1085#1077#1074#1085#1072#1103')'
-        OnDropDown = ComboBox5DropDown
-        Items.Strings = (
-          #1044#1086#1075#1086#1074#1086#1088#1085#1072#1103' '#1086#1089#1085#1086#1074#1072
-          #1041#1102#1076#1078#1077#1090#1085#1072#1103' '#1086#1089#1085#1086#1074#1072)
-      end
-      object LabeledEdit20: TLabeledEdit
-        Left = 383
-        Top = 1216
-        Width = 354
-        Height = 35
-        EditLabel.Width = 218
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1089#1090#1091#1076#1077#1085#1095#1077#1089#1082#1086#1075#1086' '#1073#1080#1083#1077#1090#1072
-        Enabled = False
-        TabOrder = 25
-        Text = ''
-        TextHint = #1040'0304325352'
-      end
-      object ComboBox32: TComboBox
-        Left = 16
-        Top = 1282
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 26
-        TextHint = #1044#1072
-        Items.Strings = (
-          #1044#1072
-          #1053#1077#1090)
-      end
-      object Button5: TButton
-        Left = 383
-        Top = 1282
-        Width = 170
-        Height = 35
-        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1057#1090#1091#1076#1077#1085#1090#1072
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 27
-        OnClick = Button5Click
-      end
-      object ComboBox33: TComboBox
-        Left = 383
-        Top = 1026
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 28
-        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-        Items.Strings = (
-          #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-          #1052#1072#1075#1080#1089#1090#1088#1072#1090#1091#1088#1072
-          'Ph.D.')
-      end
-      object ComboBox34: TComboBox
-        Left = 16
-        Top = 1088
-        Width = 721
-        Height = 35
-        Enabled = False
-        TabOrder = 29
-        OnDropDown = ComboBox8DropDown
-      end
-      object MaskEdit1: TMaskEdit
-        Left = 383
-        Top = 256
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 30
-        Text = ''
-        TextHint = #1052#1091#1078#1089#1082#1086#1081
-      end
-      object MaskEdit2: TMaskEdit
-        Left = 16
-        Top = 772
-        Width = 702
-        Height = 35
-        Enabled = False
-        TabOrder = 31
-        Text = ''
-        TextHint = #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081
-      end
-      object MaskEdit3: TMaskEdit
-        Left = 16
-        Top = 1152
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 32
-        Text = ''
-        TextHint = '1-'#1081' '#1082#1091#1088#1089
-      end
-      object MaskEdit4: TMaskEdit
-        Left = 383
-        Top = 1152
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 33
-        Text = ''
-        TextHint = #1041#1102#1076#1078#1077#1090#1085#1072#1103' '#1086#1089#1085#1086#1074#1072
-      end
-      object MaskEdit5: TMaskEdit
-        Left = 16
-        Top = 1216
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 34
-        Text = ''
-        TextHint = #1054#1095#1085#1072#1103' ('#1076#1085#1077#1074#1085#1072#1103')'
-      end
-      object MaskEdit6: TMaskEdit
-        Left = 16
-        Top = 1282
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 35
-        Text = ''
-        TextHint = #1053#1077#1090
-      end
-      object MaskEdit7: TMaskEdit
-        Left = 383
-        Top = 1026
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 36
-        Text = ''
-        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-      end
-      object MaskEdit8: TMaskEdit
-        Left = 16
-        Top = 1088
-        Width = 702
-        Height = 35
-        Enabled = False
-        TabOrder = 37
-        Text = ''
-        TextHint = #1055#1088#1080#1082#1083#1072#1076#1085#1072#1103' '#1052#1072#1090#1077#1084#1072#1090#1080#1082#1072' '#1080' '#1048#1085#1092#1086#1088#1084#1072#1090#1080#1082#1072
-      end
-      object Button6: TButton
-        Left = 567
-        Top = 1281
-        Width = 170
-        Height = 35
-        Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1087#1086#1083#1103
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 38
-        OnClick = Button6Click
-      end
-    end
-    object ScrollBoxAddTeacher: TScrollBox
-      Left = 0
-      Top = 0
-      Width = 785
-      Height = 704
-      TabOrder = 1
-      Visible = False
-      object Image2: TImage
-        Left = 22
-        Top = 41
-        Width = 145
-        Height = 190
-        Enabled = False
-      end
-      object Label1: TLabel
-        Left = 24
-        Top = 13
-        Width = 67
-        Height = 27
-        Caption = #1060#1086#1090#1086#1075#1088#1072#1092#1080#1103
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label2: TLabel
-        Left = 391
-        Top = 617
-        Width = 124
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-      end
-      object Label269: TLabel
-        Left = 24
-        Top = 749
-        Width = 196
-        Height = 27
-        Caption = #1054#1090#1085#1086#1096#1077#1085#1080#1077' '#1082' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1086#1073#1103#1079#1072#1085#1085#1086#1089#1090#1080
-        Enabled = False
-      end
-      object Label3: TLabel
-        Left = 24
-        Top = 299
-        Width = 85
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
-        Enabled = False
-      end
-      object Label4: TLabel
-        Left = 391
-        Top = 234
-        Width = 22
-        Height = 27
-        Caption = #1055#1086#1083
-        Enabled = False
-      end
-      object Label574: TLabel
-        Left = 24
-        Top = 942
-        Width = 222
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
-        Enabled = False
-      end
-      object Label575: TLabel
-        Left = 23
-        Top = 1005
-        Width = 131
-        Height = 27
-        Caption = #1040#1082#1072#1076#1077#1084#1080#1095#1077#1089#1082#1072#1103' '#1089#1090#1077#1087#1077#1085#1100
-        Enabled = False
-      end
-      object VirtualImage1: TVirtualImage
-        Left = 68
-        Top = 100
-        Width = 49
-        Height = 58
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 11
-        ImageName = 'PlusSign'
-        OnClick = VirtualImage1Click
-      end
-      object VirtualImage2: TVirtualImage
-        Left = 184
-        Top = 229
-        Width = 561
-        Height = 2
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 2
-        ImageName = 'BlueBackground'
-        Proportional = False
-      end
-      object Button7: TButton
-        Left = 177
-        Top = 1091
-        Width = 200
-        Height = 50
-        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1055#1088#1077#1087#1086#1076#1072#1074#1072#1090#1077#1083#1103
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 26
-        OnClick = Button7Click
-      end
-      object Button8: TButton
-        Left = 391
-        Top = 1091
-        Width = 200
-        Height = 50
-        Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1087#1086#1083#1103
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 27
-        OnClick = Button8Click
-      end
-      object ComboBox35: TComboBox
-        Left = 391
-        Top = 264
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 4
-        OnDropDown = ComboBox1DropDown
-        Items.Strings = (
-          #1052#1091#1078#1089#1082#1086#1081
-          #1046#1077#1085#1089#1082#1080#1081)
-      end
-      object ComboBox36: TComboBox
-        Left = 24
-        Top = 782
-        Width = 721
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 16
-        OnDropDown = ComboBox2DropDown
-        Items.Strings = (
-          #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')'
-          #1053#1077#1074#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')')
-      end
-      object ComboBox37: TComboBox
-        Left = 23
-        Top = 1035
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 25
-        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-        Items.Strings = (
-          #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-          #1052#1072#1075#1080#1089#1090#1088#1072#1090#1091#1088#1072
-          'Ph.D.')
-      end
-      object DateTimePicker7: TDateTimePicker
-        Left = 24
-        Top = 328
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 7
-      end
-      object DateTimePicker8: TDateTimePicker
-        Left = 391
-        Top = 650
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 14
-      end
-      object DateTimePicker9: TDateTimePicker
-        Left = 24
-        Top = 972
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 22
-      end
-      object LabeledEdit17: TLabeledEdit
-        Left = 184
-        Top = 41
-        Width = 561
-        Height = 35
-        EditLabel.Width = 51
-        EditLabel.Height = 27
-        EditLabel.Caption = #1060#1072#1084#1080#1083#1080#1103
-        TabOrder = 0
-        Text = ''
-        TextHint = #1040#1073#1076#1091#1088#1072#1093#1084#1086#1085#1086#1074
-        OnChange = LabeledEdit17Change
-      end
-      object LabeledEdit18: TLabeledEdit
-        Left = 184
-        Top = 104
-        Width = 561
-        Height = 35
-        EditLabel.Width = 22
-        EditLabel.Height = 27
-        EditLabel.Caption = #1048#1084#1103
-        TabOrder = 1
-        Text = ''
-        TextHint = #1057#1091#1083#1090#1086#1085
-        OnChange = LabeledEdit17Change
-      end
-      object LabeledEdit21: TLabeledEdit
-        Left = 184
-        Top = 169
-        Width = 521
-        Height = 35
-        EditLabel.Width = 48
-        EditLabel.Height = 27
-        EditLabel.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
-        TabOrder = 2
-        Text = ''
-        TextHint = #1052#1091#1093#1072#1084#1084#1072#1076#1102#1089#1091#1092#1086#1074#1080#1095
-        OnChange = LabeledEdit17Change
-      end
-      object LabeledEdit22: TLabeledEdit
-        Left = 24
-        Top = 264
-        Width = 354
-        Height = 35
-        EditLabel.Width = 91
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1072#1094#1080#1086#1085#1072#1083#1100#1085#1086#1089#1090#1100
-        Enabled = False
-        TabOrder = 3
-        Text = ''
-        TextHint = #1058#1072#1076#1078#1080#1082' ('#1058#1072#1076#1078#1080#1095#1082#1072')'
-      end
-      object LabeledEdit23: TLabeledEdit
-        Left = 391
-        Top = 328
-        Width = 354
-        Height = 35
-        EditLabel.Width = 98
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
-        Enabled = False
-        TabOrder = 6
-        Text = ''
-        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
-      end
-      object LabeledEdit24: TLabeledEdit
-        Left = 24
-        Top = 392
-        Width = 721
-        Height = 35
-        EditLabel.Width = 118
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1084#1077#1081#1085#1086#1077' '#1087#1086#1083#1086#1078#1077#1085#1080#1077
-        Enabled = False
-        TabOrder = 8
-        Text = ''
-        TextHint = #1046#1077#1085#1072#1090' ('#1047#1072#1084#1091#1078#1077#1084'), '#1053#1077' '#1078#1077#1085#1072#1090' ('#1053#1077' '#1079#1072#1084#1091#1078#1077#1084')'
-      end
-      object LabeledEdit25: TLabeledEdit
-        Left = 24
-        Top = 456
-        Width = 354
-        Height = 35
-        EditLabel.Width = 106
-        EditLabel.Height = 27
-        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
-        Enabled = False
-        TabOrder = 9
-        Text = ''
-        TextHint = #1059#1083#1080#1094#1072' '#1076#1088#1091#1078#1073#1099' '#1085#1072#1088#1086#1076#1086#1074', '#1076#1086#1084' 5'
-      end
-      object LabeledEdit26: TLabeledEdit
-        Left = 391
-        Top = 456
-        Width = 354
-        Height = 35
-        EditLabel.Width = 179
-        EditLabel.Height = 27
-        EditLabel.Caption = #1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1081' '#1072#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
-        Enabled = False
-        TabOrder = 10
-        Text = ''
-        TextHint = #1059#1083#1080#1094#1072' '#1059#1084#1072#1088#1072' '#1061#1072#1081#1103#1084#1072', '#1076#1086#1084' 2'
-      end
-      object LabeledEdit27: TLabeledEdit
-        Left = 24
-        Top = 523
-        Width = 721
-        Height = 35
-        EditLabel.Width = 91
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1086#1084#1077#1088' '#1090#1077#1083#1077#1092#1086#1085#1072
-        Enabled = False
-        TabOrder = 11
-        Text = ''
-        TextHint = '+992 919 - 64 - 30 - 03'
-      end
-      object LabeledEdit28: TLabeledEdit
-        Left = 24
-        Top = 584
-        Width = 721
-        Height = 35
-        EditLabel.Width = 144
-        EditLabel.Height = 27
-        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1101#1083#1077#1082#1090#1088#1086#1085#1085#1086#1081' '#1087#1086#1095#1090#1099
-        Enabled = False
-        TabOrder = 12
-        Text = ''
-        TextHint = 'adress@mail.com'
-      end
-      object LabeledEdit29: TLabeledEdit
-        Left = 24
-        Top = 650
-        Width = 354
-        Height = 35
-        EditLabel.Width = 148
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-        TabOrder = 13
-        Text = ''
-        TextHint = #1040'021407'
-      end
-      object LabeledEdit30: TLabeledEdit
-        Left = 24
-        Top = 716
-        Width = 721
-        Height = 35
-        EditLabel.Width = 131
-        EditLabel.Height = 27
-        EditLabel.Caption = #1052#1077#1089#1090#1086' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-        TabOrder = 15
-        Text = ''
-        TextHint = #1054#1052#1042#1044' '#1088'-'#1085#1072' '#1057#1086#1084#1086#1085#1080' '#1075'. '#1044#1091#1096#1072#1085#1073#1077
-      end
-      object LabeledEdit31: TLabeledEdit
-        Left = 24
-        Top = 841
-        Width = 721
-        Height = 35
-        EditLabel.Width = 204
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
-        Enabled = False
-        TabOrder = 18
-        Text = ''
-        TextHint = #1044#1080#1087#1083#1086#1084' '#1073#1072#1082#1072#1083#1072#1074#1088#1072', '#1076#1080#1087#1083#1086#1084' '#1084#1072#1075#1080#1089#1090#1088#1072
-      end
-      object LabeledEdit32: TLabeledEdit
-        Left = 24
-        Top = 908
-        Width = 354
-        Height = 35
-        EditLabel.Width = 166
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1091#1095#1077#1073#1085#1086#1075#1086' '#1079#1072#1074#1077#1076#1077#1085#1080#1103
-        Enabled = False
-        TabOrder = 19
-        Text = ''
-        TextHint = #1052#1058#1052#1059' '#8470'1'
-      end
-      object LabeledEdit33: TLabeledEdit
-        Left = 391
-        Top = 908
-        Width = 354
-        Height = 35
-        EditLabel.Width = 235
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1091#1095#1077#1073#1085#1086#1075#1086' '#1079#1072#1074#1077#1076#1077#1085#1080#1103
-        Enabled = False
-        TabOrder = 20
-        Text = ''
-        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
-      end
-      object LabeledEdit34: TLabeledEdit
-        Left = 391
-        Top = 972
-        Width = 354
-        Height = 35
-        EditLabel.Width = 246
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
-        Enabled = False
-        TabOrder = 21
-        Text = ''
-        TextHint = #1040'0241446436'
-      end
-      object LabeledEdit35: TLabeledEdit
-        Left = 391
-        Top = 1035
-        Width = 354
-        Height = 35
-        EditLabel.Width = 84
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-        Enabled = False
-        TabOrder = 23
-        Text = ''
-        TextHint = '2022'
-      end
-      object MaskEdit10: TMaskEdit
-        Left = 24
-        Top = 782
-        Width = 702
-        Height = 35
-        Enabled = False
-        TabOrder = 17
-        Text = ''
-        TextHint = #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081
-      end
-      object MaskEdit11: TMaskEdit
-        Left = 23
-        Top = 1035
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 24
-        Text = ''
-        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-      end
-      object MaskEdit9: TMaskEdit
-        Left = 391
-        Top = 264
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 5
-        Text = ''
-        TextHint = #1052#1091#1078#1089#1082#1086#1081
-      end
-      object Memo1: TMemo
-        Left = 150
-        Top = 1165
-        Width = 500
-        Height = 0
-        Lines.Strings = (
-          'Memo1')
-        TabOrder = 28
-      end
-    end
-    object ScrollBoxAddStaff: TScrollBox
-      Left = 0
-      Top = 0
-      Width = 785
-      Height = 704
-      TabOrder = 2
-      Visible = False
-      object Image3: TImage
-        Left = 22
-        Top = 41
-        Width = 145
-        Height = 190
-        Enabled = False
-      end
-      object Label615: TLabel
-        Left = 24
-        Top = 13
-        Width = 67
-        Height = 27
-        Caption = #1060#1086#1090#1086#1075#1088#1072#1092#1080#1103
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -16
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label616: TLabel
-        Left = 391
-        Top = 617
-        Width = 124
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-      end
-      object Label617: TLabel
-        Left = 24
-        Top = 749
-        Width = 196
-        Height = 27
-        Caption = #1054#1090#1085#1086#1096#1077#1085#1080#1077' '#1082' '#1074#1086#1080#1085#1089#1082#1086#1081' '#1086#1073#1103#1079#1072#1085#1085#1086#1089#1090#1080
-        Enabled = False
-      end
-      object Label618: TLabel
-        Left = 24
-        Top = 299
-        Width = 85
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
-        Enabled = False
-      end
-      object Label619: TLabel
-        Left = 391
-        Top = 234
-        Width = 22
-        Height = 27
-        Caption = #1055#1086#1083
-        Enabled = False
-      end
-      object Label620: TLabel
-        Left = 24
-        Top = 942
-        Width = 222
-        Height = 27
-        Caption = #1044#1072#1090#1072' '#1074#1099#1076#1072#1095#1080' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
-        Enabled = False
-      end
-      object Label621: TLabel
-        Left = 23
-        Top = 1005
-        Width = 131
-        Height = 27
-        Caption = #1040#1082#1072#1076#1077#1084#1080#1095#1077#1089#1082#1072#1103' '#1089#1090#1077#1087#1077#1085#1100
-        Enabled = False
-      end
-      object Label622: TLabel
-        Left = 23
-        Top = 1069
-        Width = 102
-        Height = 27
-        Caption = #1054#1090#1076#1077#1083' '#1091#1087#1088#1072#1074#1083#1077#1085#1080#1103
-        Enabled = False
-      end
-      object VirtualImage3: TVirtualImage
-        Left = 71
-        Top = 90
-        Width = 49
-        Height = 58
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 11
-        ImageName = 'PlusSign'
-        OnClick = VirtualImage3Click
-      end
-      object VirtualImage4: TVirtualImage
-        Left = 184
-        Top = 229
-        Width = 561
-        Height = 2
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 2
-        ImageName = 'BlueBackground'
-        Proportional = False
-      end
-      object Button10: TButton
-        Left = 391
-        Top = 1158
-        Width = 200
-        Height = 50
-        Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1087#1086#1083#1103
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 27
-        OnClick = Button10Click
-      end
-      object Button9: TButton
-        Left = 177
-        Top = 1158
-        Width = 200
-        Height = 50
-        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1057#1086#1090#1088#1091#1076#1085#1080#1082#1072
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 26
-        OnClick = Button9Click
-      end
-      object ComboBox38: TComboBox
-        Left = 391
-        Top = 264
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 4
-        OnDropDown = ComboBox1DropDown
-        Items.Strings = (
-          #1052#1091#1078#1089#1082#1086#1081
-          #1046#1077#1085#1089#1082#1080#1081)
-      end
-      object ComboBox39: TComboBox
-        Left = 24
-        Top = 782
-        Width = 721
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 16
-        OnDropDown = ComboBox2DropDown
-        Items.Strings = (
-          #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')'
-          #1053#1077#1074#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081'('#1072#1103')')
-      end
-      object ComboBox40: TComboBox
-        Left = 23
-        Top = 1035
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 25
-        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-        Items.Strings = (
-          #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-          #1052#1072#1075#1080#1089#1090#1088#1072#1090#1091#1088#1072
-          'Ph.D.')
-      end
-      object ComboBox41: TComboBox
-        Left = 23
-        Top = 1097
-        Width = 354
-        Height = 35
-        Style = csDropDownList
-        Enabled = False
-        TabOrder = 30
-        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-        Items.Strings = (
-          #1040#1076#1084#1080#1085#1080#1089#1090#1088#1072#1094#1080#1103
-          #1041#1091#1093#1075#1072#1083#1090#1077#1088#1080#1103
-          #1054#1090#1076#1077#1083' '#1082#1072#1076#1088#1086#1074
-          #1054#1090#1076#1077#1083' '#1085#1072#1091#1082#1080)
-      end
-      object DateTimePicker10: TDateTimePicker
-        Left = 24
-        Top = 328
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 7
-      end
-      object DateTimePicker11: TDateTimePicker
-        Left = 391
-        Top = 650
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 14
-      end
-      object DateTimePicker12: TDateTimePicker
-        Left = 24
-        Top = 972
-        Width = 354
-        Height = 35
-        Date = 45159.000000000000000000
-        Time = 0.474727916669508000
-        Enabled = False
-        TabOrder = 22
-      end
-      object LabeledEdit36: TLabeledEdit
-        Left = 184
-        Top = 41
-        Width = 561
-        Height = 35
-        EditLabel.Width = 51
-        EditLabel.Height = 27
-        EditLabel.Caption = #1060#1072#1084#1080#1083#1080#1103
-        TabOrder = 0
-        Text = ''
-        TextHint = #1040#1073#1076#1091#1088#1072#1093#1084#1086#1085#1086#1074
-        OnChange = LabeledEdit36Change
-      end
-      object LabeledEdit37: TLabeledEdit
-        Left = 184
-        Top = 104
-        Width = 561
-        Height = 35
-        EditLabel.Width = 22
-        EditLabel.Height = 27
-        EditLabel.Caption = #1048#1084#1103
-        TabOrder = 1
-        Text = ''
-        TextHint = #1057#1091#1083#1090#1086#1085
-      end
-      object LabeledEdit38: TLabeledEdit
-        Left = 184
-        Top = 169
-        Width = 561
-        Height = 35
-        EditLabel.Width = 48
-        EditLabel.Height = 27
-        EditLabel.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
-        TabOrder = 2
-        Text = ''
-        TextHint = #1052#1091#1093#1072#1084#1084#1072#1076#1102#1089#1091#1092#1086#1074#1080#1095
-      end
-      object LabeledEdit39: TLabeledEdit
-        Left = 24
-        Top = 264
-        Width = 354
-        Height = 35
-        EditLabel.Width = 91
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1072#1094#1080#1086#1085#1072#1083#1100#1085#1086#1089#1090#1100
-        Enabled = False
-        TabOrder = 3
-        Text = ''
-        TextHint = #1058#1072#1076#1078#1080#1082' ('#1058#1072#1076#1078#1080#1095#1082#1072')'
-      end
-      object LabeledEdit40: TLabeledEdit
-        Left = 391
-        Top = 328
-        Width = 354
-        Height = 35
-        EditLabel.Width = 98
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
-        Enabled = False
-        TabOrder = 6
-        Text = ''
-        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
-      end
-      object LabeledEdit41: TLabeledEdit
-        Left = 24
-        Top = 392
-        Width = 721
-        Height = 35
-        EditLabel.Width = 118
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1084#1077#1081#1085#1086#1077' '#1087#1086#1083#1086#1078#1077#1085#1080#1077
-        Enabled = False
-        TabOrder = 8
-        Text = ''
-        TextHint = #1046#1077#1085#1072#1090' ('#1047#1072#1084#1091#1078#1077#1084'), '#1053#1077' '#1078#1077#1085#1072#1090' ('#1053#1077' '#1079#1072#1084#1091#1078#1077#1084')'
-      end
-      object LabeledEdit42: TLabeledEdit
-        Left = 24
-        Top = 456
-        Width = 354
-        Height = 35
-        EditLabel.Width = 106
-        EditLabel.Height = 27
-        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
-        Enabled = False
-        TabOrder = 9
-        Text = ''
-        TextHint = #1059#1083#1080#1094#1072' '#1076#1088#1091#1078#1073#1099' '#1085#1072#1088#1086#1076#1086#1074', '#1076#1086#1084' 5'
-      end
-      object LabeledEdit43: TLabeledEdit
-        Left = 391
-        Top = 456
-        Width = 354
-        Height = 35
-        EditLabel.Width = 179
-        EditLabel.Height = 27
-        EditLabel.Caption = #1060#1072#1082#1090#1080#1095#1077#1089#1082#1080#1081' '#1072#1076#1088#1077#1089' '#1087#1088#1086#1078#1080#1074#1072#1085#1080#1103
-        Enabled = False
-        TabOrder = 10
-        Text = ''
-        TextHint = #1059#1083#1080#1094#1072' '#1059#1084#1072#1088#1072' '#1061#1072#1081#1103#1084#1072', '#1076#1086#1084' 2'
-      end
-      object LabeledEdit44: TLabeledEdit
-        Left = 24
-        Top = 523
-        Width = 721
-        Height = 35
-        EditLabel.Width = 91
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1086#1084#1077#1088' '#1090#1077#1083#1077#1092#1086#1085#1072
-        Enabled = False
-        TabOrder = 11
-        Text = ''
-        TextHint = '+992 919 - 64 - 30 - 03'
-      end
-      object LabeledEdit45: TLabeledEdit
-        Left = 24
-        Top = 584
-        Width = 721
-        Height = 35
-        EditLabel.Width = 144
-        EditLabel.Height = 27
-        EditLabel.Caption = #1040#1076#1088#1077#1089' '#1101#1083#1077#1082#1090#1088#1086#1085#1085#1086#1081' '#1087#1086#1095#1090#1099
-        Enabled = False
-        TabOrder = 12
-        Text = ''
-        TextHint = 'adress@mail.com'
-      end
-      object LabeledEdit46: TLabeledEdit
-        Left = 24
-        Top = 650
-        Width = 354
-        Height = 35
-        EditLabel.Width = 148
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-        TabOrder = 13
-        Text = ''
-        TextHint = #1040'021407'
-      end
-      object LabeledEdit47: TLabeledEdit
-        Left = 24
-        Top = 716
-        Width = 721
-        Height = 35
-        EditLabel.Width = 131
-        EditLabel.Height = 27
-        EditLabel.Caption = #1052#1077#1089#1090#1086' '#1074#1099#1076#1072#1095#1080' '#1087#1072#1089#1087#1086#1088#1090#1072
-        Enabled = False
-        TabOrder = 15
-        Text = ''
-        TextHint = #1054#1052#1042#1044' '#1088'-'#1085#1072' '#1057#1086#1084#1086#1085#1080' '#1075'. '#1044#1091#1096#1072#1085#1073#1077
-      end
-      object LabeledEdit48: TLabeledEdit
-        Left = 24
-        Top = 841
-        Width = 721
-        Height = 35
-        EditLabel.Width = 204
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
-        Enabled = False
-        TabOrder = 18
-        Text = ''
-        TextHint = #1044#1080#1087#1083#1086#1084' '#1073#1072#1082#1072#1083#1072#1074#1088#1072', '#1076#1080#1087#1083#1086#1084' '#1084#1072#1075#1080#1089#1090#1088#1072
-      end
-      object LabeledEdit49: TLabeledEdit
-        Left = 24
-        Top = 908
-        Width = 354
-        Height = 35
-        EditLabel.Width = 166
-        EditLabel.Height = 27
-        EditLabel.Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1091#1095#1077#1073#1085#1086#1075#1086' '#1079#1072#1074#1077#1076#1077#1085#1080#1103
-        Enabled = False
-        TabOrder = 19
-        Text = ''
-        TextHint = #1052#1058#1052#1059' '#8470'1'
-      end
-      object LabeledEdit50: TLabeledEdit
-        Left = 391
-        Top = 908
-        Width = 354
-        Height = 35
-        EditLabel.Width = 235
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1090#1088#1072#1085#1072' '#1088#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1103' '#1091#1095#1077#1073#1085#1086#1075#1086' '#1079#1072#1074#1077#1076#1077#1085#1080#1103
-        Enabled = False
-        TabOrder = 20
-        Text = ''
-        TextHint = #1056#1077#1089#1087#1091#1073#1083#1080#1082#1072' '#1058#1072#1076#1078#1080#1082#1080#1089#1090#1072#1085
-      end
-      object LabeledEdit51: TLabeledEdit
-        Left = 391
-        Top = 972
-        Width = 354
-        Height = 35
-        EditLabel.Width = 246
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1077#1088#1080#1081#1085#1099#1081' '#1085#1086#1084#1077#1088' '#1076#1086#1082#1091#1084#1077#1085#1090#1072' '#1086#1073' '#1086#1073#1088#1072#1079#1086#1074#1072#1085#1080#1080
-        Enabled = False
-        TabOrder = 21
-        Text = ''
-        TextHint = #1040'0241446436'
-      end
-      object LabeledEdit52: TLabeledEdit
-        Left = 391
-        Top = 1035
-        Width = 354
-        Height = 35
-        EditLabel.Width = 84
-        EditLabel.Height = 27
-        EditLabel.Caption = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
-        Enabled = False
-        TabOrder = 23
-        Text = ''
-        TextHint = '2022'
-      end
-      object MaskEdit12: TMaskEdit
-        Left = 24
-        Top = 782
-        Width = 702
-        Height = 35
-        Enabled = False
-        TabOrder = 17
-        Text = ''
-        TextHint = #1042#1086#1077#1085#1085#1086#1086#1073#1103#1079#1072#1085#1085#1099#1081
-      end
-      object MaskEdit13: TMaskEdit
-        Left = 23
-        Top = 1035
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 24
-        Text = ''
-        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-      end
-      object MaskEdit14: TMaskEdit
-        Left = 391
-        Top = 264
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 5
-        Text = ''
-        TextHint = #1052#1091#1078#1089#1082#1086#1081
-      end
-      object MaskEdit15: TMaskEdit
-        Left = 23
-        Top = 1097
-        Width = 335
-        Height = 35
-        Enabled = False
-        TabOrder = 29
-        Text = ''
-        TextHint = #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-      end
-      object Memo2: TMemo
-        Left = 150
-        Top = 1229
-        Width = 500
-        Height = 0
-        Lines.Strings = (
-          'Memo1')
-        TabOrder = 28
-      end
-      object LabeledEdit53: TLabeledEdit
-        Left = 391
-        Top = 1096
-        Width = 354
-        Height = 35
-        EditLabel.Width = 61
-        EditLabel.Height = 27
-        EditLabel.Caption = #1044#1086#1083#1078#1085#1086#1089#1090#1100
-        Enabled = False
-        TabOrder = 31
-        Text = ''
-        TextHint = '2022'
-      end
-    end
-    object ScrollBoxAttendance: TScrollBox
-      Left = 0
-      Top = 0
-      Width = 785
-      Height = 704
-      TabOrder = 3
-      object Label636: TLabel
-        Left = 40
-        Top = 11
-        Width = 285
-        Height = 54
-        Caption = #1055#1086#1089#1077#1097#1072#1077#1084#1086#1089#1090#1100' '#1089#1090#1091#1076#1077#1085#1090#1086#1074
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -32
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object VirtualImage148: TVirtualImage
-        Left = 40
-        Top = 63
-        Width = 700
-        Height = 2
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 2
-        ImageName = 'BlueBackground'
-        Proportional = False
-      end
-      object VirtualImage149: TVirtualImage
-        Left = 40
-        Top = 279
-        Width = 700
-        Height = 2
-        ImageCollection = ImageCollection1
-        ImageWidth = 0
-        ImageHeight = 0
-        ImageIndex = 2
-        ImageName = 'BlueBackground'
-        Proportional = False
-      end
-      object Label637: TLabel
-        Left = 80
-        Top = 82
-        Width = 74
-        Height = 32
-        Caption = #1060#1072#1082#1091#1083#1100#1090#1077#1090':'
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label638: TLabel
-        Left = 59
-        Top = 131
-        Width = 94
-        Height = 32
-        Caption = #1053#1072#1087#1088#1072#1074#1083#1077#1085#1080#1077':'
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label639: TLabel
-        Left = 118
-        Top = 177
-        Width = 35
-        Height = 32
-        Caption = #1050#1091#1088#1089':'
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object Label640: TLabel
-        Left = 105
-        Top = 223
-        Width = 47
-        Height = 32
-        Caption = #1052#1077#1089#1103#1094':'
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-      end
-      object ComboBox42: TComboBox
-        Left = 173
-        Top = 82
-        Width = 550
-        Height = 40
-        Cursor = crHandPoint
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 0
-        Text = #1045#1089#1090#1077#1089#1090#1074#1077#1085#1085#1086#1085#1072#1091#1095#1085#1099#1081
-        OnDropDown = ComboBox1DropDown
-        OnSelect = ComboBox1Select
-      end
-      object ComboBox43: TComboBox
-        Left = 173
-        Top = 128
-        Width = 550
-        Height = 40
-        Cursor = crHandPoint
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 1
-        Text = #1055#1088#1080#1082#1083#1072#1076#1085#1072#1103' '#1052#1072#1090#1077#1084#1072#1090#1080#1082#1072' '#1080' '#1048#1085#1092#1086#1088#1084#1072#1090#1080#1082#1072
-        OnDropDown = ComboBox2DropDown
-        OnSelect = ComboBox2Select
-      end
-      object ComboBox44: TComboBox
-        Left = 173
-        Top = 174
-        Width = 550
-        Height = 40
-        Cursor = crHandPoint
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ItemIndex = 0
-        ParentFont = False
-        TabOrder = 2
-        Text = '1-'#1081' '#1082#1091#1088#1089
-        OnSelect = ComboBox2Select
-        Items.Strings = (
-          '1-'#1081' '#1082#1091#1088#1089
-          '2-'#1081' '#1082#1091#1088#1089
-          '3-'#1081' '#1082#1091#1088#1089
-          '4-'#1081' '#1082#1091#1088#1089)
-      end
-      object ComboBox45: TComboBox
-        Left = 173
-        Top = 220
-        Width = 550
-        Height = 40
-        Cursor = crHandPoint
-        Font.Charset = RUSSIAN_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Oswald Light'
-        Font.Style = []
-        ParentFont = False
-        TabOrder = 3
-        Text = #1042#1089#1103' '#1085#1077#1076#1077#1083#1103
-        OnSelect = ComboBox2Select
-        Items.Strings = (
-          #1071#1085#1074#1072#1088#1100
-          #1060#1077#1074#1088#1072#1083#1100
-          #1052#1072#1088#1090
-          #1040#1087#1088#1077#1083#1100#11
-          #1052#1072#1081
-          #1048#1102#1085#1100
-          #1048#1102#1083#1100
-          #1040#1074#1075#1091#1089#1090
-          #1057#1077#1085#1090#1103#1073#1088#1100
-          #1054#1082#1090#1103#1073#1088#1100
-          #1053#1086#1103#1073#1088#1100
-          #1044#1077#1082#1072#1073#1088#1100)
-      end
+      OnClick = ToggleSwitch1Click
     end
   end
   object ImageCollection1: TImageCollection
@@ -20535,7 +20159,7 @@ object MainWindow: TMainWindow
           end>
       end
       item
-        Name = 'WHITE-PNG-ARROW'
+        Name = 'WhiteArrow'
         SourceImages = <
           item
             Image.Data = {
@@ -42955,6 +42579,1235 @@ object MainWindow: TMainWindow
               00A804740000000000000000000000000000004E400700000000000000000000
               00000000A012D001000000000000000000000000000038011D00000000000000
               0000000000000080AA06EF5F7541E36CC1340000000049454E44AE426082}
+          end>
+      end
+      item
+        Name = 'BlueArrow'
+        SourceImages = <
+          item
+            Image.Data = {
+              89504E470D0A1A0A0000000D49484452000001F4000001F40806000000CBD6DF
+              8A000000097048597300000B1300000B1301009A9C1800000B7169545874584D
+              4C3A636F6D2E61646F62652E786D7000000000003C3F787061636B6574206265
+              67696E3D22EFBBBF222069643D2257354D304D7043656869487A7265537A4E54
+              637A6B633964223F3E203C783A786D706D65746120786D6C6E733A783D226164
+              6F62653A6E733A6D6574612F2220783A786D70746B3D2241646F626520584D50
+              20436F726520352E362D633134352037392E3136333439392C20323031382F30
+              382F31332D31363A34303A32322020202020202020223E203C7264663A524446
+              20786D6C6E733A7264663D22687474703A2F2F7777772E77332E6F72672F3139
+              39392F30322F32322D7264662D73796E7461782D6E7323223E203C7264663A44
+              65736372697074696F6E207264663A61626F75743D222220786D6C6E733A786D
+              703D22687474703A2F2F6E732E61646F62652E636F6D2F7861702F312E302F22
+              20786D6C6E733A64633D22687474703A2F2F7075726C2E6F72672F64632F656C
+              656D656E74732F312E312F2220786D6C6E733A786D704D4D3D22687474703A2F
+              2F6E732E61646F62652E636F6D2F7861702F312E302F6D6D2F2220786D6C6E73
+              3A73744576743D22687474703A2F2F6E732E61646F62652E636F6D2F7861702F
+              312E302F73547970652F5265736F757263654576656E74232220786D6C6E733A
+              73745265663D22687474703A2F2F6E732E61646F62652E636F6D2F7861702F31
+              2E302F73547970652F5265736F75726365526566232220786D6C6E733A70686F
+              746F73686F703D22687474703A2F2F6E732E61646F62652E636F6D2F70686F74
+              6F73686F702F312E302F2220786D6C6E733A746966663D22687474703A2F2F6E
+              732E61646F62652E636F6D2F746966662F312E302F2220786D6C6E733A657869
+              663D22687474703A2F2F6E732E61646F62652E636F6D2F657869662F312E302F
+              2220786D703A43726561746F72546F6F6C3D2241646F62652050686F746F7368
+              6F702043432032303139202857696E646F7773292220786D703A437265617465
+              446174653D22323032332D30382D32325431313A30363A35382B30353A303022
+              20786D703A4D65746164617461446174653D22323032332D30382D3238543134
+              3A34303A32362B30353A30302220786D703A4D6F64696679446174653D223230
+              32332D30382D32385431343A34303A32362B30353A3030222064633A666F726D
+              61743D22696D6167652F706E672220786D704D4D3A496E7374616E636549443D
+              22786D702E6969643A32376265643430652D366462382D373034612D61386362
+              2D3238666430356361393537352220786D704D4D3A446F63756D656E7449443D
+              2261646F62653A646F6369643A70686F746F73686F703A34626265366230302D
+              303933652D306634302D623266642D3032373564363234343662332220786D70
+              4D4D3A4F726967696E616C446F63756D656E7449443D22786D702E6469643A37
+              336637356166372D333265392D376134332D383933652D336433303037336565
+              323237222070686F746F73686F703A436F6C6F724D6F64653D2233222070686F
+              746F73686F703A49434350726F66696C653D2273524742204945433631393636
+              2D322E312220746966663A4F7269656E746174696F6E3D22312220746966663A
+              585265736F6C7574696F6E3D223732303030302F31303030302220746966663A
+              595265736F6C7574696F6E3D223732303030302F31303030302220746966663A
+              5265736F6C7574696F6E556E69743D22322220657869663A436F6C6F72537061
+              63653D22312220657869663A506978656C5844696D656E73696F6E3D22353030
+              2220657869663A506978656C5944696D656E73696F6E3D22353030223E203C78
+              6D704D4D3A486973746F72793E203C7264663A5365713E203C7264663A6C6920
+              73744576743A616374696F6E3D2263726561746564222073744576743A696E73
+              74616E636549443D22786D702E6969643A37336637356166372D333265392D37
+              6134332D383933652D336433303037336565323237222073744576743A776865
+              6E3D22323032332D30382D32325431313A30363A35382B30353A303022207374
+              4576743A736F6674776172654167656E743D2241646F62652050686F746F7368
+              6F702043432032303139202857696E646F777329222F3E203C7264663A6C6920
+              73744576743A616374696F6E3D227361766564222073744576743A696E737461
+              6E636549443D22786D702E6969643A36316130356238312D393835622D613434
+              352D626632302D633931356535623832663265222073744576743A7768656E3D
+              22323032332D30382D32325431313A32323A30372B30353A3030222073744576
+              743A736F6674776172654167656E743D2241646F62652050686F746F73686F70
+              2043432032303139202857696E646F777329222073744576743A6368616E6765
+              643D222F222F3E203C7264663A6C692073744576743A616374696F6E3D227361
+              766564222073744576743A696E7374616E636549443D22786D702E6969643A62
+              663031396566662D373662612D333934322D623830612D303665353334306634
+              373735222073744576743A7768656E3D22323032332D30382D32385431343A34
+              303A32362B30353A3030222073744576743A736F6674776172654167656E743D
+              2241646F62652050686F746F73686F702043432032303139202857696E646F77
+              7329222073744576743A6368616E6765643D222F222F3E203C7264663A6C6920
+              73744576743A616374696F6E3D22636F6E766572746564222073744576743A70
+              6172616D65746572733D2266726F6D206170706C69636174696F6E2F766E642E
+              61646F62652E70686F746F73686F7020746F20696D6167652F706E67222F3E20
+              3C7264663A6C692073744576743A616374696F6E3D2264657269766564222073
+              744576743A706172616D65746572733D22636F6E7665727465642066726F6D20
+              6170706C69636174696F6E2F766E642E61646F62652E70686F746F73686F7020
+              746F20696D6167652F706E67222F3E203C7264663A6C692073744576743A6163
+              74696F6E3D227361766564222073744576743A696E7374616E636549443D2278
+              6D702E6969643A32376265643430652D366462382D373034612D613863622D32
+              3866643035636139353735222073744576743A7768656E3D22323032332D3038
+              2D32385431343A34303A32362B30353A3030222073744576743A736F66747761
+              72654167656E743D2241646F62652050686F746F73686F702043432032303139
+              202857696E646F777329222073744576743A6368616E6765643D222F222F3E20
+              3C2F7264663A5365713E203C2F786D704D4D3A486973746F72793E203C786D70
+              4D4D3A4465726976656446726F6D2073745265663A696E7374616E636549443D
+              22786D702E6969643A62663031396566662D373662612D333934322D62383061
+              2D303665353334306634373735222073745265663A646F63756D656E7449443D
+              2261646F62653A646F6369643A70686F746F73686F703A63643664323164382D
+              306266642D333334662D616330622D3332346262346435333231642220737452
+              65663A6F726967696E616C446F63756D656E7449443D22786D702E6469643A37
+              336637356166372D333265392D376134332D383933652D336433303037336565
+              323237222F3E203C70686F746F73686F703A446F63756D656E74416E63657374
+              6F72733E203C7264663A4261673E203C7264663A6C693E786D702E6469643A33
+              373845393239354641423531314542393534344431333130463133334236383C
+              2F7264663A6C693E203C7264663A6C693E786D702E6469643A33636537346237
+              652D343962322D333434382D383862392D6134363966383038383566323C2F72
+              64663A6C693E203C2F7264663A4261673E203C2F70686F746F73686F703A446F
+              63756D656E74416E636573746F72733E203C2F7264663A446573637269707469
+              6F6E3E203C2F7264663A5244463E203C2F783A786D706D6574613E203C3F7870
+              61636B657420656E643D2272223F3E9BF4D94E00008CF549444154789CECDD67
+              981CD77527FCFFADD0394CF7E41C31C8810073422098152889A2322507D9F23A
+              ECAEEDF526FBDD7D1C24D95E5BB2655BB225DB926D052A911473402601221379
+              729E9ECE3957D5BDEF8701489018601AB1279CDF4362809EEEEA33D53D75FADE
+              3A752E134280CC5FACEDA177FFA1EB501405CDCDD59018D05A5F099D73082160
+              33AB5014192D0D558010B059CD281434E806C7A43F0A40C01F492014CB409218
+              80E9F7852CCB5014697AFB62FA56456268A9F742620C0D3595E09C030CB09A55
+              14351DBDA37E4000FE70028C9D8DF3EC5FC43B7F009C7330C6E075DBB1AAAB01
+              BAC12149F2D9E7956052241886802F18C3C85404B942114E9B159C7314341DEC
+              EC364C26059C0BE40B1A645942539D176BBA9AA11BC6D9E7069804F8C34970CE
+              31EE8F80310945CD80A1F377E36280224B381B320CC1A14812DA1AABD05E5F0D
+              4370C8B20CC618B8E0E8199E821002635311C8920459966156650800E77EAF18
+              63D034038A22A1A1C6050686FA2A2F9C762B8410902480012814759C19F2010C
+              0844D3906506B332BD2F84000A3A87C400B349060383224B6869F0803186FA2A
+              0FAC8A09820948B20C2104C2F1244E0E8C43916530F1EEBECF178B9024092645
+              0103A0AA0A544582224B68A8F18201A8F238C0D8F46B6E70039C0BF882719C19
+              9E82224BE0627A9F59541506E7606CFAF502002624381D66985505372D6F7FE7
+              35E0824337387C8118C080482C8D4034054962601260B798218480E0E7F6DBB9
+              F79E8C8EC64A000C55154EF0B3FBD51002420844E2199C1E98842C33E88601C6
+              004591A19F7B5DCFDEDFA42AB059CC5015191D4D5510003C2EC73BDFE79C830B
+              8160248131DFF4EB79EECD2B4B6CFA3D7476DB0060B39850ED7543912574B4D4
+              C23038C603317CF3A9ED608C21108CE3F77EE511689A8EA61A2F246120964C43
+              621246FD710C4C0661329951E9B2A290CB998FF58E7DF6CC68F8AF6F5FD7FDDA
+              BD372FFB5BC3E062655773A4A3A9DAFC773F7CFD6B4FBFB67FF54DDD0D9F77DA
+              CDCF4F04936CC38A0E71EBAA76D86D269C1C9EC2A9C129DC774B37DC5633BEFA
+              DD97D158E3C1EF7C6A33C6A622F89F5FFE216031E1EC0F8377DE547903EFBCD9
+              CF12FEED20F39752EE000821649160006C009C0064001C109A2C31A9A1DADD07
+              49FE4E2295E9786DDFC93F605C18C77AC6B22E87959DE81DF3DAACA623368BA9
+              08018F224B5E40E40064001800DC003C00020042E5FAE148F95142278490EB87
+              019019638273610F27526BA742F1EE78326737997461687A41D70ABA008B56B8
+              6C3BFB47C3DD617FF4510080CE01CE0D6656FB5D35EED399427139043AB2F9A2
+              27124F2746A62271AB5911FE40DC9649E719E7623FC01200BC984EF41100BC7C
+              3F3AB9D128A11342C835C400E40A1A0E1C1FC61DEB3A55A7DDE2B6AA522E1489
+              D5EF3B317CDFE93EDF8386C4BC12832CCB3217820B01A1090123932B364255A6
+              37A202104216B2D49ACE143EDA371A2E0801A119869CCC8EA64F0DFB8B32842D
+              97C94FCA26659B8435DCE5B0763126FD1237C454BEA87FEB68CF4416674F1390
+              858F12FA822470EEE4D8BB67C3317DDEEC7DD8FBFFCE2EB8CB259FE5BCAD5F7C
+              C3A56DE8A21863EF9C8B9FF1A1EF7FFC8C379610D8C51E222EF57D76593FEAC5
+              B00B5E8812898BFC9DB1CBDAD0257FC4739BBCD863DFF7A0F7BCE72EF2F88BBD
+              9E1706242E1D133BFF9D3EBBE9ADBDFBFB71618CA56EE7BD5FCF7BAC090CB703
+              681742EC8E25329689A9E8038C73C7983F52756AC0B729E18FAD83CD34BDE384
+              C03B27E8014091304302B61A9AD194CA6BD3CF284928A4B288691C101C10A2D3
+              ECB4B1378FF657D456BA84E0BCA9A1C635ECB09AAC00D6627A3A7E17A6A7E8DF
+              89962C3C94D00921E42A89B385A68F6D596F797ADBE1CFC9AAF2315591FFD7E0
+              78B0B8EB50EFAFA593B96EC8B2E04248A8B05DFC13C5C5480C90CE4BF4B20930
+              BFF32FB5006C7E65CFF17B65559E72BBECFF5A5BE9DCAB1B468B80F85528521B
+              8008347D3F14D3AC1FA0C9FC45099D1042AE09A1AAAA5271C7BAEEED8170B238
+              1549DC3DE98B7427A2E96E14740526195095E9E47C6D3108C18C82261905AD3E
+              29CB0FEE3BD8D739391A62358D95E31F79E89689DD077AFF57C41FDD01E0EBD7
+              FAC9C9DC21953B00420899EF04A0E40B5A7D289AEAB2594CE3951EC7FED1C9C8
+              FAA9B1D02D5015050E0B6056AF47329FC61860350356B35AC86BB79F3836FCD9
+              D75F3BF258289C90BB5B6B065A1BABD79A9CF68F02EC0E008EEB130429371AA1
+              1342C81538D7072195CEB1BA6A8F7D6822DC70E0C4D0925024B55100EBE3C94C
+              33ACA677EF7CA3480C70585014C2B2F750DF2746A7626BDB5B6ABF21AB72DDC1
+              63837F89A2FE3530E967741A7DE1A1844E0821578881299A6E788F9E1E6DDB75
+              B8EFDEFED1E05D857062134C8A0B26F5DD462E379A4985E0428E86122DA974C1
+              6335A9479C6E7B7EF992E68CCF1FD99408A78A000E01982A4F80E47AA0844E08
+              219781318073814426CBAA2A5CEE702CBDF499ED47571F3C3DBA5162EC6E386D
+              AEEB36B55E2A21A667055C766806771E7D7BE077BA96B6BCB26659EB3715997D
+              FA4422FD4730F0BB355515534FFFFD6F2399CE95375E724D5042278490CBC400
+              D93078DD99117F6DDF706069CFB0FF01640BB771ABD935FB357937D0D9EBFA74
+              2EAC1393E15B4D40B6A1C11B5FF3A13BBEEF71D9873FF9D0AD94CC17104AE884
+              1072794C9CF3CA4822D37EE0D4E8EA537D937741E04E584C9573EEBCB498BE6E
+              5DD82D2C954C379E8E251F77394C4FAFB979C9C1AEF6FA42513724E09D8BF3C9
+              3C47099D10424A200460185C72DA2D35D178A6EED4A0DF393115BF1D8C3D04C0
+              5DF669F64B1280D904DD304C278E0D6DD10DE17CF2F17BFFB5D2E37C3D9B2F66
+              18637AB92324578F123A218494C6CCB9F0FA23C9DAC189D0DABEB1E086542A77
+              0F645639A7A6D9672200283284C4583C9AAA39727A6C53ED1B278F1534E3688D
+              C791E29C06E80B015D874E082197C01883495524065693CE15979D19F237F68C
+              046FCE168A8F4362EDE7F59F9DDBCEB599F53A5180C8BFBCEBEDBA9D877A1A8B
+              9A6E3A3314C0B77FBEB7DC1192AB4423744208B9344508511749666A07C7C3AD
+              E3A1D8C6543AB70960D5F32291BF9F2C0179CD69443377E732F990D3660E0B88
+              33E50E8B5C3D4AE80B0A83386FA58C9997B5B8D86217171B6588F7DFEB228FBF
+              F229BB2BA9C8B9D471F4520B835CCE421EE7EE35FBF64A77C99FF37257C7B9C4
+              964BD9CAE5ECF36B39A37C39AFC13527665F54E87D919975CEABD2A942D7E044
+              B8BB7F3C786BA1A83D0C81DAB97DCEFC120400C64C42913B1389ECA6BEB1E0B1
+              783A9791184B0048943B3C72E528A11342C80C24C62493AAD486E3E9A6BE31BF
+              773C10BFA7A8E90F02AC62CE9F33BF142100458261B7A0673C28A75FDC5FE7B2
+              DB6E96981C05B0B3DCE1912B47099D10422E6411427822C974E5B02FBC72C417
+              BB2593CEDD0B8955CF9B73E697C218844961F158BA21194B6FAD6FAC3E5D57E5
+              3E5AEEB0C8D5A1844E082167498CC1E5B449E94CBE2657D0DA8727C2E6615F74
+              65A1A87F189254336FA7D967222081B10626318F4995D3AA2AED2B7748E4EA50
+              42278490772942889A582AEB190B441B260289CDC9746EB310A899F7A3F29914
+              3528B2CCD67436E66F5BDB152B7738E4EA504227849069AAC145752C995D3A34
+              116E1B9E8A6CC815B40FC21075D38BAC2CC08C7EF64A36ABC564B89C36B9DCE1
+              90AB43D7A11342163D93496576ABC99DCD171A4F0DF96A87A6220FE40BDAC721
+              50B5A0A6D9DFCFA2A2A8C8F21BC7069BBFFDB3DD9DE50E875C1D1AA113421635
+              C6201B06F70E8C85DA0F9C1CB963C817BE259FCA6D842C4F9F339FCF15EDB361
+              12C0200CAD58D00AD942B9C3215787123A2164516100B8000A450D768B897121
+              3C914476E99E43FD4B0F9E1AB997C96C0B14A562418FCCCFD174C8B26C743779
+              275776D40E973B1C727528A11342162BC9E0DC3330116E387072A4BB7734F030
+              8AC5BB85C934BFAF332F95986EE9C4202049B22EAB4AB1DC2191AB43099D10B2
+              18299C8BAA717FB47BEFDB03AB0F1C1BB903C2D80893BAB0CF999F8F314062E0
+              1258249D738EF89315E50E895C1D4AE8849045813106830B44E319D6DA58EDF2
+              85121DAFEE3BBDA27724F01098B8138CB9202DB23A6159066790FCE17475B6C0
+              1BCB1D0EB93A94D009218B060354C3E0556786A6DA4F0CFAEE3D353079B796CA
+              DF01ABC9BB202F4B9B8D2441002C992D3A721A77973B1C727528A12F5062867F
+              CDBE18C7651ED066D8E0959D7ABC4864EFB9F972363CF3722AEF5958E6AA8EDD
+              E27D8F2F6163E756A061172E8F7325CBDA88F77D9DC98C515DEC053A2FBEABF1
+              4E5CE2FC7F5DC4653DD7D5ADD72D8440BEA031A7CDEC4964F2CB0E9C1859D933
+              16BC0B1077C1BA48CE99CFE4EC624E6693A2DB2C66ADCCD190AB44099D10B2F0
+              31A60A211AC3F1B4DD1F49544E06E3F78A5CE10E98950AB04536CD7E3EC38024
+              49BCDA630B3754BB7DE50E875C1D4AE8849085CEC2B9A8CA17F36D63FE78CB98
+              3FBA365B28DE0A935AB96847E6C0F4A487212041881AB72DB6A4C91B287748E4
+              EA504227842C4842003A37649BC55C9FCD176B278371652A1CBF33932F3E2638
+              F72CEA640EBCE79487599584C32C5FDD790D527694D009210B110383850B54C5
+              53D99A6034BD6A32185F1D4F66B7082E6A17C412A8D7026310008BA57296F140
+              DC5EEE70C8D5A1844E0859308498BE3CCD66555926A7D5150BFA325F286E990A
+              27D765F3DA1342A07AD15D9A762992042E01D174C1A284D294D0E7394AE88490
+              854615423464F345EF5438E10D44D35BD2D9C26621505DEEC0E61C438702B9D0
+              DD52135DB3B43959EE70C8D5A1844E0859482C9C8BCA74B1D81608273B2682F1
+              F5D99CF690E0A28146E633300418E370DBADC5869A0A5A9C659EA3844E0899FF
+              84806E08D96651EB73C562DD4420AE4E8593B7E7F2FA634208CFA2BE34EDA218
+              A048D08530F78E866A3501FBEF953B24725528A11342E63B0630AB10A2329ECA
+              D60663E95593C1C4EA7832BB59705103062A809B89E05C319B822655EE0FC652
+              C56436D70DE0E5728745AE1C257442C8BCA5C8121A6BDDCC174CD4158BFAB2C9
+              50CC36154EDE94CD6B1F17422C9E85562E17176006E7AE4A476F7DB5FBFBC94C
+              BE3696CA7ACA1D16B93A340F450899CF640834E48B7AC56428EE0D44D28FA6B3
+              85870D8357953BB0398B01E01C72368F258D95E2E3F7AFEF5BD955FF1C6378B1
+              DCA191AB43237442C87CA51A9C574793D925938158872F185F9BC9151F10820A
+              E04A608021A628B26636A91DAA223F07205CEEA0C8D5A184BED8B1F77D2DC525
+              FB49B1CBDFDC65F7A77AEFD6C53BB731404C6FEFA29BBC92F567660C70E60DCD
+              F8BCECA2DFB9606BEF6C55CCF0CD6BE53D3FCF0C71BD7F9196CB7D8F5CECE7BD
+              E4E367DE3F178B9401CC6631554C85E24DA786A76A0726C35B8B457DB300BC54
+              00370B0140925386CDBCE7D8A04F9F8C243F99CA1662F9BCF60B00BCDCE1912B
+              47099D1032DFC886C13DFDA381E683A7476F1D998CDC964FE7EE85ACD4420215
+              C05DCCB9E506933998DC3676DB2DCBCF64B2C5E123C7065A618808B399255042
+              9FD728A11342E63C2100837338EC1696CD162AE3A9DCD237DE1E683DD2337E87
+              E078188AE2A102B859089C2D863344ADC711FDC8BD6B429174F685C1B1602411
+              8AD3D2A90B00257442C87CC1381795C3BE70C7DEB707D7F78D0636F27CF13628
+              0A2DB4322B06140A50B8D0D76DE8DAF5D0E69BBE77F3CAB683FB4E0C05851034
+              2A5F2028A11342E63C06A85C08EFF854A4F3ADE3C3771D3E3EB40942DC0D5571
+              51322F811060405E35A953DE3AEFA8D36D9FEA1B0FFA6449A264BE8050422784
+              CC59DCE0F087936C496BAD271C4B75BEFED699AE33C353774191EF82100E4AE6
+              25100074839B6C960187D3F2CCC901DF07CF0CFAEF9125F66B00767ADD76B89D
+              568C4FC5CA1D29B94A94D00921731783991BDC3B341EAAEA1B0BAC393DE0DB92
+              4F656F83D5E4A6EAB7127001086148C0E9E606EFCBDD6DF5077A867CE6A153A3
+              351048943B3C726D51422784CC490C4C9218AB4EE70A4B7BCF8CB90627C26B34
+              CE37C36CAA9ABE70ADDC11CE0342084996C22EA7FAFCF2F6BADD37AF6CCBE7F3
+              DA5F0F9D18F1D3ECC6C243099D103217291C684CA6B39593C178E55820FA7026
+              93DB0449AAA2445402210043184CF0335E8FE3D5D5DD4D3DABBA9AFD36AB3928
+              84F0973B3C727D50422784CC3516CE456526936B1F9B8A768D4C45D765F3C507
+              C0580325F31208010851545469B2D2E37A6D597BDD736B9636E7EBAA2B42F942
+              D157EEF0C8F5432D950821730603934C8A52972B686DA3BE88D5178CDF962F68
+              1F874035B5739DC5B9C6319A2198103EA7C3FCC3355D4D876E5AD6A65BCDA691
+              4CAE18D40D81FBEF5C85FFF17B4F00B962B92326D7188DD00921738545005589
+              4CAE7232145F3E194A6C48A6B29B00564323F3594C27723059D23D1EDB6187C3
+              F2A6CB617BBBB1CE3B50E57586F2792D0408A3DC6192EB8B123A21A4EC24C624
+              2E446D5ED3BA274371CB7830BE2A932F7E0C60D5D401AE4442708B490E34D7BA
+              7FE2F5380E8199DC922C27203051EED0C88D41097DA1BA9C054FAEE67839E31A
+              1CEC9A6EB7BC833301F1CE9FEFC50008F6DEFBCE84BDE73B175939A6D49FF1DC
+              C229E2FC1B66D8DC4C3BED2A76E405DB2B61459D8B2F5473C18F2B0B81E64CAE
+              E0F18592AEC950E2C1643AB7850B545325FB2C18008D4332B85E55ED385457ED
+              7849929578AEC8B9DDCA4E70CE0383E321B4D479DFFB304657092C4494D00921
+              E564350C5E95CCE6DBA74289B6F1A9E8AA44A6F030D7791364A9DC9FE6E63E43
+              409658C16A358FD654395EADAC70BC1A8CE7AA0B9962C662360F973B3C726351
+              422784DC708C3138CC2659E3466322536C0A4693367F3879672A5BFC90E0C243
+              05702510022868DCE2B18DB4D579BE6D529550385168D275FEB64995272E6B96
+              8E2C0894D00921E5601102D5A96CA17A2A9458E10F27D7A4D2B9CDD30570A091
+              F96C0C0E26497A65A5E3A0C7EB78D3645647754384F345232E84180750287788
+              E4C6A3844E08B9D16401D4147463993F9C744E86122B0B05ED6300ABA202B812
+              4C2F83CAAD16C5DFD2E47DCA62329D0EC6B32D60AC5792D88912CA1BC8024509
+              9D107243488CC1EB72488562B1D6174CB8278231873F9A7C24972B6C11825551
+              915609B8000C6E982DCA098FDBFA8AD96C8E43621901BC258498E086804C672B
+              162D4AE884901B84A95C882A7F38B5746832D43EEA8FAE4CA6730F0843344166
+              A0B2EB594C0FBD8B8A2A4F34D6795E6DAEF5BCC864C99ACE14E30C384D037342
+              9FE508213702B35B4DEE4CAED07EF0D448F3897EDF23E94CFEB3828B5A2A802B
+              11178231E173DA2D3F6C6FA83AD6D15CCBEC16CB692EF8A0CB6985A0B9F6458F
+              46E88490EB4D360C5E7966C8DF76E0D4F0EDFDE3C13BF2C9CC3D30A93590E87A
+              E8599D5D0295013D355EE7AECE96DA23EDCD3583368B29164D667C1030681F12
+              8046E88490EBC0E01C13812854456680F0C653D965BB8FF4ADDD7774F0CE7C41
+              BB1F16530D5D675E2AC165458A389D96975B1BAA5E59D65E9FAE70DA42428831
+              00D4CE95BC8346E88490EB820112E7A26A3C106DDC73B4BF73602CF8208AFA3D
+              C2ACB82991CF8201D0A70BE0548B7CAADAEB7CB9A9C6D3D7D65015309BD44930
+              169115B9DC51923986123A21E47A30195C78C6FCD1CEB74E0CDF74E0C4F01DD0
+              F93D3029B4D04A29B800180A668B325153E57CA5BDA9FAF9FAAA0AC3EDB20784
+              10D49B9DCC88123A21E49AE15C2016CF4A2D8DDEAA6832DD79E8F478C3E078E8
+              1E0676BF9024175D675E020140E342B52893951EDBBFB53556F5D7D754A88A2C
+              0F16353D6435A9E58E90CC5194D01792D98E95332EA4F2DEBF977CB815EF5F98
+              64FAC6CB3F5C8BF77CB9009BFEE372D62E9971011476C97F5E36F6CE9FA55716
+              0B00ECA277BF7444ECDC062EB2DD2BD8E4CCDB98E53D321B06580D21AA7CC144
+              B52F9C5CDE3B34754F3E95BB1B26C54B23F31270010086A248A76A3C8E5D1D2D
+              D5C71B6BBC23568B29A1E9460810DAB997E8A27B53BCFF9F17FE8ED12BB13051
+              4227845C2B3293586D36A7ADEA9F08597DE1E4EAA2C11F8259A9A2645E2221B8
+              A2C8E10A97E5F9967AEF9EA6DA4A6635AB51018C953B3432F7514227845CB5A2
+              6E484EABB9259ECA55F9C30967209A7A2093C96F045855B9639BF31800430086
+              C1992CF578DDD6173B9A6B069BEB2AC3264509722182B4D00A2905257442C8D5
+              B20A21BC997CB129184D2DF18512EB52B9C2FD10A271FA9C398DCE2FC9109018
+              0A16BB79B4C2657BB9B9CEFB626B7DA5E6B6DBC2794D1B2BFD841359EC28A113
+              42AE08630C5693492A1A7A633EAF3584122904C2C975E9BCF649C1450575802B
+              810050D085C96D9E68AD737FBBA1CE3B5CE9764AAAAA0CE7352D58EEF0C8FC42
+              099D1072A52C00AA73F9A2D71F4E768762E995F164EE3E6E18D5E50E6C5ED039
+              2499E955D5CEFD4E9765AFAAA8E3569379D46EB306B9E041C1A1953B4432BF50
+              4227845C091942D4E60BDAF2602C65990CC657A4B3C5CF1A3AA725504BC48430
+              2C6693BFA9BEE2E7AA2ABD1D88E5DB139982565385313A674EAE04257442C8E5
+              525493D296CC162AC3F1947B2A92DA9ACE16371986A002B8D930001A0733B8E1
+              A9B41FAAAD74BCA8715148A78B662EC401DDE0E3BD230174B7D5C0E094D5C9E5
+              A1844E082915036015406536AFB54C45124B2683B1D5E96CF161186884CCA837
+              FB6C740E5996F2769B69B8DA6BDFE6B059768713F9DA745E4B5B4CF209DA7BE4
+              6A504227845C92C074019CDB6E917245AD2997371AC3B1B4128CA536E4F2FA47
+              21E09A5ECF9C5C921060459D3BBC8E91A5CD9E6FEA826542F15C876E88FD8AC4
+              8638E718F547000023BEF0553D55B6A0219ACCA07F3C70D1FB34AE6DBFAAE720
+              730F25744248292C00AA0A45CD1989A5DBFDE1E44D89646E23E7A2B2DC81CD0B
+              060793985E55E9385859E97C4352145F21A7C5F29A9195801100B9728748E63F
+              4AE88490D9C81CBCB650D09686E31935184E2E4DA6F39FE086A8A602B8127161
+              582C6AB0ADB9F22756ABF9F85424DD962B1A038CE11815C0916B85123A216446
+              028000632EBBA5726822E81D980CD5F9C3C9CDD96CF12E830BBA34AD14420006
+              E7B222F5B81DD617DD6E475096E52458662FE7C22731062128A3936B8312FA02
+              23DE5987E1BC83C425D73F79779991991A52CD74AC7977DBD7E64074B1AD88F3
+              4362E7DD3ACBA0F052C7C78BFD9C97DCDE453774ED7AA04DF7536338FBDF3BCF
+              7BB1ED8B730BD05CE40E57B248CEB9CD9DFBCA009573EE1DF545BA7A8703AB47
+              7CD19BF399E22360AC06B2041A9DCF42084088A2A2C813D595CED75BEA3D2F3B
+              EC762357D0A20006CB1D1E5978A8951321E40292C498DD6AAA48A4739DDBDE3A
+              D371E8E4C8FD058D3F0645F24296A89B6B290C2E98C4026EA7E5076D8D9507DB
+              1A6B249B591D129C8FB5D65582D3C89C5C6334422784BC070314CEB967603C58
+              BFFFE4F0DA3343539B7289EC5DB09A2ACFDD815C822100260C932A1FAFAA72EE
+              69AEF51E6BAEF70E3AACE658A1A8FB01EA0047AE0F4AE88490F34902A84CA472
+              4BF71E1B6C3C7072F866706C85C544EB99974A0843519570B5D7F65C6773CD8E
+              C65AAFD966354504A72550C9F545099D1002210412E92C6B6BA8AA990CC6EB0E
+              9C1A69E81DF13FCA8BFA46483225F352080118823389F5795D961796B4D60DB6
+              D45726C058881BFCEA2E2C27A40494D00921009849705139E18F751EEB9B5873
+              F0E4F07AA3A8DD0749AEA3E2B7124C17C069B22C4D5455395E5BD25CFD524763
+              75D661B746E3E9EC44B9C3238B0325744216312100CDE092CB6EA98EA7B34B7A
+              86FDB52353D1BB39170F4092DD94CC4B64080109019B4DFD496763E589EEB63A
+              6155D5B142410B329ADD20370825744216378B10A22A1ACF548E07A25D83E3E1
+              8DB954F61EA84A2515BF95800B40084392D9992A8F637753BDF7EDB6869A5E97
+              DD16E29C077543D3CB1D22593C28A113B278298CB19A42515B3EEE8FD9C6FC91
+              E5455D7F10AA421DE04A75B600CEE3B23EDFD15CBDB3ADB18AB91DB6B01062BC
+              DCA191C587123A218BC8B9C63186C1259BD5D492CF6BCEA94842990A271E4AA5
+              F35B0D301A99CF8601D00560185CB1283D0D558E673B5B6A7B1A6A2A228A2C07
+              74CE434681C362A2C32BB9B1E81D47C8E232BD04AA10DE4C36DF1C8CA4DBC683
+              D165B164EE7EC310EDB4046A090C0E59960A369B65C8EDB2BEDC54EB79B5BDA1
+              3AE7745883F1548646E6A46C28A113B2483000B2243189B1867C516B09C652CA
+              5438757B22957FDCE0DC0D891A47CE4A00281AC2EA368F7535557CCB6EB78D59
+              AC363B17182C6ABABFDCE191C58D123A218B875508519BC917BDC158AAD31F49
+              DD9448E5B670435401A046D0B3D10D30C60C8FD776C05B617F4392E529499226
+              4C8A120743180015C091B2A2844EC8E2A080A156D38D55C168CA32194A2ECFE4
+              0A4F70435452015C6918986E362BC1FA6AF733168B7A38922EB46A42D69C0E0C
+              943B3642004AE80BDB056B3F8819970EBB2687F373DB65EF7E2D79BB42E0522B
+              B7BD7F3B336E975DEC1BD39B67EFB9E36598213421CE3FCD7C393FE8BB9BBC9C
+              FBB0196E7BEF1D677E51CF15C015354D72DAAC2DD95CD11D4D6444289EBE3F93
+              C96F3500EF6505BE1831009A00330CA3AACA79B4A1DAF90C93A4643A67A8C210
+              FB0D834F8C07A2A8AD745D620333FCF3F2DF3684CC8A123A210B9B550095D97C
+              A121184B75F84289E58954EE7EC3E0EDB4046A090C0E4591F276BB65B0B6CAF1
+              4A85CBBA239C285465F25A5C91D9A9728747C8F928A113B200498CA1C6EB96A2
+              894C53D1309A22D1349F0827D64793B94F1986F040A613E6B31200D30C61F758
+              C63A1B2BFE4955D54028916F2D6AFC8822B3312104D2D93C0060DBFED397BD79
+              9372F63538FBA14AE7FC9A854E16274AE8842C4C2600DE7CA1E80A8493EDD158
+              764D3499B95FD7790D001A99CF860B00302C56D33197DDBC5B55D52983B3C9A2
+              66E4F874D3987C992324E40294D00959786483F3DA6CBEB02C1049DA2703C995
+              D97CE1D386CEA9035CA984E0AA5909D755BB9EADB05BF7A772462D07928CB193
+              D3351F84CC3D94D0095940842198DB6DAD1AF187EB4EF64F354E04A39B3359ED
+              2E0E515DEED8E6052100837326B1DE0AA7E5F9252DB543368B3932E48B8E640B
+              C5295A6885CC6594D009593854218477742AD27AAADF7773DF58E00E3DAF3D04
+              49AAA202B8124C5F6DA1C98A3C56E5B5BFBAA4B9E6A58EC69A5C413782623232
+              56EEF008990D55C61032DF09804330BBCDE24966F21DDB0FF4D41F393D7ABB61
+              8847214B1554005722430889B1A0D3697E6A4973CDBEA56DF5B05AD4314D337C
+              AB3A1BC0A9688DCC7134422764BE63500C2EBC0313A186A3A747D79C1E98BC23
+              134FDF0B93EAA1BEEC25982E80E392CC4ED6543A777736D71CEB6CAAEE71DA2D
+              3149924280A00E70645EA0844EC8FC261B5C546732D965FB8E0F361E393D722B
+              E7E2033029D401AE544270599522154EEB8B9DCD35AF2FEBA8670E8B392A8498
+              287768845C0E4AE884CC439C0BF8A32969494B4D9D2F186F3EDE3BD13C301E7A
+              D8286AF740922B69645E020180730EC318B13ACC2F2F6DAD1DEC6EAD8B9B55C5
+              6F18224CBB90CC3794D009999FAC42084F289A6EEA1D09AE3FDA3376072FEA5B
+              204B3534322F81108080A628F2A8ABC2BEADBDB1F2A5AE96BA6865853D94CD17
+              27CB1D1E215782123A21F3090354459224893566B2C5B6097F8C4D0413AB04F0
+              2864D949C9BC44861092CA824E87E9A9E51D7527BA5BEB72168B3A92CD1703E5
+              0E8D902B45097DC111EF5B3CE47A3D0BC0DEBFD6CB95F4DB10333FF4A29BBAC4
+              73BCB388C9CC6BD05C850B3738E3EEBDD4935EE4E7BCF406676415404DA1A0BB
+              82D164932F90BC259ECA6E16808756FB28C1D9023826E3648DD7B9A7ABA9FA44
+              6753CD69B7C31633380F1A821BEFDC97FAC7907986123A21F387CA056A8B9ABE
+              221ACFA8A1487A492A97FFA810A26E7A644E197D5642E8B22AC72A9C96973B9B
+              AA5F5FDA56CF1C364B9C0AE0C84240099D90794062901459EE2A14346F229D35
+              85629987E3A9EC66DDE03594C767C1001802D00DCE5479A0C6637F76496BED99
+              8EC6AAB8D9AC4C199C870080BAC091F98E123A21739F1D40755ED39AA3894C57
+              2092EC4A66F20F0A5DB44262D7FFFCCA7CA77348322BDA1CE6418BC5F45A5585
+              635B4B5D65AADAEB0A6572051A99930583123A21731463804991254D17CDBAA1
+              77C45219118AA557A5B3852720840B3225F292E85C98ADE6C996FA8A6FCB8A32
+              693299DC3AE78345CDA0644E16144AE884CC5D5600B542707B3A9BAF89C433B7
+              2453D9CD86212A41A7CC67A77330094655957D7FA5C7B1DB6C324D0A604C9658
+              8231F801500738B2A0504227646E52215057D48D15C94C1E9164A62D99CE7FD4
+              D0791DF5662F0D83D02C2635D258E77EDAEDB0EE0DC7F3ED459D67CD26F39972
+              C746C8F540099D9039874926455E52D40D573A9B13C168E6D1583CB35533780D
+              9D2F9F0503A00B3043E7EE0ADBC9FA6AD74F25498A26B29A5517380486A94426
+              47931B6441A2844EC8DC62074475A1A035C533B9F6483CDD1E4B661FD60B7A3B
+              2D815A0243409658D16AB10C782B6CAF3BEDE637B2056E2B14B5842449BDE50E
+              8F90EB89123A2173802C49E86AAE968626234D06171DC95416C1587A6D3293FF
+              3837841BB24CE7CC4BA17361769A279BEB5CDF516425144B163A9824ED936569
+              180093992400E0C899F1CBDEB449910100B2A44008205F285ED3D009B95A94D0
+              09991B540151A569BA2B124FB7C493D975C9546EB361F02A0034329F0D170004
+              9755E94485CBBAB3CAE31ACE170D7F329B2EAA0A9B902450F6250B1E257442CA
+              4FD60CA3369D292C0DC55215C158726936A77F8CEBBC9A2E4D2B9110BAA22AB1
+              2A8FEDA5C6EA8AED16B3C552D0F221400C963B34426E142A9725A49C18632EBB
+              B53A9ECCD61E3C3D5ADD371EFA602E5B7C8C1BBC8A7E3B4B20046070CE64D6EF
+              7159BEBBBCA3BEA7ABB52E6152D5E39C0B5FB5C74D2DD9C9A24123F485EABCF5
+              44C47B6F7EEF2DECFCBF96381A9CE10879EE260686B3FF956CD6032E9B3DB6F7
+              7E575C7CABE7C5564A8C17DF12BB607BA5278E77EEA90A21BCE3FE68FBF1FEC9
+              F5A787A6D615B2C50720B17A481275809B8D002084C1181BAFF6387774B756BF
+              D2D5529B32AB4A3091CA8D5ED7E7A69786CC41340620E4461340D13098CDA27A
+              52D9FC923D47FB9B8F9C19BF4BD3F947A148D590254A18A5E04240B088D92CFF
+              A2BDC17B60595B03B39A4D93F9A23E515BE582A0A139596468844EC88DA70821
+              AA877CE1C6137D13EB7A47FC77E613997B6056BD94C84B70B6008E013D5E8F73
+              4F4753E5D1AED6BA930EBB250C8905411DE0C82245099D901B4B1110D5A9746E
+              F9E1D3A31D6FF78CDE0EC11E8659ADA04AF652094351A4B8DD667A65494BD52B
+              2BBB9A0C97D3E2E786982CF9B411210B102574426E002E0422B18CD45CEF6D0A
+              C752D583E361E7882FBC113ABF0FB2ECA6F3E52578B7006EC0E3B4FEA2BBADB6
+              A7B3A52E66362993BACEC30020973B4642CA88123A21D71F036083803793CDD7
+              8C07E2AB4E0D4EDE94CD16EF8124D751322F81108080A628F24875A5F3D5AEE6
+              AA57BA5A6A935EB73D982BE893E50E8F90B980123A21D79922CB0C407351D3DB
+              C6A622295F38BDACA0199F06634E9A662F11E74256A4A0CB6E79AAABB9EA5877
+              5B3D33ABCA6436AF05197D20220400257442AE371B8046DD302A12E96C5D2491
+              7D309ECC6E310CEE2D7760F3021700179C41F47B9DF69D4BDB6B4F7536D7F638
+              6DE684C14558373815C0117216257442AE1F15409D61182B92D99C1A8EA5BB63
+              A9FCA7F5A25E4397A695863168B22A27AC16F36B2D0DDE57BA3BEAF315766BCC
+              30384DB313F23E94D009B90E182049B2B44CD70D47AE58CC44E3D98FC493B907
+              754354D139F35930008600349D5B1CE6DEC66AD74FAA2B2BC69B6ABD71B3A20C
+              EB068F943B4442E6224AE8845C7B7600D586CEAB53D97C5B249E6E8D25B2F769
+              45A313122D813A2B43409650B439AD7D6E97F9358FCBFE46637545AACAE30C01
+              8246E6845C04257442AE21C185244BACD500DA7285422A1ACF2E0BC5329FD735
+              5E01851A3396443784D9699E6AA973FFB32C4BBE6CD168C816F4FDBAA68FAB2A
+              5D9846C8C5504227E4DAB102683484B0A732B9CA703C7B5F2C9ED9AA158D1A00
+              D49B7D36060703B8D369395CE9B5EF329BD580668809CE911142F80118E50E91
+              90B98C12FA4273A9FED5337CEF6A52CCFB377725ADB3C5953E70B66D96A2D41F
+              FE621B7CEFE35500F506E72B73850222B17447289EFDB496D7EA68645E1AC6A0
+              2BAA12ADACB43F5FE1B0EDC969BCA1A81919B3AA1C032EB9E4CEBBDB78E7EBF5
+              FDF0441FCDC85C44099D90ABC000985445D2395F293877E435231B8A663E1489
+              671ED0745E43E7CB67715E019CD5653D5DEBB5FFD46A3205355D98207010C094
+              A6D3C09C9052504227E4EAD80154496095997CA12D9ECEB544E2E9070B796D09
+              15C095C01060128A3687A5BFAAC2F69AC7697DB36040296A3C224BACAFDCE111
+              329F504227E40A4812C392A65AA97F3CD002A085412432D962672896F9154DE3
+              1E2854BC5512C31056ABC5DF52EBFAAEC5621ECB17792387D8CF188601309322
+              0B0018F18531E20B5FD15398CEBE16B49A2A59E828A113726554005586CE1DD1
+              78BA3957D0EE8F27B35B8A459D0AE04A2104200467123B595561DFDED556DB5B
+              D0F8F8A82FC6B9109312635AB9432464BEA1844EC8E553348D572732B9659144
+              CAEB8F2496A772DA934237AA20D3C8BC244218B222C5BD2EEB2BED8D952F3454
+              57C9A1782A2C446CA2DCA111325F51F92D2197A1A8E9CCE5B056C7D3B98683A7
+              86AB7B46021FC8E4B48F0A435482D1AFD3AC04004308E8C6B845559E5ADED978
+              66655763CA6C527A3817E1E51DF5E08226C709B912344227A474662184673210
+              6B38D93FBEFEF4D0E46D854CE101C8723D18F5669FD5F412A89C4962D8E371ED
+              E86AAA7E79595B9DBFDAE30A4413595FB9C32364BEA3844E48090CC199C56CAA
+              4E44929D477AC66CBD23FE0DBA2E3E0C45A9A0F3E525E2106008DB2CEACF97B7
+              D71D5AB7B42563B5A8E3996C21A4D2B5FA845C354AE884CC4E1102B5FE48DC73
+              6AC0D732301EB82795C86C862257963BB079E15C011C6327AB2B1DBB97B4D6BC
+              BDBCBDE1B4DB698B0ACEC39A6ED085E6845C0394D009B934D510A22695C9779F
+              19F2571EEF9F5893CDEB1F842CD5D1C8BC4442E88A22C5DD4EEBCBCBDAEA5E5C
+              D3DD2CDC2E6B8C1B82A6D909B98628A11372310292AA2A4BA2F194D7E78F59C6
+              02B107B2B9E256015453322F8100C0856010230EABF9B9D59D4D675674D6A72D
+              66C5A76946140064DA8F845C3394D00999990340B510A23A10492F9F0CC6BBD3
+              D9C25670D10E990AE06675AE008E89116F85635B774BCDAB4B3B6AC3B55E5728
+              9D2B4C953B3C4216224AE80B8C78DFD799BE77E9C54666CF5497BCA8885D7EAE
+              9B6D811676DE464BBAA0E912AB7894129BA2C8123778AB2ED099CBE5E3A96CBE
+              3D57D09F84801B32156F95444000889ACCF22FDA1B2B0FAF58D264D8AD165F3A
+              5F0C189C33F0E957483FEF211D8D550080CEA62A1806C74B6F9E842CD1FE26A4
+              5494D009792F0B806645962CB942C1118E6536C512992D86C1A900AE145C005C
+              7049914E55573A76B7D679DFEE6CA939EDB05B4292C4C2A0255009B96E28A113
+              F22E13807ACEF90A4DD78D54B6D01A4E649F28E48A8D50646AE75A02C650544D
+              4AC2E930BFD4DE50F9E2CAAE26C969B386B8E0E3E58E8D90858E123A21001883
+              C4185B06818A42A1980E25321F8AC6320F1635A30E34ED3B3B2100CD100EA7A5
+              AFA9C6F503A7D33E56E37569B22C8F189C47CA1D1E218B01257442CE16C001A2
+              3A932B7424D3B996503CF350215BEC864C4BA0CE8A7330C6749BDDDCEB715B5F
+              733BADFB2ADCF68CDD6A8D0B8129D0426784DC1094D0C9A22649908460CD02A2
+              5BD7F4783C9DEB08C632BF6A68861B2A2DB45212830B93CD14A8AF767ECF6456
+              469339BDD964D6DE72398C61C139B2F92200209B9F2E4A74DBCD94E109B90E28
+              A193C5CC0EA08531B8F345CD154B6637C6E2992D7A519F2EB7A673E697667030
+              21B8D36139E2ADB0EFB4584C4121E033B84872013FDE5BC44E08B9CE28A193C5
+              CAC4803A002B0A85A214CFE43A42F1F427B49CD6008546E6A590182B2A662556
+              E375BC50E1B26DCF168D464DE72959928E973B364216234AE864D1319B5449D3
+              7997220B97E03C1C4FE71E8B44D38FEA3AAFA502B8120801A61BDCE9B4F4D455
+              3B9EB2592C7E03CCC2C00E03628A0B5EEE0809599428A193C5C60AA08A1B4675
+              3A9B6F4F670BCDD164F6FE7CAEB8840AE04A30BD56B9A1A8CA4085DBBAADC6EB
+              DCA57149CAE4F5B400FA41057084940D0D47C8A2C01843739D9731B00600CB0A
+              9AC643F1F4F2B140E2B77239AD1BAA4CC9BC145C08459683156EEB534EBBED80
+              21E41AC131C984380900AAA24091654413199C1E9A02A37D4AC80D432374B258
+              28006AD3B942EDD854B42B9DCDAF882773F76A45BD0642805ABACE62BA37BB60
+              DCE875391C3B9777D6F738ACE6BE782A9FE1429F628056EE100959EC28A193C5
+              403138AFCAE48ADD93A178DBC85474835E343E0A213CD3899C469125D025594A
+              D81CF6EDED4DDE1796B5D5150A9A118CA57213E50E8C10328D86258BD0CC2739
+              CB99D4C4254EBC5ED1522FEF9024C61C7673432A9D6F38DA33661E9908DFA56B
+              C64380A8A0CBD24A2000E85CC0E0E376ABF2EF2B3BEA8FADEA6A8A9B4D6A8FA1
+              1BA18E864A0871B1576FE6DB4B3AC9CECE2ECA430829198DD0C9426606E00944
+              93B5A787A7569F1A9C5A994A653701AC118CD175E6B3999E663764990D5555BA
+              B6753655BDBAB4AD2E5CED7105F3456D92AADF08995B28A1930547402099C932
+              AFDB5995CE153A4EF64D9ACF8C4CADCDE68B9F066334322F15174292A5B0C3AE
+              FE64795BEDC135DD2D45C6D8643A970FC892C4BC6EBB00803B2A1CE05C60DBFE
+              1E4854044748D95042270B912C041A2782D1BA81F1D0D2C1B1D0AD8978F61E48
+              ACAADC81CD0B670BE0A0EB7DAE0AD7CE355D8D27577436F439EC9678AEA08560
+              D012A884CC4594D0C94263E65C5465F3C5253DA3536DC7FB276FE7BAF808C0BC
+              34322F99CE642965B3DBB775B5D43CB7A6BB3957ED76240A86E12B776084908B
+              A3844E160C87D52CE58BFAEA643A5791CF6BF08792B772CD7818601EBAC6BC44
+              0617E07CCAEA547EB16E69D3B1D54B9A6356B3329AD7F568B94323845C1A2574
+              B2503801D4984DB22799CE2F1D4F465B53E9C246406A000315C0CD66BA529DCB
+              B2D45FE171EC6E6BF0BEBEB2BD71A2BECAED4FA573FE72874708991D257432EF
+              69BAC154456E61C0124992429A61D424B385CF1BBAEEA1DEEC25E24230590EBB
+              1CA69F76B7D61C59D65E9FB5DBCCFE74B6E063B40F09991728A193F9CE0EA043
+              9125BB21842516CF7C381ACB6CD135A39ABA8A97800B400821CBEC647DB573FB
+              92B6DA93EDF555BD0EBB252149521000ADB442C83C41099DCC6766004D00566B
+              BAAE677385B6A970F233856C617A095499A6D92F49008C41931439E1B4AAAFB5
+              D457FC62555703EC566B22932D50073842E6194AE8645E32A98A54D0F4D592C4
+              3C0C084712990FC412D9878A45BD9AA6D967C1303DEE2EEAC264370F557BAC3F
+              B258CC93368B456182F572CE43568B0AC3A0290E42E6134AE8643E7202A85115
+              D9932B14BB32D97C7D2496B92F9F2B2C81248112FA2C7401488C3B9CE6D3156E
+              DB76AFDBFAA6ACA859599113828B2980AE3327643EA2844EE695E959623403E8
+              5665291C2B680D8168FAD7F5A2E181426FE792185C98CCA6405DB5F33F9C764B
+              1F8754C9B918E69C8F7080A733F972474808B90274042438BB12C6652E852130
+              D323D87BFEC650D2521CB3DDE5DDD82C00DA1559B2178ABA399AC87C281A4B6F
+              D134A37AFAB22B3A677E49060784101EB7F550A5D7BECD6133FB6459F18323C1
+              399F82807E55DB7FFFEE17B8E0B52D75129F166621E4F2514227F38519400338
+              5FAE09CE52996CDB5438F9A942B6D004950AE04AC1182B2A26395953697FB1CA
+              E37831AF89064D17694962A7CB1D1B21E4EA514227F381C4185B05080FE74622
+              92CC7E301CCB3E52D4F4DAE9F5CCC92509000617569BD25FE9B6FDD86456260A
+              BA707181E38C2178F1E54F0921F309257432B731581559AA9265E62914F5A599
+              6CA12E12CF3C90CB169740625400371B014008C1C047BC6EFBCE8EA6AA1D0583
+              F34C4ECB488C8D322A802364C1A0A32199B32C661303173500BA2050C8E68B4D
+              8168FAD7F3057D0914999279298400188B2966F5952A8FF3405DB5C76EB79847
+              B9102720041742E0DC083D1C4BD3996B42E6311AA19339894DBF376BE3E95CC5
+              C078B02110496C4826F39B35CDA8061774CE7C367C7A0954268C9E4AAF73F792
+              B6DAC3ED8DD56714590A01088246E6842C3894D0C95CA4EA06AF4AA673DDC393
+              A19A9E11FF4D996CF1534237EAA8035CC9344996522E87E5B5A5EDB5BFD8B0A2
+              AD68B79A7D93C1D864B90323845C1F94D0C99CE2B09B18375843209AA81D190F
+              99877CE1FB3299E2834270EA00572A2E048498B05BD59FAF59D27C6AF59286B4
+              D9A48E168A5AB4D26DC744205EEE080921D701257432979800548613A986FE91
+              C0DAC1B1C0B2442AB715400B24464BA0CE460080108CF391CA4AE7F6A56D35AF
+              AFE86AF0D7785DD16C5EF31B34CB4EC88246431E527602C0F8548CA9AA52592C
+              EA4B7B47A62A7B46A6D6A5F3DAE7C0580B6489927929A68BDBE2922ABFDCDE5C
+              B563C3CA76CD6DB7FAD3D93C2DB442C8224023743217A88068F50563DE703CD3
+              3A3C19BE379BCADF0B59F2963BB079414C17C04137FA2B3CF65D4BDBEB8EAC5A
+              D278DA693307394784735A029590C580123A29370B63A8E19C2F191C0FD60F4F
+              446ECA15F50F4296AA21D1A8BC449A244B49BBC3F27A776BED2F36AC6CCD5557
+              38039A6EF8CA1D1821E4C6A1844ECA4696258973B1CA307477B6904F2433B947
+              7279ED2300BC34C55EA2770BE09E5ED7DD786A655763D2A6AAC3858216050046
+              8584842C1A94D01724F1BEAF337DEF1C76DE9F28717D93F3B77F89B6A1975E9B
+              C505A0C6A4CA9E82A677441399BA7822772F046F8424D13A2BB33937CDCEF968
+              65A56BC7D2D69AD7577636F86AAB5CD15CB6E8BFE4632FB210CF2CAFE6A5CDB0
+              CDABDD1EBD0708B93C94D049393000AD0056A8B2E44F6773F5BE50EA3F6945DD
+              0B592E776CF3C3F4E27209C9A4BCD2D154B97BC3CAB6A2CDA206D3997C406634
+              2A276431A2844E6E342B806E59622E2EB829144B7F3896C86E2C16755A02B514
+              5C00420859964E55573AB637D4549C58D656DFEBB49BFD82233CBD462A216431
+              A2844E6E248BC4D0C4185B260457D39942AB3F9AFA78315B9C5E029592F9A589
+              B34BA0AA72D261535F6BAA763FB3A2B381D755B94242803AC011B2C851422737
+              0463608681D516B3ECB69A95097F38F9D14024F598A61BB4046A290400CD1056
+              8769B8AED2F11F6693E2B35A4C2601F4E83A0FE93A87D9A4963B4A4248195142
+              2737C2D90238C9C3396F8B25B355B144764B2157EC802C812E4F9B05170063C2
+              61379DAAF43A5EAFAEB0EF1560694596B39C0B3F03745AD19C1042099D5C6F4C
+              08B40258A92AD2542C95A99FF0A77E532B6A9EE96976322B43C06491437555CE
+              EF57B86D2720AB15BA668C185C8C42083E154E5CD6E6EABC2ED47A9C3835E803
+              A3CB0309593028A193EBC90A608922333717423D5B00776FB1A851015C29B800
+              2084CDAABEED715BB7DB6C269FA2A861301603E0072D814A08390F2574727D30
+              58184323636C996170533A57680B44D34F14B3C5462A802B810018A0C9AA9CF0
+              78ECAF56B96DCF834995BA21B28AC2FACA1D1E2164EEA16A24724D31C6B0B4AD
+              8E31816E932C375A4C8A3F9DCD6F0846535FD034BD860AE04A2000185C48321B
+              77DB4DDF71DB2D0316B3C92C49D2712EC47051A3813921E442344227D79A0580
+              074C54E40ADA124DD31B62C9B30570924C0570B3999E65178C61A0A6D2B5ADA3
+              B172A722CB8982A6A7003E82AB68BE460859D828A1936BA6A81BCCA4C8955C88
+              2E5D37782C95EE8CA5F2BFA2170D2F147AAB954408309945EC16D333ED8D95FB
+              96B73720144F8D8F4D45A7841010E2DD7C9ECA16305B7F5D42C8E241475972AD
+              2800EAC3F19477DC1FAB1F0F44EE8827F29B344DAF860020D3C8FC92A613B580
+              A60D399DCE1DEB57349F58DE56DFAF284A027184005A029510726994D0171CF1
+              EE970B066E62C6B559D8792BB394BC36CBB9A799FEAA7221AA73997CF7C078B0
+              E1CC907F6D2657F804745E0B852E4D2B89103A93A4A4C56DDBD5DD5AF3EC86E5
+              ADF14AB72332154A4C01B8C840FC6A963FB9B6AB9F5CEB8F6BB4360B21978F2A
+              94C8159B4E258259ADA6C66CBED87E66C8671F1C0F6FCEE58B9F001755540057
+              222E00DD0832C67EBCAAA3E1C06DABDAA356B3692057D0226EA7ADDCD11142E6
+              091AA193AB61160255F164B6726432BC726022B83695CC6D025813A4F70CFDC9
+              4CA667D905041FF254B9DEE86CAADAB6A6BB79A8AECA1DD40D1EE0E79F302784
+              9059504227974D0018998AA0B3B9B65A378CE54313013E381E5892CDEB4F8031
+              0F241A99974408406271B3597D61457BDD9E3BD675C64CB2E24BA47341BBD54C
+              C99C10725928A1932B611502DDF154C69CCCE49C2393E1CDB17876B32144158D
+              CA4B70AE00CE30FA2B5CF65DCBDBEA8EADE96EEA73DB2DA1A26644A053011C21
+              E4F251422797CB2A49AC9131B62C144D5A13994273249E7ECCD08D262A802BD1
+              D9023867856DC7D2969A9FAF5BD69A6DA87647003155EED00821F31725747239
+              981058AE2852B54961538194F691682CF5615DE7B4046AA984000C2328C9D22F
+              56B4D51FBD69454BCA66568773452D060032CD701042AE102574522A17805A93
+              22790C83B745B3C5BA7832BBB998D7DA215307B8590901080808315259E5DED3
+              D954BD6D7577D3508DD715CCE68A0150771842C855A2844E6625846012632D00
+              562BB2E44F67F37513A1C46FEA05DD0395DE4225110024246526BFB2B4B566F7
+              DDEBBBA32645F6A5D2B9A02CCB94CC0921578D8EC664361600CBAC66C506012D
+              92C87E20124B6DD20A3A2D815A0A2E002184DDA6BEED75DB5EB7592D832DB5DE
+              21B7C332AAE93C02EA004708B94628A1934BB131A04162580A21A45C41AF0FC6
+              521FCD26736D3029A0643E0B013086A2A22831AFDBFA6A4BADFB670E87C3EA74
+              D8C242C05FEEF008210B0B5532911931C69810628D2CB3E516B3321549E6368C
+              F8A2FF299FD71AA89ABD0402806108932A8FD7796DFFE0B6DB7A20A9155C60C8
+              30B86F783C5CEE0809210B0C8DD0C94C2A00D49B4D4A05185AE2C95C75389ADA
+              9A4DE53A214BA08AF659700E8009934939E3755B7756791C0754D514176019CE
+              859F017AB94324842C3C94D0171821DE5930E582B26931F3DA2CEFFE9D016693
+              C2F29ADE2A31DC6431C9E3E96CD133194C7CA958D02AA7A7D9C9AC382099A498
+              DB697DDAE3B21F564C260763AC5F083E2284E0C353D3A3F3735F4BE171DA104D
+              64DE73DBF9AFF5659BB133EFB55EECE56AB6776E9B849052D1119A9CCF06A0DB
+              61516DB2C4728974EE916834734FA1A0D7D2455525E0D397A6D96CEA318FCBF6
+              BACB611DB25BCD7E5992C29C0B3F00A3DC211242162E4AE8E41C1363AC5691A5
+              25B20449D3F5866034FDD14C22D7063315C0954893142951E375BC525FE5FA99
+              609217024900FDE50E8C10B2F0D1C950028FDB014992DAAD16B5D6E5308D2532
+              B90D2313D1FF94CF6BF550A900AE245C000C7E9B59FE37AFDBDE5BE1769A1559
+              3E6D7031621874651A21E4FAA3113A3103A84EE70A75A1686A6941D3AAA3B1CC
+              FD9954BE0B8A042812F5309B8D10806E0CD7D4BA772C6FAFDDE17539FC3A1771
+              0093A0EBCC0921370825F445CC66352157D0AA349DAF084793F6FEF1D0BAA266
+              3C61E846C5F4343B2899CF46088021C14CF2CB9D4D35BBEE58D3954D64F2137D
+              638120289913426E204AE88B970CA03E96C854F68EF82AC703F1FBB2D9C2BD10
+              A89CFE2E9D33BFA473970C68DA90A3C2B173D592C6A3B7AC6CEB75D82D8144BA
+              401DE00821371C25F4C549E59C5766B25AC7D044A0F9F4D0D44DD97CF11100F5
+              748D79C93426B384D56ADFD9DD5AF7F3DB5777C45AEA3CFE6CBE481DE0082165
+              4147EF45269648C36135D7E50A5AD3A9C17136301EBE2B9FD73E0181AA192E4C
+              2633E102E03C6492A51FAE5ED2B8F7F6356D099B451DCCE68BD17287460859BC
+              6884BEB85804501988246AC703D1356786FC2BC2B1F41670D10469C64E23E47C
+              E2EC1F9C0F54563A772F6DADDDB96A49E3406DA52BAAEB3C08AA382084941125
+              F44522932BC0E5B0D6689AB1626034A80CFBC26B52D9C2E7205041D3EC251202
+              90584CB5282F2C69ADDD79D7FACEA4495182F1542EE8B09A29991342CA8A12FA
+              E2A002E8CAE58BD648326D9908C61E8AC7339BC098B7DC81CD0BE7FAAB16B521
+              7B857DC7BAA52DC76F5ADE34E8B059C245CD88820AE00821730025F485CFCC80
+              5A0ED1118EA73DE178AA2391CA3E0C8116AA642F9180CE64296E73DB772C6BAB
+              7BFA96956DB1C61A77245B2C4E953B344208398712FA42C6C024262D11825719
+              BA118DA5B25B22B1CC4735DDA8A5645E22834F17C099E41FDFB4BCE5F8CD2B5B
+              62768B6930932BC4CA1D1A21849C8F12FAC26506D020C05DE95CA13D96C8B447
+              E3E9FB8A79AD0DB2044894D02F69BA952B14453EE3AD70EE69A9F3EE5ADDD530
+              D450E3096732854B16C03136F73BDFCF14DFD5ACDEC666A8A9BCBAED31AAD124
+              E4325135D40234DA3F09C6D028045F5B2C686A2C9E6E9A0826BE94CB16574195
+              299997420848128B39EDEAB3CB5A6B9EB965755BCAEBB68713A99C0F54CD4E08
+              99836884BEF038007C219BCB6773F942281CCF3C1A8CA4B66A45BDBADC81CD0B
+              7C7A5869B5A8C73C6EEBAB368B69D0E9B085ED16F3A42CCB1183734AE6849039
+              8912FAC2210368522DA69B3D759EBB9D36752A1C494E4C45D31FC9A78B5D30C9
+              98FB13C16526041883262B72B4C265DD56E3713C2B4BB24392A42C005FB9C323
+              84904BA129F7F9CE30CEFDEF4424F98D9A2AD7EFFFCA47EEFEFEBAE5EDB1A940
+              E2378BD96213147A994BA273288A3C55E9B67EC76933F730265508A0570831DC
+              334C1D5D0921731B8DD0E7396FA5F3DC5F0B9D4B1A02CD9DF575B97C71493814
+              DF90CF6BED600C5068647E49060724069BCD74C2E3B6EDAE705A0FAA8A121660
+              19084C00D0CB1D222184CC8612FA3C57E5994EE80EAB9A7FECBE757F98C9699F
+              FFC79FBFF907B1A94815ACE63247377F288A14F556D87F565D61DFAFAA8A5D37
+              44C0E07C8831464D630821F30225F485A1315BD05B8E0FFA43F1744E44E2E94A
+              E8865CEEA0E6BCB305704EBBE988DB697DCDA4CA6143206F92D800E3C207EA00
+              4708994728A1CF732E8719001C8A24ADD8FBF670452892BC95811584C34AAFED
+              A54CD7AA6BB222456B2A9DAF5657387E1E4E645BB205AD60B5A803658E8E1042
+              2E1B554BCD73FDA361B4D57946376FE808B96CA64D856466A310DC425D396661
+              708021E8B49BBFE77539CEB89C36ABA2C8470417A7C2B14CB9A3238490CB46A3
+              B8F96F4D2A93CF27B3459E2B68ED8273BADEFC52CE16C0D9EDA6630E9BE94D97
+              DD72C0E5B04EA8AA1A658C8D809AC61042E6294AE8F39CAACA0FF78C8553FDBE
+              981C8CA575584CB4AEF9A5084051A448B5C7F613AFCBB65F9214B7224B515D37
+              0640C99C10328F51429FE796B7D745A7C289F5A393917586613441A2B3283332
+              38C0052ABDB603355EDB8B1253A6B8404E95D910632C2828991342E6393AFACF
+              73372D6FEDADF6385D5A367F3B2FEA95D40C6E06424092A582C5AAFA2ADDD6D7
+              BD2EEBF382B150BEC88B008600A4CB1D2221845C2D4AE8F35C4B9D57F7386D49
+              D008F3E2340E9B451DEF6870FF952C49C3BE7076695E33FA64493A93CE6AE58E
+              8E1042AE099A729FE77A4702EE703C6D852419A0D7F3BDCE16C0399DE6A31E97
+              758FACC8C3E99C9E49E7F5BCCD228D4245BEDC211242C8B54209609E7BE348AF
+              271C4F7B204BF45ACE4055E4684DA5FD276655391D8AE73B752EF69815F930A8
+              690C216481A12430CF75D4B9E3DC30B2A170F2EC2D8BFC243A03A073C0E0A8AE
+              72ECABF1DA5E2E68BC90C814659D8BDD008641C99C10B200D139F4796E497355
+              ACAAC29681986E63BAE81902B222E5ED4ECB4895C7B6CD6933BF9ECD1BA944B6
+              9803700840A4DC211242C8F54023F4792E95D751D038A687A68B38A133000680
+              A20E5795636045ABF7ABA9BC6E1B988CDF6E186297AA484306E790E9B23E42C8
+              0245097D9E3B31E85F1588A69A202DF2A9F6E99179B6CAED38E07459C61299C2
+              4A7F2C170CC77343AA22F738EC26EAE74A0859D028A1CF73A787036B344D6F9E
+              4EE88B38A91B1CAA4549B436B8FFA5A81BCD2786A37F6670F16587DDFCB71220
+              0C7DFAB4B9018E62510750402C319DE3C703B10B36178ABD7B69FAE0441800B0
+              FB70FF7BEE934C662F3BCC2D772CBFECC71042482928A1CF735C20C9815CB9E3
+              283B89C1E09C4DC5B296AA0ADBB15B96377EDD6935BDB4EFF4E47B0AE092BEF8
+              858F55CE4EC31B33D4CAF1194E6358544006AEA42BDFF67D672EFB31EF982194
+              B74F8D5DF9F66670ECF4F80CCF7BE5A7724EF74E5C45348490CB41097D9E6B6B
+              F0F486E3E9B5C1D0D92AF7C53AF52E3368BAB08D07520F28B2B26D6D97E7D525
+              4DDE91AD37B7C9008CE383217CFFE5E3E58E921042AE1B4AE8F3DCD296CA2013
+              3C110C26303D8493CB1D52993000B083B1CD53FEC4CA64323FA8C8D2538DD5CE
+              E772053D51EEE80821E47AA3843ECFD5573AE353E144F69DA9E1C59ACFA7C900
+              2AF379AD329F29B4BF7D66D26C36C9A655ED35CF01F002D80AE008807D658D92
+              1042AE034AE8F35CBEA829BACE6530082CEAAAB8F3981500B00C8E86EF8B6635
+              9BD761F5991469954995FFA26892BF0CE02D9C3B236D56801CF5732784CC7F94
+              D0E7B97D27C6BA22896C0DA4C57AF2FCE20498144D64D6BDBEB7FFF79A9ABDE1
+              0FDFBBF45B855CFE85252D5EE17658707C28849F6EEF2977988410724D50978D
+              794E40B60A30D3F480731137969989D50400F6333DBEAD3D23E115B55EFB732B
+              BB6A4E823EC8124216204AE8F3DC938FDE7A66FDB2A629E886806E943B9CB945
+              08804980C38C4038D5F0B31D673E7F7C30F4B059912A40A72708210B0C8D54E6
+              B9783AA7A5B305059A0128F2A2EF007B01064055502C68DEA989E8D663829B65
+              8949AB3B6A5E01508FE942B95D008E95354E4208B94A94D0E7B9A75E3DBC2A91
+              CA56C16A6694CC2F4208C0A44830299513FEE4DD5943146B3C76BF22497728AA
+              F2655DE37F8A4CE1381489F61E2164DE628256E89AD7D4258F8CB4D4797CD55E
+              E7FEC1F1D003E150720514096034A33CA3820E98E4A9EE5AF7B1F6B6AA498FCB
+              16397A7AB2A3F7C444118AF4E700DEDB7DE61A778ABB2AE5FA55A563C4A22126
+              5E2F7708E42AD0087D9ED3355D6A6FA8DA7FEBAA96EFA532F9E5E1F1F00A382C
+              E50E6BEEB22880C1EBFBFAFDF54255DEFC607BCD97D3AD554BD2C9FCDD86CCBE
+              79FE5DFD7D5380492D57A48410725928A1CF774CFA48B5C7E6EF6CA8AC5665B9
+              12D90260374F8F1E6964752181E94239BB05E3BEE89A1FBD76E2FFDDB6B665DB
+              973E71C7D793B9C21100A8AB74E2C5BDFDD3099D1042E6094AE8F3DFE1E1F1D0
+              FAFD36CB6FB7D47B478CF54B927D81E89DC57CD1026571B78DBB2806409591CF
+              169CBE547EF990CBEA6BAFF35ABB1A3D2E9B59CD4693B4D60D2164FEA1CBD6E6
+              3B0676E0E8E027FFE3E5435FA8AA74EFBDEBCE15FF6C31AB4914F5724736B709
+              317D9DBAC38263A727B77CEF85237F7C7230F028804AD0EF0521641EA211FA02
+              20B8782197C90707C7837B24C66E49C6D2D5D08CB38571822ADF67C3188BC433
+              AB5FDFDBF76B1A07362C6DF829802F00B815C057019C286B7C841052024AE8F3
+              9FC0F475D4BB4E9C1E7DD46AB36C6E69AD399E4C661BE2894C352469F12EA95A
+              2A9B19300C6B5F8FEF565D920A36B3C22D26F9434D5D75ED862439CEBFEB54EF
+              E474953B2184CC3174D9DA3CC73A1E3AF7579B942B3EB77275DB924F3E78F37F
+              DE7F7CE4FEE79E7FEB4BC2A430D8CC5420371B01C0306056E45445853D7CD7BA
+              9657D777D5FF30952B1E04906D6DA8C6D3BB4EE2F5E70E42B8EC74D91A5990E8
+              B2B5F98DCE152E1C8C737E389EC81C1F9B0CDF525B694FDC797BF78F9C6E6B08
+              A9DCD936A83452BFA8B31DE50AB9A233301E6E1F180EB6463339B9B5D1EB5CBD
+              A481F61D2164CEA384BE706400FCC1F854F4EFFFF1A95DBF3D198C763C70D7B2
+              6F7534D7BCCDCE8DED68A47569E70AE59C561C3FE3BBE77B2F1CFD1F2707FC0F
+              03A801FDAE1042E6383A482D24661500F64337FEE0D8C951B1FBEDE13FBEE3A6
+              8EDD1F7970C3FF6386104864A6479A34D89C1D63F6482C7BCBEB7BCEFCC6BE93
+              631F76D84C0E00BF0FE03F309DE00921644EA1A2B885270AE09B93E351F3643C
+              FB3F3B1BAB5EED5E52DFBB6C22BC7F722CD091D4F41A2A942B81CD0CE846455F
+              AFEF566631E51D36ABE6B25BB6367635AC0A24B38F699AB603C020005EEE5009
+              2104A0A2B879EFBCA238BCB37CEAF4F9DE3A48D2AA1A8BFA672B57B79A37ADEF
+              FABF7B8F0E3EF2EA6B477F55984D5428578AB3857216454E79BC8EF08736ADF9
+              D7DA0ADBE03F3DFDD61FFA4F8FF5C069FD0C8077BBD01862BA4BDFF58CA71CE8
+              7DB2685051DCFC4623F485CB0FC01F9C8A6E364CF22DADD5EEDB9A9BAAA29B36
+              AEF9E191DEF1AD8950B2060E0BB588BD94B38572F94CDE3995C839CF344CAE34
+              AF6C49DEBEA6752AD75C75266970EDDC5DC703514C0C06CB182C2164B1A311FA
+              3C778911FA74B28EA500A7ED0330F88F3EF6E8CDBFB8734DFB377FF0D2A13F3C
+              72B0EF7EE1B032AADEBE0C993CAA1B2A7D9F7B64C39FDEB4B4F1FBB144260540
+              4C86A2F8FECBC7303118A0113A99D768843EBF5151DC42A61B80D30600FB60F0
+              FF76F8E890FCFA81DE3FB97D6DDB9E8F3CBCE1FF319D0BC4A9506E56E7ED9B50
+              2CDDB0E3CD331F3EDC33F170ADD7596B35D1AF1021646EA029F7C52102E09B23
+              437EEB4828F107BFF6D1DB5FEBEE6EE85BE18BED9B1C0D74C60B7A2D15CA5DC2
+              B901AAC30AE8068E1E1D7A30962FDA2506D3B296CA5700A40174022802E80335
+              DB2584940125F4C5C2AC0266F5FB60D2DB4FBF78F4ABAB6F6A357FEED19BFFF0
+              8DC3038FBCF0C2A15F17162A949B9510D3A731DC364C05925DDF7FF9E8473E75
+              FFEAB11A8F3DC985F867E48AC350A44F032894B4BD5CB1F4E7B698CE5D964808
+              2133A2F9C2C52500607BC81F7DE5F89949FFC048E0AEA6C6CAD896CDABBFEFAE
+              B08590C85047B9D99CEB28972FD605C6C21B77ECEFFBB56303FE275777D5E5EE
+              7F60ED49C6A0CDBA0D0050E8578F10726D5151DC3C77C9A2387EDE6BFBFE4239
+              97ED03D0F98F1EFFE0CDCFDEBDB6ED5BFFF1E2A13F3A72A0FF3EEEB04A94D02F
+              43B680CA3A8FEF93F7AFFEE3359D753F4C66F22900C2A4BC3BF9A519D397AA5B
+              4C0A1880E3C341FCD3536F405CCEBAEBE51CA1D33162D1A0A2B8F98D86098B8D
+              61002E1B00EC05E7BF7BE8C8A0FCEA5B7D7F7AF74D9D3B3FFE815BFE523238A7
+              42B9CBC01822F16CFDEEFD031F3DDA37F5685585BD9A5DEA03113BBB6B69DF12
+              42AE313A87BE784501FCD3C850C036124CFD41EBE377BED2D5D538B87C22BC6F
+              7238D8152FE8B590A9506E56D31DE5D88913630FC4F39A4366CCDCD6E8D90E60
+              02D4458E107203D1087D31B3A880D3FA03C8EC333F7DF1E047DE7C7BE8B79FB8
+              7FDD9FDF7A73D7B32C93E3286A34949CCDB94239A715815062D953DB8F7FAA67
+              24B4C9EDB43834CE61B59ACA1D21216491A0113A09020886FCB1578E9BD45B5A
+              6A5C7737377A631BEF59F983C37D930FA5C2A92AEA28370B06409551CC15BCE1
+              89D8DD6F1E1E92255972743757BD0C601874191B21E406A0113A39E70FA3B1F4
+              DFFDDBD3FB7F3316CF363FBC71D5773A5BAB8F49D2D969634AE69726C474E19A
+              D362EB19F0DFF7F48ED3BF393615BF4F005E50350221E406A0844ECEEF28B717
+              9CFFDEE1B78794ED8707FEE4DE0D4BB63DFEC8CD7F29E90615CA5D0E89211C4B
+              77BFB2E7F4AFEF3D36FA5987D55C4BBB8D1072BDD1943B395F04C03F8E0E071D
+              A391F4EF75D679C592AE86811593E17D93C3C1CE585EAF83CCA6A7DFC9C54D17
+              CA297D3D931B725CC82E9B29D95AEFD90660128051EEF008210B131D99C97B99
+              55C069FD0F30F6B99F3C7FF0E3FB8E8DFCF6671EDAF0953B6F59FA0C4BE7380A
+              3A15CACDE65CA19CCB8A4028D1F6C3D78F7FEACC4868B3DB617659ED16D03407
+              21E47AA0844E661200B02DE48FBD74AC6762AA7F38B0B1B9D113DFBA65CDBFBB
+              2AECD451AE14673BCA150B5A4578227AD79B87063FF5E6F1B14785109500D600
+              F803007781B23B21E41AA1297772297F1889A51FFD979FEDFBD1E38FDEFCECA3
+              9B57FD63345B6C381A496EE1804C8572B33857286781AD67C07F4FACA0F16AAF
+              33ACC8EC0ED56AFEFF3443FC11807DB84415BC1002B76DE8C4FE8383542A4F08
+              B9246AFD3ACF5D76EBD7F35F6F6986FB5D785B2534FD236D4D95F72F5FD658DF
+              DD5AF3826F22E2F9E9B6E3FF4D640B123C0E00822ECC9A4DAE08984D9155CDDE
+              131D9D75530DD515839261FC64E3ADDD271863020026FC610800F27963768303
+              3FDB7E02FBF60F4098CAF4F99B8E118B06B57E9DDF68CA9DCC2602E03B234381
+              032FED39D351C815A4AEAEFAA155CB9BF6792A1D7E14B5E9AC432ECD660638AF
+              3C796C74D3A981C0B22AB7E3C0ED37754D5EB24D2C21845C064AE86476D38572
+              FF0E497AF2A72F1CFEF88193A3FFE9330FAFFFF2ED372F7996A5F25428570A21
+              0059022A6C98980C2FFBF633FBFEF8E099B18FC98A64F3859348667234C94108
+              B92A94D049A98200B68703F1E78FF74C4EF50CF9B7343755C6B66E5DFB6F6EB7
+              3D4C8572257877E9556B6034B86EC79BA77F69DBFEBE4F08215A7191E2B8E985
+              5C689F12426647099D5CAEFF2F144DFDC3777FFED697A2F16CD3839B56FD6B7B
+              5BCDDB92244D9FC0A7F3AD9726046035034E2B4E9E99B8FDC7DBDEFEB5E1A9E8
+              560154817E1F092157810E20A474BA0E38AD00F0160CF15F0F1E1D32BFB6BFF7
+              CFEE5CDBB6ED43F7AFFD6B49330C24A8A35CC92409E1487AD5CB3B4EFCC69BC7
+              463EE9B4993D54A44A08B95274D91AB91221307C7B74D8EF1E0D27FECBAF7CE8
+              56A9B3A37E684520BE6F722CDC15CB156A214B8C3ACACDC26E0134C3DE777A7C
+              435E70E6B4AAF9965AF76B00C6404BAF12422E131D71C99531AB80C3FA3D30F6
+              E4D32F1FF9F891BEF12F7DEE919BBF72C7CD5DCF48A9BC409E0AE56675AE50CE
+              6D83DF9F58FEC357DEFECFA747021F74DB2D7683035EB7ADDC111242E6114AE8
+              E46A84006C8F8692CF9FEA9B9AEA19F26F6969F4C6B66E5DF36FEE8A738572A0
+              C47E290C80A2A098D7ACE189C8CABD87863EFEE6F1B10F0B215A40272E082197
+              81123AB916FE28184A7EEB5F7FB6EF4B9178A6E9E14DABFEA5B3BDE6882C4B3A
+              002A949B8D1080D50438ADE81DF06F7866F7E9CF8DF8629B8578A7504EC6F4E9
+              314AF084908BA273E8E4EAE806E0B000C03E08F13B070E0F3D98CC16BE72CF86
+              8E5F74D5BA8FFC74DB89FFC63379993ACA9548966CE15866FD2BBBCF085D88D4
+              86A50DDB5559FE2D24B3EB6056FF0F80D3B8602F0A4095DF7B5341BF36F1A8CA
+              F4870D42C89C47099D5C2B4100FF323A12F08C4653FFA5ADCE2DB777D48D2C9F
+              88EEF58D0497C40AC55AC8327BA7B52C9999D50C6846557FAF6F0B4C525A95A5
+              6ABBCD747FE7CA166F91C1F2FEBB6B5CC03FE4A7CF498410EAE53EDFDD805EEE
+              E7DD765EE1F5B90AF60B6FAB8224ADF29AE4AFAD59D3266DB9B9EB7FBE7178F0
+              B1D75F3BF62BDC66926031D114FC6C0400CE854562495B853DB5F596AE9FDDBA
+              B4F1DF12D9FC290005F7F48C0862892CBEFBC211F8067C100A8DD0C9D5A35EEE
+              F31B9D4327D75A18C0CE6830F18B93BDBEC99EA1C0FD4D8DDED896CDABBEE774
+              D82254285702064091593E57744727234D7D8353CBFDF1745D739DA7B2A9C64D
+              3B8E1032234AE8E47AF93FE168EA5B3F78EEC01763896CDD7D772DFBB7CEB6EA
+              B71559D100D0287D36424C2FE8E2B0E2ED93E30F7CEFF9C3FFDFF17EDF4342A0
+              12541C47089901257472EDE906E0B0028CED83C06F1D7A7BD8F6FA8181AF6CBA
+              B9EB958F3D7CD35F49458D3ACA5D0E5942289659F6F2AE339FD87B6AEC61A7CD
+              EC9D9E76A79D4708791715C591EB2904E0BBE323C1CAF158EA3F773779958E8E
+              BAD1952B9AF74E8C06BB62D9621D14EA28372BAB19D00DF740AF6FB3C6045C16
+              B3BC6649DDAB8C21C1806500CB013803BA868090458D8EA4E4FA322980D3FA6F
+              00FBC253CF1FFAC4813363BFFE9947D67FE5B60D5D2F48695A7AB524424C171C
+              BAAD8ACF9FB8ED47AF1FFFB59ED1D04D4E9B69B921F877912BFE0900B5DC6112
+              42CA8B123AB911420CD81E0D267E71A26772EACC60E0FED6A6CAF003F7ADF9AE
+              CB6D0B219E99EE5C4E89FDE2CE16CA6905CD1DF6456FDFBEAFF78B47FAA73E7B
+              F3CA96E0873F72FB014962EFAC7657D75C434BAE12B208D1656BF3DC1CBC6C6D
+              C6C7328941C43380DDF218B8F8FE273E78CB8F6F5BD5FCAFDF7FF1F0FF3E7678
+              78936E379BE894F06548E551DD5235FEE4C3EBFF78FDB2E6A7B2453DCD18843F
+              94C4B77EFA26267B27714D7EB7E9B2B545852E5B9BDF68844E6E08A1F3738572
+              7BC1C56FBE7578D0F1CA5B7D7F7ECFCD5DAF7FF4919BFE4A2A683AE219005428
+              5712454224966E7C75F7A9270F9C9978BCAAC2E1B55BCCE58E8A105246541447
+              6EB42018BE3B3AE4AF198D246F6DABAB503B3AEAC657AF8AEE1D1F097545B385
+              7A2A942B81CD0CAE1BD28963C3F7640CE1506599AD5FD6F8228034801500B200
+              4E810AE5085934E8A8496EBCE942B97F01C3E77FFCDCA1270E9E1EFFF5CF7EE0
+              E6AFDC7E73D70B523A478572A538572857E1C0C464A4FB7BCF1FF8E2C921FFCD
+              2EBB65A5C1C5F790D7FE0FF29A82BC86F7FC4FD3E7842C58740E7D9E9B2FE7D0
+              673CAF2E338858E6FFD6B4D6DCF2F03D2BFACD1653617428E0DD7B6AF423A970
+              B2124EDBF47DE93D7A718C01993CC085D8B0AEFDF9154B1A4632B9C2AA6232F7
+              D2E63BBBFF5A929861B1A89018C3FED363F8DE4FDE8291CE97BE7D3A87BEA8D0
+              39F4F98D46E8A4DCFE6F309CFCA7EFFD6CDF1723F14CED967B567CBFABADFAA8
+              A2C8050094CC67F34E47390B3B7C74E883AFBCD5FB91252D35FFFEF10FDCF24D
+              59667CF60D1042160A4AE8A46C84765EA19C105F3A7078D0FEDAFEBEAFDE7553
+              C7AB1FBC7FEDD7A462913ACA5D0E45423896AE7E71E7890FBC757274ABC769AB
+              E6B4E7085934A8288ECC052130FCFBF868A06E3C9EBEB9A5CA696A6FAB995CB5
+              AA79CFC470B83B9AC9D743911964FAFC7949360BB8AE9B4EBC3DFC8144AE6095
+              18B7B53778DF003009C02877788490EB8B8E90646E5015C061FD5706FCCACF5F
+              3EF28963FDBE5FFECCC31BBE7AEBFA8E97A4749EA3488572B31202906406B74D
+              9D0A24D6FC78FBC9C77A2722B7BBEC66A7AC4AA0C13A210B1B2574329784016C
+              8F87534F9FECF3F94E0DF81F6E6DAE0A3FB075DDBFBADCB63075942BC1BB1DE5
+              1A43BED8A6370E0CFED29EB7473EC6B9A8047033803F02700FE8779F900587A6
+              DCC95CF47F02C1C463FFF6F3B7BEFF890FDDF2E3AD1B577C2F94C9B51C8F6536
+              6A80990AE56621C4B9CAF4EA333DBE8762B9A2C3EDB4061549BA437158FE8724
+              49FF1BC03E4C7F3C9A11E702B7ACEFC481FDBD17BF1321644EA1CBD6E6B9F97C
+              D9DA2CB7D540371E6C6DF47CA8BBBBB179696BF5CF7C1311CFB33B4EFC372357
+              54E076004C50DB94D9E435481635B5A4DE73B2BBB376B8A5A6E28CA1EB3FBF63
+              6DFB194962823120184D5DF019C96AB5E287AF1CC59B6F9C0637D3BA2F8B055D
+              B636BFD1089DCC554130FCFBE850B06E3492B9A5A9D2656A6BAB995CB9B2E98D
+              899170772C5DA8172A75949B95D504AEEBCEDE93E3771880B2BAB3EE5FDB1BBC
+              3E49A2D316842C347434247397FA4E47B95FFAF94B473EF176AFEF8B9F7D78C3
+              576EDFD0F93CCBE4A850AE14D3857240850D6393B125DF79F6E07F397066FC03
+              8CC115496491CE15E80C06210B04257432D74518B023114DFDF454BF6FFC78FF
+              D4071BEBBDF1FBB7ACF91787CB1A4122333DED4E89FDE2A60BE5502C142B82BE
+              E8A63D07063EBDF3F0D0070D219A41A5EF842C1894D0C97CF1C78150F23BFFF1
+              F4815F0AC7D2351BEF5CF6A3AED69AA3AA22E7C1F0DEF3F1E442E70AE56C667B
+              4FEFD4A667769FFEDCC864748B10A80120973B3C42C8D5A3844EE63CA11980DD
+              72B6A31C7EEDE0D161C7EB07FBBF7ACFFACE573E78FFDAAFCB054D4792965E2D
+              992A5923F1CC8617779EFAD57D27C73EECB29B2B98C4D058EB81C3E1407B532D
+              18CD781032EF50511C994F4260F8C1C458A8713291D9D05A5B61696DAFF1AD5A
+              D9F2C6F868B03B96CED70BF56C47391AB05F9CD50CA11B95837DBEBB75C684D3
+              6AD2DB1BBDDB018C82F61C21F3168DD0C9FC629201A7E59F05F04B3F7BF1C8A7
+              4EF4F97EF9B38FDCFC95DB3674BEC03285E942391AA65FDA3B4BAFDAE0F3C76E
+              7AEAF5E35FEC1D0B6FE54238CA1D1A21E4CA514227F3519401BB9291D453A7FA
+              A6C6DFEEF33DD6DCE08D3DB075CD3F3B9CD608E25428372B064096A115754778
+              2A7ECB9E03FD9FDB7964E809CE450BE8131121F3122574327F31FCF15430FEBD
+              EF3FB3EFF3D178A6FADE3B96FEA4B3A5E63815CA95E8DD4239B9A777EADE6777
+              9DFA95A1C9C816215085E96383198015749C20645EA073E8645E129A0ED8CD00
+              F00684F8E28123C31F8BA5725FBE7743C7539DB5EEFDCFEE38F1FB465E53E0B6
+              5347B952A83242D1D48A675E7FFB977543146E59DEF492224BBF8F7876252CEA
+              FF02430F682F1232A7514227F35D008CFD606C24D03C91C8DCD45AEB36B7B457
+              FB56069ADF9C180D2F896572F54255186446E9E852AC66705D73F79F1EBBE765
+              9392962451E97658372EBFB9D39C07AEA8F72B03104D17101B0B825A4C1372FD
+              512FF7796E01F7729FF936F9EC6DC679CF3BBD4EBA1792B4C629B1BFDBB0BE43
+              7FF0F6E5FF7DE7C1BE8FBDFED2D15F326C26055613A825DA2C84008480192CED
+              ACB4271EBD6BE50FEE5AD9F2DD683AD72F84D054E9C2FD27CDB446BD987EBBC5
+              52457CEB67FB101AF253429F2744726FB943205781CE8D9185220AC177A622E9
+              1F9FEE9F1A3BD637F9E1A6066F7CEB7DABFFD9E1B046A950AE048C01B28C42BE
+              E8084F441B4F9E195F331C88B737D755D4D678EC74693A21731C2574B2B030FC
+              713098F8971F3DBBFFC9783C53BDF1CEA53FE96AAF3E6256951C002A949B8D10
+              80CD0CD82DE2F0D1E107BFF3CC5B7F78F8F4F8039C8B6A8051473942E6304AE8
+              64E11098EE2827497BC1D8AFEC3F3AE0DA76A0FFAB5B6EEF7EE9B187D77F4D2E
+              681A12595047B99230A83222B174D7B33B4EDCFFE6F1913B9D36530593245657
+              E5844991E1B45BCA1D2321E43C54144716A220189E9A1809B74C25726BBB1ABD
+              D69696AAC07447B9C0D258A6401DE54A6135831BBA67B067E25E8373D96E562A
+              DB1ABCBB000C82F61C21730E8DD0C9C2A4CA80CBFA1D43E0977FF0DCA14F1F3C
+              35FE4B1F7F60ED9FDFB4B6ED25299337503440C3F4D988E9AA3797BD66722AFE
+              C053AF9FF8B5DEF1F0262E849D761D21730F8DD0C9421603E7BB53B1CC0F4F0F
+              4CDD52EDB17FACA3A526627BF0A66FEF3836F2897430E185DB365D9D4F55D833
+              63609098A26535773810BFF98D03039A10C2BCAABDE6650043A0913A2173068D
+              D0C9C2C7F0A7C160E27B3F79F1D0A75399BC77E35DCB7EDEDD5673C46256B360
+              ECBD97DE910B094C7794B39AA49E5EDF5DCFEE3AF51B4313D12D42882A464BAF
+              1232675042270B9B00E0B0008AF426805FD97BB0DFFBEA5B7D5FDE725BF78B1F
+              7EF0A6BF9173452A94BB1C2605D144AEF9853D671ED97F7A6293D361F1006035
+              1E3B1489C166B9A21E3484906B80A6DCC9621100634F8D0D07DB26E3D9B51D75
+              5E6B6B5B7560F5EAD637264683DD9174BE813ACA95C06A02D775C7509F6F2324
+              068755B5B6D67B7683965E25A4EC68844E160F45015CB67FE2427CF107CFEDFF
+              DC91DEC9273FF3E8862FDF7253E74B52B668D0D2AB25100290640697CD353E19
+              BBEB47AF1EFF54CF68F81E2E8483761D21E545099D2C3631C1F98E6438F9C393
+              BD539347FB261F6F6CF046EFDFB2FA3B0EBB3586787A3A69515BB48B63609099
+              AC158BD5217FECAE370E0CFEF2EEA3234F1A5CB4833E1111523694D0C9E2C4D8
+              1FFBFDF1FFF8C133073F174B642BEFBEADFBE9CEB6EAA35428572201C06A06AC
+              66674F9F6FD3B3BB4F7F6968227A9F10C2CBE8B8424859D02F1E597C0400BB15
+              90D96E407CE1ADC303DE6D8706BE7ADF1D4B9FFFF043377D4DC9178B884F778A
+              A5F166094C32C2F16CDBF3BB4E3FF1D6C9F1471D765395D7ED648C3130DA8184
+              DC3054144716333F18FBC9E458A83D98CEAD5ED254696B6AAA0EAD5ED9B26774
+              34B42C96CE37081375949B95C504A1EB8EE1BEA98D60AC60B79AF237AF68DD01
+              4007B00E4008C0690034ED41C875442374B2B82932E0B2FD93CEC5AFFEE0B983
+              9F3D7266E2F38F3FB0EECF6F5ADBF6B2942B5247B9524C17CA012E9B3AE18FAD
+              FAE9B6138FF48F85BAED16D3CD5CF0EF0983FF3E6489AE6723E43AA3F5D0E739
+              5A0F1DE7D6433F7BBB78EFFD04DEFD99CFC527C4BBDB7CE7B10248E6FE774D4B
+              F5ADF7DED21574DA2D31FF78D8B1EBC4E827B291A4172EEA2857925CD10063FE
+              F5CB9BDE5CB6A421224952555FDF240E1D1D1AE59AFE0B007B0118E50E93CC8C
+              D6439FDF68CA9D907318FBB36030F9F84F5F3CF2DD8F3D74D38FEEBCBDFBC7BE
+              646E696F3A7F5B1ECC0ECEA9FA7D3656930C86C623C7869E0866F2FDBFF1F8DD
+              FFD5EBB2DED1331EFA032D579804F01628A1979F00940A3BBD9F17181AA1CF73
+              3442C7B519A10B71EE7EB530F8DD8DD5EECF767737B4AD5FD6F4BD898950F5CF
+              5E3EF2FB7A5E33A1C2313D034FBF3697962FC264B3E4973557ED5FD1DDD4D7D1
+              E039A1158A2FDCB6AE6D5896242131869E611F0C43A0C2657DE7ED59D02ECCF5
+              6C86A463B5D82EB84F2C91C4FB8F6716D385631645BDF036B36ABAE0B65C2E77
+              C16DEF8F4F0070DB6D17C4C8940B63CE652FDC5EBEA8BF777B42A0CA5B71C1F6
+              34EDBDF703005D2BBEBBEDC2F4F7ADE775EA53D5E9BFDB6CD677CE1A3121C1A4
+              CAF8EFDF780EC158F2826D268F3F73C16D64FEA073E884BC570012FBD9E45868
+              FF9EA343F6743A676B6AAC0EAF5AD9FAA6B7DA3DC9F29A80C1E9B4FA6CAC6614
+              0B9AE5F8E1818DC77B265659ADA693EBD7B4456549A23D47C87542099D90F793
+              65C065FB9661F02F7DFFB9834F1EE999FCCCE30F6CF8CADAD5EDAF4E7794A342
+              B95909315D70E8756060D4BFECEF7FBCE777F79D1879D410C2E50BC53111885E
+              309A26845C1D3A874EC8CCE282F3EDE978E63F4E0FF86EF156D89F686BAA0C59
+              EE5BFD4FBB4F8E7D32134E7AE1B252A1DCA53000928462A6E0F14F44EFD9F6C6
+              19B958D0A515ED553B15894D804E5C10724DD1089D904B61EC4F0381F8F77FF6
+              E2C14FA7D239CF9DB72F79B6ABA5FA6D8B59C900D4516E560280CD0CD84DEE53
+              A7C637FD7CFBF1CF0E8C47EEE31CF5A0A55709B9A628A11372310280DD0C28D2
+              6E009FDF7768A0E6F503037FBEF196AEE71FBD6FEDDF28F96211C90B0B9DC80C
+              040093620DC7D31B9EDB79F257F79D1CFDB0C36AF1A826859AC911728DD0943B
+              21B3F343623F9D1C0B2DF1A773CB3B6A2B1C8D4D959195AB5BF74C8C85964693
+              B946EA285702AB095CD32A87FBA6EE3284E036B39AE96AAEDA0D600CD4458E90
+              AB462374424A315D28F70F9C8B5FFFF14B473E7BBCDFFF9927EE5FFBE7EB56B7
+              4E17CA695428372B210059015C36F8A6122B7FBEF3F4A7072622F7D8AD269766
+              7080D1E18890AB41BF4184942E2138DF9989A7BF7766D0377EA477F253AD4D55
+              E107B7AEF996DD618921464BAFCE8A01901874CDF0468289DBF71C1AF8D89E23
+              C30F1A8668067D2222E4AA504227E47231F6E54020F1EF3F7BF1C8C713A9ACE7
+              8EDBBA5E58D25A73D46A31A520A850AE245615B0AAEE9E9EA97B9FDBD3FBC4E0
+              44649310A281955828276EC0B98D991ADA5C1848E97194B4BD2B746ECB334573
+              E1BE62D73516523E94D009B91CE7AAB615E90D4878F2ADC383D5AF1F18F8EAC6
+              5BBA7EF1C87D6BFE4E29148B4864CB1DE5FC2000A84A45389EBEEDB99D273FBD
+              FFD4D87D2EBBC5CEB940A5CB0E45926051694D17424A454571845C990024F6F4
+              E458A83B90CA2FEFA8F3543434554656AF6EDD353A1A5C114BE51A84AA302854
+              287749169519BADE383A10A8DEADC8B2C36A36B7D77B76306008542847C865A1
+              113A21578AC980C3F60F06E75F7AEA85439F393938F5E9C7EF5FF797EB56B7BD
+              26E58A060C2A949BDDD98E726E9B3AE18BDEFDA3D78EFD97DEB1F0839C0BDBEC
+              8F25849C8F123A2157272538DF958D67BEDB33E01F3FD23BF1A9B6A6CAD0835B
+              D7FEA3DD668953A15C8918635AC1B04602C9157B0E0D7E70F7B1E1070D433482
+              3E111152324AE8845C3D01C6BE3CE58FFDE8672F1F7E2295C9BB6EBF65C90B5D
+              ADD547AD16950AE54A6535015655F4F4F86E7EFE8DDE4F0E4E46EE1542D4955A
+              2847C86247099D90ABF54E47397917C09EDC7768A06EFBC1FEAF6CBC75C9D30F
+              DFB7F66FA950EE320830A88A37144BDDFA8B9DA73EBAFFF4C43D4EBBC5A5C82A
+              6BAAAD86D36187C7ED02B59723E442541447C8B5330589FD7C622CB42C90CE2F
+              6DABF7B81B9A2AA3AB56B7EC1A1B0D2D8FA5728D542857028BCA0C4D6F191998
+              72EE9699C96E353996B6D6EC02C31068CF117251344227E45A9A2E94FB86CEF9
+              6FFEF8C5435F3839E8FBF4C7EE5FF7176B57B5BE26E5359D0AE54A71B650CE65
+              738F4F46373FF5FAB15FED1D0B6F145CD869DF117271344227E4DA4B0983EFCC
+              A672FFDC33E0BFB5C269FB4C5B7355D07ADFDA6FED7C7BE873D948AA026E1B2D
+              BD3A1BC624AD6838C3FEC4CDDBF7F672C38075FDF2C61714591A058DD409B900
+              8DD009B93E3818FB8A7F2AF1C3675E3EFA782A9D73DF7673E74B4B5AAB8F582D
+              A62404A850AE14D38572EA99D363773DBDF3D897FA46835BB910D58C51A11C21
+              EF47099D90EBE15C473955DA0D897D6EDFA181FAED07FBFF7CCB1D4B9F7EF4FE
+              B5D31DE568E9D5D208006615E168BAE567AFBEFDC4DEB7471EA870585D600215
+              763392A92452A91404CD7690458EA6DC09B9BEFC90D83393E3E165A14C714967
+              A3D7DBD0E08DAD5ED5B673742CB82296CC350A1315CACDCA6282A1E9AEE19E89
+              8DDB254977D8CC62494BD59B8C81A6DF09398B46E8845C6F4C029CB6BFD30CE3
+              377EF0FCA1CF1DEF9FFAC447B79E2D942B14A950AE24670BE53C7675743274EB
+              BFBF70F0736786031B39171597DA75733DD35FF357FDFD3FF00C3B805D8FE725
+              73028DD009B931D282F33DF954EEDB3D8353B7B99DB627DB9AAB02F6ADEBFE61
+              FBDBC35FC886936E2A949B050300C6B4825E190AC46EDBB6B747647379D1D5E4
+              D96552A431CCFDFC4DC875452374426E1C0EC6FEC2EF8FFFF8D9578F7C2C9D2D
+              B86EDDD0F54A574BF511ABD5948480A042B912D8CC80D55471EAF4D8A667779D
+              FAF4E044741317A21ED4518E2C7294D009B951DE2994937741624FBE79B0BF7E
+              FBA1BEAF6EBEBDFBE70F6D59F3F76AFE6CA11CCD87CE6E7AE9554B249E5DF3D2
+              1B3D1F3AD23775AFD366F1CAB2C4EAAB9C70DA54B81D66DA956451A12977426E
+              3C3F24F673DF6868693893EF6AADF356343456C656AD6DDB353A1A5A114B64A9
+              50AE141613B86ED44F0C87B6EC5315D8CD26B9ABA5F24D50A11C59A468844E48
+              39300970D9BEA119FCB79E7AF1D0174E0FF91FFFD8D6757FB16E55CB6B52BEA8
+              43A742B9D90940910097C53DEE8BDEF1F4AE531F199808DF2EB8A8A07D471623
+              4AE884944F5A187C573E9EF9F699FEA9C9C33D134FB63555851FBE7FED376D76
+              7382965E2D11634CD7F4FA702871F7EEFD039FD97564E403BAC169E955B2E850
+              4227A4BC3818FB73BF3FF693A75F39FAB164A6E0BA7543D76B4B5A6B0EDBACA6
+              0415CA95C862024C4A6D6FAFEFFE17DFE8F96CFF58782B17A29E965E258B0925
+              7442CAE9DD42B91D60F8DC9B87FA1B5E3FD4FF95CDB72D79FAC1FBD6FC839AA3
+              42B9CB6252CDE1787AC3B33B4FFFEA8193131F72DA2D6E08A0C265816E1890E8
+              884716302A8A23646EF043624F4F8D869746B285CEF67A4F6543A337BE7A5DDB
+              AE9191D0CA5832DB40857225B0A8D035BD726CC07FF71E592ADAADA6586763E5
+              5E0013A03D471638FABC4AC85CC124C065FD86A61BBFF5A3170E3F7966D0FFF8
+              C7EE5FFB176B5736BF2EE5CE16CAD1F9F45908409501B715A3BEE88A1FBF7EE2
+              637DE3E13BB910EE724746C8F546099D90B925230CBEA790C87EEBF4807FFCE0
+              99895FEA68A90E3E72FFBABFB7DACD0944A950AE248C412FEAB5A150E29E9DFB
+              FB3FB3EBC8F00775833733463B8E2C5C94D009997B7430F697FEA9F84F9E79E5
+              E88753D9BCE3960D9DDBBA5BAA8FD86C662A942B95D5C46052EA7A7A26EF7FF1
+              8D9ECF0E4E84EFE35C34800AE5C80245099D90B946607A1D7055DA0949FACC9E
+              03034DDB0EF5FFF996DB97FEFCA12DABFE412D140A542857A2E9A5572D915876
+              DDF3BB7B3F79B8C7779FDB6E724AB282A66A2F1C362B5C76FBF5DF9537E0B59A
+              A94060C6A20106D044C5C244457184CC5D7E48EC175363E115D16CBEA3BDDE5B
+              D5D0E04DAC5ED3B66B7424BC329AA48E72B36200CC2A0C4DAFF10D8736BD6951
+              E07298E5EEB6FA9D673BCAD15407593068844EC89CC60097F51B4583FFCE0F5F
+              3CF4E4A9E1E0473F76FFBABF5CBDB2791B75942BD5B942398B69783C72CF8F5E
+              3DFEC5FEB1D066CE85BDDC9111722D51422764EE3B5728F7CD9E7EFFC4C15393
+              D385720FACFB7BBB8D3ACA954C62CC281AB650207ED3EB6F9CF9C4ABFB7B3FA4
+              1B4603E81311592028A113323F6860EC2FA7A6A23F7DE6D5A31FCE64F3F65BD6
+              776E5BD25673980AE54A74AE36C16CB29C3E357AEF333B8E3F796628F02017A2
+              118C0AE5C8FC47099D90F9E09D4239790764F6B93D07075AB61DECFFEAE6DB97
+              FEECA12D6BFF5ECD53A15C4918A66733CC264B289ADEF093578F7E71EFB1E10F
+              B8EC56BBA61B709A15140B7968C50284A0C20432BF50511C21F38B1F127BC637
+              1A5E11CE145A5BEBBDD5F50D9EE4DAB51D3B864782ABA3C94CA330A954287729
+              0C80C5045DD32B47FB7C776C571561B3AAA2A3A1723B804150A11C99A768844E
+              C8BCC30097F5EB9A61FCF68F5E38F4F9D3C3FE8F7EE4FE357FB56655F336B9A0
+              E9303868A83E9BB385721576313C16BAE5DF5F3CFC3B6786030F722E1CB4E7C8
+              7C45099D90F9292B0CBEB798CCFEFD99FEA9890327277EB5A3A53AF0C803EBFE
+              CE66A542B992498CE9455D0D07E2CBB7BFD5BB69C791C13B3483D7833E119179
+              88123A21F39706C6FECA3F15FBC9B3AFBDFD682A93776EB8A96367776BF521BB
+              CD1CA742B912080056336056784FCFC4DA5FBC71FAB1DED1D046CE4533A8A31C
+              996728A113325FBDB750EEB37B0E0C346F3B38F0952D7774FFF481CDABFF41CD
+              150A4851A1DCAC1800C1649894A67034BDF5999DA71F3FD8E3BBCBE5B0B83838
+              DC4E0B3800838AE4C81C47457184CC7F81773ACAE50A2D6D759EBAFA064F7AED
+              4DEDDB8747426BA2F14CA330AB0C8A3C3D0D4F2E34DD51CEA26B7AD7E470B06A
+              8F4991ED1645EA68F2EE05A8A31C991F68844EC882C00097F56F8ABAF1BB3F7A
+              E9C8177AC7421FFAC8D6357FBD6A79D30EA9A0E9D0398DD44BA12A80CBEA1A99
+              88DCF3936D273E3D301EBE8B73E12C7758849482123A210B474E187C4F3199FD
+              BB337DBEA903A7C77FB5B3B5C6F7E8FDEBFECE6635C769E9D51249908CA25E19
+              0CC4EFD8BEBFFF63BBDF1E7E5037780BAEE278C92EE3D3D4E5CEA1B0737F94F8
+              4006468BB32C5094D00959588A90D8FFF34DC67FF6EC6BC71F4DE70AF69B6EEA
+              D8D1DD3E5D28C7A8506E76EF7494533CBDBD531B5F7CB3EF89FEB1D03D5C887A
+              D0694A3287514227642111004C2AA04ADBC0D8E7F6ECEF6BDF7178E0CB5B6EEF
+              FEF9839BD7FC83428572A5992E94034C8A3B1C4BAFFFC59E330F1DEEF1DDE674
+              983DB2C2586DA503768B8A0A878D46BB64CEA04F9B842C4C7E48ECD9A9B1C88A
+              78416B6AADABA8AB6FA848AF5DDFB17D7838B8261ACF3408B32A51A1DC253000
+              2645D235BDCD371C34EF5564D96E562CDDAD557BC130062A9423730C8DD00959
+              B018E0B27E2D5FD47FF7472F1D79F2CC48F0B1C7B6AEFEABD52B9AB7C9057DBA
+              A31C0D2E67A7C880C35A373A19D9F4F4CE538F0D4C446EE75CB8417B8FCC3194
+              D00959D8F2C2E07BB564EE1B6706A6C6F79F1CFFF58ED6EAC0230FACFB86D562
+              4A229A06408572B360609078D1A80F8593F7ECD8D7FFCBBB0E0F3EA1EBBC1994
+              D4C91C4253EE842C7C7948ECAFA726E3FEE702896F7EFCD1F5FFB66E5DDB6BA3
+              D1E4BAC142717DC640859038A3A43E0B8B0960A8EBED9DAC4BE60A369BC9945D
+              DD55FF8A244B110046B9C3238446E8842C740280C904A8F236C8ECB37BDEEA6F
+              DF7178F02B5BEF58FA930736ADFEA6922B1490CCD3587336E72E0D33AB08C7B3
+              ED4FEF3EF9C0C19EC93BDC0E8B1B92C46ABC6E582D26582C26DA95A42C68844E
+              C8E21180C49EF38F4756250A5A635B7D45635D8327B36E7DE7EB4323C175D178
+              9A0AE56633DD510E9A66D44C0E05B7EC32994C0EABD9B5B4BDEE0D30EA2847CA
+              8B46E8842C2682012EEB5F1734FD777FF8C291CFF78E063EF891FB577F6DF58A
+              C6ED724137A60BE52899CF4A9565386DB54363A1AD3F78F5C8677A4782F7702E
+              5CE50E8B2C6E94D009597C0ADCE0FBF454EEEBA7FBFD93FB4E8CFEA78ED6EAA9
+              471F5CF73756AB298568065428372B0609B251D4BDC140E2B657DF38FD85D7F6
+              F73EA1EB4603A39317A44C68CA9D90C5290F897D6D6A321E7E2E98F8FB271E5D
+              EF5BB3B6EDF5A15072C350AEB82E4B8572B313006C6600A8387D6A7473225F30
+              DBADAAB6AAB3FE65800501418572E486A2113A218B910060360126F93548EC73
+              BBF7F577ED3C38F8958DB72EF9C9A67B577E6BBAA31C15CA954400B0A8084692
+              2B7EF4EA915FD97762F4C3150EABBB5028C22C0B64D239E4D23908AA4B20D719
+              8DD00959DCFC90D8B3FE89C8F2785EFB44438DB3A1AEDE9359B7A1F3B5A191E0
+              BA682CDD488572B338572857D02BC6FB7C776D57D4A2D52CC75B1B2AF60298C0
+              A50AE5665A5445A0C40F52A5ACC832C3F7199D4D59A868844EC8622718E0B47E
+              ADA0E9BFF7D3978F7E7E683CFCC18F6C5DF3F5D52B9AB74F77941334522F8549
+              01DC760C8E07977FFFA5C31FEB190EDCC5B9F0D2397572A35042278400404170
+              BED7C816FEBA67606AE2AD13A3BFD1D152E57FE4A1757F63B52A494453B4F46A
+              2924C028E875C140E2AE1D6FF53DBEF3F0F07D9A61D481923AB90168CA9D1072
+              4E1E12FBFA942F1AFE4528F1778F3FBCDEBF664DEBB6B1506AFD405EBB29C3E1
+              11823348949B2EEADCD2AB0CF5BDBDBECDF16C91A98A6C5DD55EBB9DC9F001D0
+              CB1D2259B868844E08992600A8264055A70BE5F6F777EE3A3CF8675BEEECFEC9
+              D6CDABFE51CD15F2B4F46A09DEED28E78EC4B377FE62CFE95F3DD43BF9A8CB6E
+              760908B81C163030E806A7B204724DD1089D10F27E0148ECB9E0786465BAA87D
+              BCA5AEA2A9AEDE935D7773E76B0343819B62F174A3309BA850EE52DE5D7AB5D6
+              3F12AADD6B56330E9B29D0D5EC3DC88049504739721DD0089D1072A1B31DE5F2
+              05FDBFFDF0F9239FEF1F0D3FF2D8D6B57FB37A45F34EB978AE508E92F9AC5419
+              705A31341E59F6D31D273ED03716B98D73E105CD7390EB80123A21E4628A9CF3
+              7D3C53F87FA7FB7DBE7DC7477EABB3AD7AF291876EFABAC5A24C7794A342B9D9
+              4900D78CC66030B979C7FEBEC7761E1DBE5733783D6394D4C9B54553EE84904B
+              C941627F3B35198B3D174CFCED138F6C9858B3AA75C7683071F350515F9BE6F0
+              52A1DC2CA61BCFC86068EBEDF59913390D1655B12F69A9DCCD8049418572E41A
+              A1113A21E4E20400930AA8CA6B90A4CFEF7AAB6FC9EEC3437FBAF5CE654F6DB9
+              77C577D46C3E8F3415CACDEA5CA19CC9541D8965EE7976F7E94F1EEDF16D72DA
+              2D4EAE7378EC1638ED6678DD0E48F4E1885C211AA113424AE187C47E11188FAC
+              4C17F5C75BEA2B9AEAEB3DE9753777BD3E301258178B51A1DCAC180093AC6845
+              BD656A3858BB4F9160B128467BAD672F631881A04239727568844E08298D00E0
+              B2FE55B6A0FDF71FBE70F89706C6A30F3DB675EDD7572F3BBF50AEDC41CE03AA
+              0CB8ACA6E1C9E8EDCFEC38F5E981C9E83D9C0B0F759423578B123A21E4721405
+              E77B8DE94239FFBE1323BFD9D55E3DF9E843EBBF6EB52829EA28572206C635C3
+              1B8EA46EDE7368F0D1374E8CDDA319BC9631DA71E4CAD1943B21E4726521B1BF
+              F14D46A2BE60FC6F9F7864BD6FCDEAD6EDA3A1C486A1A2B636C5452515CACDE2
+              EC0A6D60A81C1898BA3BA71B4587CDEC58BBA461B7749D3BCA3100F4B96161A2
+              113A21E4F20800AA7AB6A39CF4B99DFBFABB761C1AF8F2D63B97FEF8BE4DABBE
+              ADE68B5428570AC600C12458D4AA50347DEFCFB79FF8F4C133139BDD0EABDDE0
+              02150E0B4CAA0245A665E9496968844E08B9527E48ECF9E0C47447B9D6BA8A96
+              DADA8AECFA0D9DAFF40FF93744E3192A949B0D03A02A6AB1A0374F0D076A765B
+              CD8AC36A91BBDB6A76026C04D4518E5C061AA11342AEDCD942B95C51FF831FBE
+              70E4C9DEB1F0231FD8BCFA1B2B9737ED94355D87C1A9A35C294C32E0B69BFA47
+              02F7FEC78B87BE7866D8BF8573EEA28139B91C94D00921574B179CBFC5B385BF
+              E8E99F9AD87B62E4773ADB6AFD1F7860FD372C16353DDD510E5428379BE94239
+              7328945CF3CAEED31F7F6D7FDF078BBAD104303A4E9392D0943B21E45AC84262
+              7F37E58B26A68289AF7FFCD10DC32B57B6EC1A0E25D60E17F57529CE2B856054
+              2877290280CD0C00B6DED3631BD3F9A270D84C58D559BF03607E405047397249
+              F4C98F1072F5CE759433A9AF42913EB3735F6FEDCEC303BF73DF1DCBFE7DF3BD
+              2BFF45CD15F248E7E988530A01C066320763A9D53F78F9E8636F9D18BDA7C261
+              A94867738C710D5AA1085D2F9EBD2321EFA2113A21E45A0A40622F8726A26DD9
+              A2FEC1D63A6F5B4D6D4576DDFA8E57FA87431BE209EA28372B06C0A4422BE80D
+              BE81A9CD3B2DAA6136C985C62AC7413075121054284766449F970921D71607E0
+              B2FE53AEA0FFF50F5F3EF2C58189F0D68737AEFEC68AA50DBBE582AE8353A15C
+              494C8A80DBE6E91B09DEFAA3578F3EDA3B1ABA95735E095AA58D5C048DD00921
+              D703E79C1F44B6F8973DFD53F7584CEA6F7777D4F654DBCD5F7FE9C0C06F14A2
+              6927DC7640623452BF380606704D6F0A04129B771E18F0168BBA73C3F2E66D26
+              933409BAA48DBC0F257442C8F59284CCFE766A329A9C0AA7BEF6C947D68FAE5C
+              DDF2C67028B96158D3D7A438AFA242B912584C3280F6C1FEA9866CD1303BEC66
+              6D4547ED4E99313F00A3DCE191B983A6DC0921D7C7B98E7226F525803DB97D5F
+              CF8A5D8786FFE481BB96FFE8BE8DABBEA366A950AE24E73EEF58547338915AF9
+              ECEED30F1EEDF3DDEA7258DC85A2C15455A55978028046E88490EB2F00993D17
+              1C8FAECE14F9636D7515ED35B5EEFC4D1B3A5FEA1F0EDE128BA71B85850AE52E
+              89013029D00A46A36F24B8658F59651655616DF59E430C98004DBF1350429FFF
+              CE3FFEC9F27BBF57EAC867A6FBCD78DB0C37CE78DBD53C4789B72917F9E1DEFF
+              8E9E69E0C2D885DB9CA9E949A9B7CDFC2457BEBDABBD6DA69FADD49FB7D4C796
+              B23DF97DB7B9AC7F9ECB17DFFAFE4B87BFB7E996AED18737AEFA2355EDFDC25B
+              6F9EFEA46EE2263089AEC49A8D2A4B50AC8D03A3E17BE299BCFEE18D2B955B97
+              DB760208A3D4A44EEBB42E5834D94508B9510CCEF97E912E7CE54CBFDFB7EFE4
+              E87FED6CAFF63D7CFFDABF36AB4A0A11EA2857020606084D6F0E85531B771C18
+              787CCFB1A1FB98C41AAD1645A25DB7B8D1089D1072236520B37FF0FBA2697F24
+              F9B58F3DB06E64C5CAA6DD63E1D4FE117D6A6DD2A042B9925854090CED83BD3E
+              4FB6A049768B595AD151B34B9159008056EEF04879D0089D1072E3BC5B28F732
+              24F6D95DFBFB96BD7974F44F1EBC6BF90FB76C5CF91D3557C8219DA323D36CA6
+              975E05ACAA3B1C4FAF7F66CFA9078FF64DDEEAB29BDD8661B00A8799263A1621
+              1AA11342CA2108497A29EC8BAE3966888FB6367896D4D4BAF31B6EEE7AB17738
+              705B2C966E14569304990AE52E6A7AE955A6158C36FF48D0FC8659916C6613EB
+              6CF41C02300E2A945B7428A113426E0CC6DE5B282700386D7F91CE150F7DFFC5
+              C3FFB6E5B6AEC10737AEFCBF9249CEEFDF73E609DDCC4D9069A83E2B5506146B
+              C3C048F89E44F6B8F6D14D2BA51A8F23CBC022D4267671A1844E0829272138DF
+              8F5CF1CB67FAFD9B4D8AF25FBB5A6B4E78CDEAD75E3D34F89B8568C6810AEA28
+              378BE94239DD680A8653F76EDBDF271B02C53BD7B4EF3399CD21C6A8CFEE6241
+              099D10526E69C8ECEFA726A2D9A950F2AF1E7F70DDC0F295CD7B4722E9FD23FA
+              D49A3415CA95C6A24A00EBE8EFF159F33A98CB6173ADEEAA7F4392E57100B4F4
+              EA2240F3598490F21200141530A92F42629FDBF956FFCABDC746FFF8A1BB97FF
+              E0BE7B5750A15CA9CE55C1594C5581507CEB0F5F39F2C5FDA7C61E723B2C4E21
+              04AA2B9C902446D7FA2F6034422784CC150148EC85F06474CD712E1E6BADF774
+              D5D657146EB975C98B3D43C1DBA2D12475949BCD744739B598D7EA7C03FEBAED
+              6653DE6631475676D6ED05633E50A1DC82469F790921E5C318204BD39DFF1469
+              FA522C97F5ABA96CE10FBFFFE2912F0C8E47EF7B74F3EA6FAE5ADAB04BD6F9F4
+              D2AB34C49C9D49059C36F40DF9D7FCC78B071F3F33ECBF9B1BDC4D4DE216364A
+              E88490B94608CEDF42A6F027A7FB7DFE3DC7867FB7ADA57AE2C12D6BFEDAA4AA
+              69C4A8A3DCAC18000910BA511308C4EF7D7EDBF1DF7A65EF99CF9BCD6AD31B6F
+              0FB1A2A683D1FE5B7068CA9D103217A520B36FFA2622595F30F1578F3D70D3C0
+              D2E58D7B47A3A9B746078C3569835753A15C096C2606CE6ACF9C18A92DE8DCEA
+              7258C3BAC1B7032C0E200F9A825F5098A07351F31A6B7FA8DC2110726D090170
+              716E66BD060C377BDDB6FFB2B4ABAEE5B695CD7F31301C58F2EAABC77EA72884
+              0D15364A49B31100340326BB79AAA9AAE235BBDD7C205FD44E46D3D9FDD1503C
+              2F8400D205400888D89BE58E965C059A722784CC6541C8ECC5A82FFAFAC93E5F
+              6C22945C5A5B5351B8F5B6EEE7AA6ADCE32C95E7E09CA6DF2F850130CB28660B
+              9543BD13F78D07A2EB4DAA52C1B9B805C01200F22C5B20F304257442C8DCF2FE
+              42393006A7F52FD2D9E21FFDF4E5B73F33E28F6F7A78D3AA6FAFE86EDC2DEB5C
+              87418572B31200144985D3D2E8B0992CAAC28AAA22DDC1E4FFBFBD3B8D6DE33C
+              F300FEBC3343CE90140F511229C9962C4BA228D98A6DC58A0F4956B2F1816DEB
+              5E68B1D87A37DD5D14C11E28BAD8450BB468B349DA7E6812B7FD10A4575234ED
+              A2C1EE36BB891B37B6A434761D4BB1374EADC3BA6DDD072952BC3943CEF5F603
+              25C74D523709EDD0149F1F30826148C24391D09F2FF5E7FB3207018890EBF1D0
+              AD81818E10BAD3510080B51DE51E1D9D5CF29F1F98F9725D8D6BEEE8E15DDFE5
+              8D5C12C2092CCAFD790400201C4AEC8FC6A5637F71B727F4897B772A66C1F814
+              003C080018EC790E031D21942FE2C092A7971656BB4E9D1BDE134FA6046FE3A6
+              416F8DEBA2CD6A5A219AAE6756EBE8DD659EEC2463A9AD8170F2B3C53653696D
+              A5D36E31099FE50C5C2B67E0B0249DE7B01497E7B014870AC21F17E5DCC090DD
+              2576D3BF35D6576CDEBBBDEA89896B3E6F77CFC017B128F71EE814588E85F252
+              DBAC8165A742D1E4948121FF4300CE04065FC0B3D4F318AED01142F9C60F2C79
+              797531FCDBA1B1C5F06220D6E0723B52ADF7D4BFE42CC5A2DC9FC510D0540D16
+              2717B7846362E5C1B6A69382D1708652C030CF7318E808A13BDF3B7694030256
+              E13B71497EE4BF4F5FFEFCEC72E8C091CE6D3F69F2549C63550D7794BB199DAE
+              9FA50E75D565AB87F63589DBBD9B296FE6733D19CA12063A42281FDD5094531E
+              19BDEA0BF40DCE7DC553EB9E3B7AB8E5BBBC018B727FD2FA8FC3C0C15220EAF8
+              CDB9C1DDA9B4729810E8CCE95C286B18E808A17C160596FC646921D8DDDD3BDA
+              9A10D34243E3A6A1C61AF7EB769BC54F742CCABD0321998B63C1E70B55BCDCFD
+              E6278726163E5A6C356FCBF568283B18E808A1FC4521F352BCC1F0120079E0D5
+              0B133BCEF7CF3C7CA8CDFBDC81F6C6670D623A8547AFFE099942B40D58A6A566
+              534951FBAEDA6BB91E0965071FE608A18D600558723AB414EE1E9A5C5C9D5B89
+              36BA5DB6F43D7B3C274ACA6C58947B370400086181618D0CC3100A2495EB9150
+              7630D01142F9E97A518ECD5C99A2DCE309517EF8575DFD0FCC2C873B0F1F687A
+              BAB1BEF2B5CCD1AB14B0287703420018A202437C2B9184343CB564CFF548283B
+              18E808A18D62BD28F7FF2029FF313CB9BCD23738FB554FAD7BF66347763E2170
+              6C024258947B1B0600EC8281313ACD465CA1E7390C7484D0461303963CE35B0C
+              9DEEEE1D6D898B69A1A1A172D85BEB7ADD6EB7F87147B93599172C18A060B299
+              8C864DA5D664AE4742D9C14047086D2C998348008CDC4920CC03AFF68DEFE81D
+              9879E4505BE3739D6DDE678D525A82440A7FFB01C07AAAB31CA3F33C8BCF72F2
+              1C3EA411421B550018D215F6457AAE4C2E07E7FCD16D2EB743BE678FE7252CCA
+              FD3159D5219E52702FF73C87818E10DA38D68B722C9BB93245B9C7E2A2FCC8AF
+              BAFA1F98F5853B0E1FD8F674637DC5F9CCD1AB055C9423EB1F08C49232BFB092
+              28CAF144284B18E808A18DECC6A2DCC32393BEA5DEC1D92F566F2EB97AFFBDCD
+              DFE7393601E164E116E508012000A1885836391F6CC8F538283B18E808A14290
+              D9516E3ED8D5DD3BBA33924CF15BEB2B463C35AE0B055D945B7B0E23C9AA108E
+              498E9CCE82B286818E10DAF8D68B723C770A08F997BE4B53AD97C7E6BF71A4BD
+              F1979DFB1B0AB7284729002160E2B958B1CDB498EB7150760AEDE18B102A6C41
+              00E88AAE44BAC7A7FC2B732BD16697DB21EFD9EB39E12CB5CD93989459A917C2
+              CBEFEBF5014AA1C4618A78AA9C0BB91E096507031D21B4B1BDBD2847080345C2
+              63B164EAD1E7BBFAFF666629DC71A863DB4F9B3C15AFB13A55337B9C174051EE
+              869B69B7F0A9EA727B3CA7F3A0AC61A023840A8D0E004075FA06A4948746267D
+              C1F303B35FF3D695CF1C3DB2EB71812DB41DE508C8AACE8892C2E67A12941D0C
+              748450A18A004B9E595E0876F7F48DED888B69A1BEBE72CC5BEBBEE0B017F988
+              A66DECA21C81EBA5B8B4A21B62A26ACAE93C286B18E808A1C2B47EF42ACFBD08
+              40FEAEA777BCA56F70E6A1C3ED4DBFE8686FF8B9519425481642518E02CBB20C
+              C70B1BFE966E74780722840A5D90B0E474C4177E7978722930E30BB7B85C0E65
+              EF3EEF0BCE52DBDC862ECAADDD245DD3195956310FF21CDE8108A1C2F3B6A357
+              29A50C58F9E33131F5EDE7BB2F1F9B5D8EB41DEC68FA59635D452F4BA9B2B18F
+              5E25A0E9946AAAB2516F60C1C0404708A1EB4539FD2248F23746269682BD8333
+              5FF5D6975F3B7A78D771C1C0C5334539BA8156EA14405601C41494398AD27B76
+              D4CDE57A22941D0C7484107A4B0458E699E585E02BDDBD633B13926CAA6BA81C
+              6DAC755F70382C3EA2AEED2897FF994E8152DDC01B12D652BBCF6E3503D5694B
+              AE8742D9C1404708A1756F15E55E00027FFFCAF9D1DD17FA671F3AD4DEF8CB03
+              6D8D3F374A6B45B91B1AE27987AE7DD469DA556ABB78DF1EEF13AAA2589EFB75
+              EF8F723C19CA12063A4208BD5310809E0AFB42A786AF2EF9677C116F99CB91DC
+              B7CFFB4249A96D81C4251DD43C2ECA510AA0A860E40DF35515CE5FEBBAFEF2C2
+              E4626FAEC742D9C1404708A1774301C06A7A3C9A90BEF9FCE9DF7F66D61F6E3D
+              D8D9F4B3264FC57956A36A7E17E5880E0C2B0285B828A545007816ACA68FE57A
+              2A941D0C748410BA094AF54B90561E1D195F0E9EBB3CFDAF5BABCB26FEF2FE1D
+              C7058E8DE7E5D1ABBA0E1CC7C096EAD2DFD557959CD454354829D50140CBF568
+              283B18E808217473516099E7961782675EE91B6B8A26D3424D5DF9A4A7C67531
+              73F4AA965F45395553798E9DDEEED974B6F5AEAD178B6D16A5B5B906782397EB
+              C95096F01E4408A19BA1B07EB0CB6F8080FFEC1B935F6BAA757FFADEBD9EC726
+              CB6C8367CF0CFD639A100B58855C4F7A73EB6FB95394055DD7CFBB4B1D91A6DA
+              6A8728CAA2A6EBCA77BEFCB95C4F88B284818E1042EF4D18007A62FEC8AE5180
+              23E525D68AD2526BA86577FDA9B1197F47349C7053C148806333E17947A100AA
+              06202BE0AA724D77EEF69EDE5E57355E64368B468391D23B6E5EF44160A02384
+              D07B4501C0C23F114BA47A4F9CBDF2ADCEDDF5D3ED7B1B7EAA00908150E2E32A
+              50E31D5994D3D756E7BC516C6B69183B7674FF80AEC314C31025D7A3A15B0703
+              1D2184DE2F5D1F004D7B727C76A59E33B03B3D5B5D678A4DC6E5D72E4FFD433A
+              92B480CD02C090DCAFD4759A99219204775DC5E2673EB2F78787DB9A5FDC5251
+              323D331FC030DF60B014871042EF5F1218E645BF2F7CEEC2C08C3D9992C5EA2D
+              652375D56597EC368B9FA89A0EAA96FBA21CD5D30CC7046C95CEA5666FF5D0B6
+              ADE5B3525C0CE89AAEE455331FBD27B8424708A10F803572400919D22995CFBD
+              39F5EFF555CEADF7EFAB7F7AC255D4F2BB57871F4C33C40276736E86A36B2B73
+              555B3417093D9F3C78F7EFCB9D8EBA5FFCEF6B8F47FCE156A0F42100888B620A
+              BEFE9563E0745A41D7EFC03F15A0F705031D21843E200220514AFBA381E8EB57
+              3595DDECB25654949724DB0E34F70C5D5BAE5C5D097BA8817300C711E0C8EDFF
+              F33AA5006915806A2A63E2A7DC9B4ACFECF05476B5EF6EE80B87129EB189F92D
+              B1E9B945C8BCEF1C0000FEF9C16F5FFFF2BFA69FB8CD03A2DB095F724708A16C
+              5000C6CCFF309A48FDE0C4D9E12389B45E75EC536DDF6BDDB9F5C71C30978065
+              92C07E08610E9029BE1938009E9F1304E3C9E6FA8A9E7B5B1BA7ED16532A9A94
+              FA8422E17360B51F07AB3D09563BBCE342790D57E80821742B68FA10C8FA538A
+              A6859D0ECB40C7EE86340F703A22A52E8FCCAEB406A7573A28438CC01B329FCF
+              3299F0FDA0C5B9F52F9395CC4548C4EA725CEA6C6DB8566436F92E0DCF4619C2
+              8604233BCB32244E08E837FD7E28EF61A02384D0AD110380FF03009055151AAA
+              5D0B069639ED0BAC4A2CCBDC3FA1032BCA4A95CA32C0324493528A332DC9C514
+              8001026B5BC84266957D63614DD7DF7ADBD90DFF0B84888425298BC392B29805
+              2ACBCA15A7C3D273DF9EC673C5364B647A71D523A5D5A04E210E80615E0830D0
+              1142E8565154F848FB7630F34688C6D301514A879392A234D5555EBCA7B9569D
+              F7858AFCA1B868160C91D129FF5F4D8FCC7E5A03E0C1C065429B2100061680E3
+              32FF5EFB9E909201182673510AA0D11418D92183D534BEDD5339DEB6B33EB4B2
+              9AA0D34B015155F56822995ED2553DC85B8CCAA9F3C3DADF7E7C3F909C57EED1
+              ED86818E1042B78702000AD5299414174DD45496F9598E5163A258174D481F75
+              3BADDCE603779D94649993758DE70501D2AA2605420961D91FDEA725C462E00D
+              D0B8AD66A4B96ED31B9158428844137681371281E783BA4EAF2C0442FD56B369
+              CC53ED8E5A04A1C81F8A15814EFD0090020252AE7F00E8C385818E1042B71921
+              448EC5A52001A0BE60DCF5E6D8C2973AEFF68E7EFEE8DE2F45E33129128B9738
+              4B1CFAE26A92BCDE3FED4DC425473421EEA13A65777AAB2F7DE1531DC7FDFEA0
+              EA0B848A9D762B29711673E1444AFAAFAE0BD354D75721F3827D38D7B713E516
+              063A42087D088C068E9EEABB0249313D4455EDEB0C4B7C1460D424185269D928
+              1499782D1CF17F617631F84FB5D5EEAB7C4DF99383534B7BFBFBAFEEFF4F867C
+              ABAEB2F8A92AB7EDA2AD4890AD66C1206B140821497A47EE358B7201DFB68610
+              421FAE7900F831009C00801400000148492945595E896C5EF087EE72165BA7EB
+              EB369D28320B67C6C7E78513BF7DF3BE91A9A54A55D3650048034062EDC23047
+              D7113C6507218410CA7F7F0091D6CF6B38C5B6560000000049454E44AE426082}
           end>
       end>
     Left = 72

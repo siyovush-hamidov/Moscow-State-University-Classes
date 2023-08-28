@@ -30,16 +30,14 @@
 #include <Vcl.Dialogs.hpp>
 #include <Vcl.ExtDlgs.hpp>
 #include <Vcl.Mask.hpp>
+#include <Vcl.Grids.hpp>
+#include <Vcl.DBGrids.hpp>
 //---------------------------------------------------------------------------
 class TMainWindow : public TForm
 {
 __published:	// IDE-managed Components
 	TVirtualImage *VirtualImageLightSwitcher;
 	TToggleSwitch *ToggleSwitch1;
-	TVirtualImage *VirtualImageStudents;
-	TLabel *LabelStudents;
-	TVirtualImage *VirtualImageThinLine2;
-	TVirtualImage *VirtualImageThinLine1;
 	TVirtualImage *VirtualImageLogoMSU;
 	TVirtualImage *VirtualImageBackground;
 	TImageCollection *ImageCollection1;
@@ -807,7 +805,6 @@ __published:	// IDE-managed Components
 	TOpenPictureDialog *OpenPictureDialog1;
 	TScrollBox *ScrollBoxAddStudent;
 	TLabel *Label601;
-	TVirtualImage *VirtualImage141;
 	TLabel *Label602;
 	TLabel *Label603;
 	TLabel *Label604;
@@ -947,13 +944,6 @@ __published:	// IDE-managed Components
 	TMaskEdit *MaskEdit15;
 	TComboBox *ComboBox41;
 	TLabeledEdit *LabeledEdit53;
-	TPanel *PanelMainMenuSidebar;
-	TLabel *Label623;
-	TVirtualImage *VirtualImage5;
-	TVirtualImage *VirtualImage6;
-	TLabel *Label624;
-	TVirtualImage *VirtualImage7;
-	TVirtualImage *VirtualImage8;
 	TPanel *PanelForStudentsSidebar;
 	TVirtualImage *VirtualImage9;
 	TVirtualImage *VirtualImage11;
@@ -971,44 +961,27 @@ __published:	// IDE-managed Components
 	TVirtualImage *VirtualImage74;
 	TLabel *Label628;
 	TPanel *PanelForAdminsSidebar;
-	TVirtualImage *VirtualImage75;
-	TVirtualImage *VirtualImage78;
-	TVirtualImage *VirtualImage128;
-	TLabel *Label629;
-	TVirtualImage *VirtualImage130;
-	TVirtualImage *VirtualImage131;
-	TLabel *Label630;
-	TPanel *PanelForAdminsSidebarAddCard;
+	TPanel *PanelMainMenuSidebar;
+	TVirtualImage *VirtualImageStudents;
+	TVirtualImage *VirtualImageThinLine1;
+	TVirtualImage *VirtualImageThinLine2;
+	TLabel *LabelStudents;
+	TVirtualImage *VirtualImage5;
+	TVirtualImage *VirtualImage6;
+	TLabel *Label623;
+	TVirtualImage *VirtualImage7;
+	TVirtualImage *VirtualImage8;
+	TLabel *Label624;
+	TLabel *Label632;
+	TLabel *Label633;
+	TLabel *Label634;
 	TVirtualImage *VirtualImage134;
 	TVirtualImage *VirtualImage135;
 	TVirtualImage *VirtualImage136;
-	TLabel *Label632;
 	TVirtualImage *VirtualImage137;
 	TVirtualImage *VirtualImage138;
-	TLabel *Label633;
 	TVirtualImage *VirtualImage143;
 	TVirtualImage *VirtualImage144;
-	TLabel *Label634;
-	TPanel *PanelForAdminsSidebarProcess;
-	TVirtualImage *VirtualImage132;
-	TVirtualImage *VirtualImage133;
-	TVirtualImage *VirtualImage145;
-	TLabel *Label631;
-	TVirtualImage *VirtualImage146;
-	TVirtualImage *VirtualImage147;
-	TLabel *Label635;
-	TScrollBox *ScrollBoxAttendance;
-	TLabel *Label636;
-	TVirtualImage *VirtualImage148;
-	TVirtualImage *VirtualImage149;
-	TComboBox *ComboBox42;
-	TLabel *Label637;
-	TLabel *Label638;
-	TComboBox *ComboBox43;
-	TComboBox *ComboBox44;
-	TLabel *Label639;
-	TLabel *Label640;
-	TComboBox *ComboBox45;
 	void __fastcall ToggleSwitch1Click(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall VirtualImageStudentsMouseEnter(TObject *Sender);
@@ -1059,7 +1032,6 @@ __published:	// IDE-managed Components
 	void __fastcall LabelStaffEditClick(TObject *Sender);
 	void __fastcall LabelAdminsAddStudentClick(TObject *Sender);
 	void __fastcall VirtualImageReturnToBackArrowClick(TObject *Sender);
-	void __fastcall VirtualImage141Click(TObject *Sender);
 	void __fastcall Button7Click(TObject *Sender);
 	void __fastcall Button8Click(TObject *Sender);
 	void __fastcall LabeledEdit1Change(TObject *Sender);
@@ -1092,6 +1064,12 @@ __published:	// IDE-managed Components
 	void __fastcall Label632Click(TObject *Sender);
 	void __fastcall Label633Click(TObject *Sender);
 	void __fastcall Label634Click(TObject *Sender);
+	void __fastcall Image1Click(TObject *Sender);
+	void __fastcall ScrollBoxAddStaffMouseWheel(TObject *Sender, TShiftState Shift,
+          int WheelDelta, TPoint &MousePos, bool &Handled);
+	void __fastcall ScrollBoxAddTeacherMouseWheel(TObject *Sender, TShiftState Shift,
+          int WheelDelta, TPoint &MousePos, bool &Handled);
+	void __fastcall FormResize(TObject *Sender);
 
 private:	// User declarations
 public:		// User declarations

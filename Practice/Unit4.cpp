@@ -67,6 +67,9 @@ void __fastcall TMainWindow::VirtualImageReturnToBackArrowClick(TObject *Sender)
 {
 	PanelMainMenu->BringToFront();
 	PanelMainMenuSidebar->BringToFront();
+	PanelForStudents->Visible = false;
+	PanelForStaff->Visible = false;
+	PanelForAdmins->Visible = false;
 	VirtualImageReturnToBackArrow->Visible = false;
 }
 //BELOW SIDEBAR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SIDEBAR BELOW
@@ -89,6 +92,7 @@ void __fastcall TMainWindow::VirtualImageStudentsMouseLeave(TObject *Sender)
 
 void __fastcall TMainWindow::LabelStudentsClick(TObject *Sender)
 {
+    PanelForStudents->Visible = true;
 	PanelForStudents->BringToFront();
 	PanelForStudentsSidebar->BringToFront();
 
@@ -97,6 +101,7 @@ void __fastcall TMainWindow::LabelStudentsClick(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TMainWindow::Label623Click(TObject *Sender)
 {
+    PanelForStaff->Visible = true;
 	PanelForStaff->BringToFront();
 	PanelForStaffSidebar->BringToFront();
 
@@ -106,6 +111,7 @@ void __fastcall TMainWindow::Label623Click(TObject *Sender)
 
 void __fastcall TMainWindow::Label624Click(TObject *Sender)
 {
+    PanelForAdmins->Visible = true;
 	PanelForAdmins->BringToFront();
 	PanelForAdminsSidebar->BringToFront();
 
@@ -325,23 +331,33 @@ void __fastcall TMainWindow::VirtualImageHamburgerClick(TObject *Sender)
 
         VirtualImageLogoMSU->Visible = false;
         VirtualImageBackground->Visible = false;
-		VirtualImageReturnToBackArrow->Visible = false;
+//		VirtualImageReturnToBackArrow->Visible = false;
 
-		VirtualImageHamburger->ImageName = "MenuButtonBlue";
+		PanelForAdmins->Width = MainWindow->ClientWidth; PanelForAdmins->Left = VirtualImageHamburger->Width + 20;
+		PanelForStudents->Width = MainWindow->ClientWidth; PanelForStudents->Left = VirtualImageHamburger->Width + 20;
+		PanelForStaff->Width = MainWindow->ClientWidth; PanelForStaff->Left = VirtualImageHamburger->Width + 20;
+
+
+		VirtualImageHamburger->ImageName = "MenuButtonBlue"; VirtualImageHamburger->BringToFront();
+		VirtualImageReturnToBackArrow->ImageName = "BlueArrow";
 	}
 	else
 	{
 		VirtualImageBackground->Visible = true;
 		VirtualImageLogoMSU->Visible = true;
-		VirtualImageReturnToBackArrow->Visible = true;
+//		VirtualImageReturnToBackArrow->Visible = true;
 
-
-		PanelMainMenuSidebar->Visible = true;
+        PanelMainMenuSidebar->Visible = true;
 		PanelForStudentsSidebar->Visible = true;
 		PanelForStaffSidebar->Visible = true;
 		PanelForAdminsSidebar->Visible = true;
 
-        VirtualImageHamburger->ImageName = "MenuButtonWhite";
+		PanelForAdmins->Width = MainWindow->ClientWidth - VirtualImageBackground->Width; PanelForAdmins->Left = VirtualImageBackground->Width;
+		PanelForStudents->Width = MainWindow->ClientWidth - VirtualImageBackground->Width; PanelForStudents->Left = VirtualImageBackground->Width;
+		PanelForStaff->Width = MainWindow->ClientWidth - VirtualImageBackground->Width; PanelForStaff->Left = VirtualImageBackground->Width;
+
+		VirtualImageHamburger->ImageName = "MenuButtonWhite"; VirtualImageHamburger->BringToFront();
+        VirtualImageReturnToBackArrow->ImageName = "WhiteArrow";
 	}
 
 }
@@ -1012,9 +1028,6 @@ void __fastcall TMainWindow::LabeledEdit1Change(TObject *Sender)
 		Label613->Enabled = false;
 		Label614->Enabled = false;
 
-		LabeledEdit1->Enabled = false;
-		LabeledEdit2->Enabled = false;
-		LabeledEdit3->Enabled = false;
 		LabeledEdit4->Enabled = false;
 		LabeledEdit5->Enabled = false;
 		LabeledEdit6->Enabled = false;
@@ -1077,9 +1090,6 @@ void __fastcall TMainWindow::LabeledEdit1Change(TObject *Sender)
 		Label613->Enabled = true;
 		Label614->Enabled = true;
 
-		LabeledEdit1->Enabled = true;
-		LabeledEdit2->Enabled = true;
-		LabeledEdit3->Enabled = true;
 		LabeledEdit4->Enabled = true;
 		LabeledEdit5->Enabled = true;
 		LabeledEdit6->Enabled = true;
@@ -1122,43 +1132,10 @@ void __fastcall TMainWindow::Button5Click(TObject *Sender)
 	else
 	{
 		ADOQuery1->SQL->Clear();
-		ADOQuery1->SQL->Add("INSERT INTO Students(Surname, Name, [Middle Name], Nationality, Gender, [Date Of Birth], [Country Of Birth], [Military Status], [Family Status], [Home Address], [Actual Adress], [Phone Number], Email, Image, [Passport Serial Number], [Date Of Issue Of Passport], [Place Of Issue Of Passport], [High School], [Country Of High School], [High School Diploma], [High School Diploma Date Of Issue], [High School Diploma Serial Number], [Enrollment Year], Degree, Speciality, Course, [Type Of Education], [Form Of Education], [Number Of Student's Ticket], [Boarding House]) VALUES(:Surname, :Name, :MiddleName, :Nationality, :Gender, :DateOfBirth, :CountryOfBirth, :MilitaryStatus, :FamilyStatus, :HomeAddress, :ActualAdress, :PhoneNumber, :Email, :Image, :PassportSerialNumber, :DateOfIssueOfPassport, :PlaceOfIssueOfPassport, :HighSchool, :CountryOfHighSchool, :HighSchoolDiploma, :HighSchoolDiplomaDateOfIssue, :HighSchoolDiplomaSerialNumber, :EnrollmentYear, :Degree, :Speciality, :Course, :TypeOfEducation, :FormOfEducation, :NumberOfStudentsTicket, :BoardingHouse))");
-		ADOQuery1->Parameters->ParamByName("Surname")->Value = LabeledEdit1->Text;
-		ADOQuery1->Parameters->ParamByName("Name")->Value = LabeledEdit2->Text;
-		ADOQuery1->Parameters->ParamByName("MiddleName")->Value = LabeledEdit3->Text;
-		ADOQuery1->Parameters->ParamByName("Nationality")->Value = LabeledEdit4->Text;
-		ADOQuery1->Parameters->ParamByName("Gender")->Value = ComboBox27->ItemIndex;
-		ADOQuery1->Parameters->ParamByName("DateOfBirth")->Value = FormatDateTime("yyyy-mm-dd", DateTimePicker4->Date);
-		ADOQuery1->Parameters->ParamByName("CountryOfBirth")->Value = LabeledEdit5->Text;
-		ADOQuery1->Parameters->ParamByName("MilitaryStatus")->Value = ComboBox28->Text;
-		ADOQuery1->Parameters->ParamByName("FamilyStatus")->Value = LabeledEdit6->Text;
-		ADOQuery1->Parameters->ParamByName("HomeAddress")->Value = LabeledEdit7->Text;
-		ADOQuery1->Parameters->ParamByName("ActualAdress")->Value = LabeledEdit8->Text;
-		ADOQuery1->Parameters->ParamByName("PhoneNumber")->Value = LabeledEdit9->Text;
-		ADOQuery1->Parameters->ParamByName("Email")->Value = LabeledEdit10->Text;
-		// IMAGE
-		TMemoryStream *Stream = new TMemoryStream();
-		Image1->Picture->SaveToStream(Stream);
-		Stream->Position = 0;
-		ADOQuery1->Parameters->ParamByName("Image")->LoadFromStream(Stream, ftGraphic);
-		//IMAGE
-		ADOQuery1->Parameters->ParamByName("PassportSerialNumber")->Value = LabeledEdit11->Text;
-		ADOQuery1->Parameters->ParamByName("DateOfIssueOfPassport")->Value = FormatDateTime("yyyy-mm-dd", DateTimePicker5->Date);
-		ADOQuery1->Parameters->ParamByName("PlaceOfIssueOfPassport")->Value = LabeledEdit12->Text;
-		ADOQuery1->Parameters->ParamByName("HighSchool")->Value = LabeledEdit13->Text;
-		ADOQuery1->Parameters->ParamByName("CountryOfHighSchool")->Value = LabeledEdit14->Text;
-		ADOQuery1->Parameters->ParamByName("HighSchoolDiploma")->Value = LabeledEdit19->Text;
-		ADOQuery1->Parameters->ParamByName("HighSchoolDiplomaDateOfIssue")->Value = FormatDateTime("yyyy-mm-dd", DateTimePicker6->Date);
-		ADOQuery1->Parameters->ParamByName("HighSchoolDiplomaSerialNumber")->Value = LabeledEdit15->Text;
-		ADOQuery1->Parameters->ParamByName("EnrollmentYear")->Value = LabeledEdit16->Text;
-		ADOQuery1->Parameters->ParamByName("Degree")->Value = ComboBox33->Text;
-		ADOQuery1->Parameters->ParamByName("Speciality")->Value = ComboBox34->Text;
-		ADOQuery1->Parameters->ParamByName("Course")->Value = ComboBox29->ItemIndex - 1;
-		ADOQuery1->Parameters->ParamByName("TypeOfEducation")->Value = ComboBox30->Text;
-		ADOQuery1->Parameters->ParamByName("FormOfEducation")->Value = ComboBox31->Text;
-		ADOQuery1->Parameters->ParamByName("NumberOfStudentsTicket")->Value = LabeledEdit20->Text;
-		ADOQuery1->Parameters->ParamByName("BoardingHouse")->Value = ComboBox32->Text;;
-		ADOQuery1->ExecSQL(); delete Stream;
+		ADOQuery1->SQL->Add("INSERT INTO Students(Surname, Name, [Middle Name], Nationality, Gender, [Date Of Birth], [Country Of Birth], [Military Status], [Family Status], [Home Address], [Actual Adress], [Phone Number], Email, [Passport Serial Number], [Date Of Issue Of Passport], [Place Of Issue Of Passport], [High School], [Country Of High School], [High School Diploma], [High School Diploma Date Of Issue], [High School Diploma Serial Number], [Enrollment Year], Degree, Direction, Course, [Type Of Education], [Form Of Education], [Number Of Student's Ticket], [Boarding House]) VALUES('" + StringReplace(LabeledEdit1->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit2->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit3->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit4->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', " + IntToStr(ComboBox27->ItemIndex) + ", '" + FormatDateTime("yyyy-mm-dd", DateTimePicker4->Date) + "', '" + StringReplace(LabeledEdit5->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(ComboBox28->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit6->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit7->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit8->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit9->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit10->Text, "'", "''", TReplaceFlags() << rfReplaceAll) +"', '" + StringReplace(LabeledEdit11->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + FormatDateTime("yyyy-mm-dd", DateTimePicker5->Date) + "', '" + StringReplace(LabeledEdit12->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit13->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit14->Text, "'", "''", TReplaceFlags() << rfReplaceAll)+"','" + StringReplace(LabeledEdit19->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + FormatDateTime("yyyy-mm-dd", DateTimePicker6->Date) + "', '" + StringReplace(LabeledEdit15->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(LabeledEdit16->Text, "'", "''", TReplaceFlags() << rfReplaceAll) + "', '" + StringReplace(ComboBox33->Text, "'", "''", TReplaceFlags() << rfReplaceAll) +"', '"+ StringReplace(ComboBox34->Text, "'", "''", TReplaceFlags() << rfReplaceAll) +"', '"+ IntToStr(ComboBox29->ItemIndex + 1) +"', '"+ StringReplace(ComboBox30->Text, "'", "''", TReplaceFlags() << rfReplaceAll) +"', '"+ StringReplace(ComboBox31->Text, "'", "''", TReplaceFlags() << rfReplaceAll) +"', '"+ StringReplace(LabeledEdit20->Text, "'", "''", TReplaceFlags() << rfReplaceAll) +"', '"+ StringReplace(ComboBox32->Text, "'", "''", TReplaceFlags() << rfReplaceAll) +"' )");
+        Clipboard()->AsText = ADOQuery1->SQL->Text;
+		ShowMessage("SQL text: " + ADOQuery1->SQL->Text);
+		ADOQuery1->ExecSQL(); this->Button6Click(Sender);
 	}
 }
 //---------------------------------------------------------------------------
@@ -1198,11 +1175,6 @@ void __fastcall TMainWindow::LabelAdminsAddStudentClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TMainWindow::VirtualImage141Click(TObject *Sender)
-{
-    if(OpenPictureDialog1->Execute()) Image1->Picture->LoadFromFile(OpenPictureDialog1->FileName);
-}
-//---------------------------------------------------------------------------
 
 // днаюбхрэ свхрекъ /////////////////////////////////////////////////////////
 
@@ -1231,7 +1203,7 @@ void __fastcall TMainWindow::Button7Click(TObject *Sender)
 	else
 	{
 		ADOQuery1->SQL->Clear();
-		ADOQuery1->SQL->Add("INSERT INTO Teachers(Teacher, Surname, Name, [Middle Name], Nationality, Gender, [Date Of Birth], [Country Of Birth], [Military Status], [Family Status], [Home Address], [Actual Adress], [Phone Number], Email, Image, [Passport Serial Number], [Date Of Issue Of Passport], [Place Of Issue Of Passport], [Latest Degree Speciality], [Latest Degree Earned], [Latest Degree Country], [Latest Degree Date Of Issue], [Latest Degree Serial Number], [Latest University], [Latest Degree Diploma]) VALUES(:Teacher, :Surname, :Name, :MiddleName, :Nationality, :Gender, :DateOfBirth, :CountryOfBirth, :MilitaryStatus, :FamilyStatus, :HomeAddress, :ActualAdress, :PhoneNumber, :Email, :Image, :PassportSerialNumber, :DateOfIssueOfPassport, :PlaceOfIssueOfPassport, :LatestDegreeSpeciality, :LatestDegreeEarned, :LatestDegreeCountry, :LatestDegreeDateOfIssue, :LatestDegreeSerialNumber, :LatestUniversity, :LatestDegreeDiploma))");
+		ADOQuery1->SQL->Add("INSERT INTO Teachers(Teacher, Surname, Name, [Middle Name], Nationality, Gender, [Date Of Birth], [Country Of Birth], [Military Status], [Family Status], [Home Address], [Actual Adress], [Phone Number], Email, Image, [Passport Serial Number], [Date Of Issue Of Passport], [Place Of Issue Of Passport], [Latest Degree Speciality], [Latest Degree Earned], [Latest Degree Country], [Latest Degree Date Of Issue], [Latest Degree Serial Number], [Latest University], [Latest Degree Diploma]) VALUES(:Teacher, :Surname, :Name, :MiddleName, :Nationality, :Gender, :DateOfBirth, :CountryOfBirth, :MilitaryStatus, :FamilyStatus, :HomeAddress, :ActualAdress, :PhoneNumber, :Email, :Image, :PassportSerialNumber, :DateOfIssueOfPassport, :PlaceOfIssueOfPassport, :LatestDegreeSpeciality, :LatestDegreeEarned, :LatestDegreeCountry, :LatestDegreeDateOfIssue, :LatestDegreeSerialNumber, :LatestUniversity, :LatestDegreeDiploma)");
 		ADOQuery1->Parameters->ParamByName("Teacher")->Value = LabeledEdit17->Text + " " + LabeledEdit18->Text.SubString(1,1) + ". " + LabeledEdit21->Text.SubString(1,1) + ".";
 		ADOQuery1->Parameters->ParamByName("Surname")->Value = LabeledEdit17->Text;
 		ADOQuery1->Parameters->ParamByName("Name")->Value = LabeledEdit18->Text;
@@ -1375,7 +1347,6 @@ void __fastcall TMainWindow::LabeledEdit17Change(TObject *Sender)
 		Label574->Enabled = true;
 		Label575->Enabled = true;
 
-		LabeledEdit21->Enabled = true;
 		LabeledEdit22->Enabled = true;
 		LabeledEdit23->Enabled = true;
 		LabeledEdit24->Enabled = true;
@@ -1419,7 +1390,7 @@ void __fastcall TMainWindow::Button9Click(TObject *Sender)
 	else
 	{
 		ADOQuery1->SQL->Clear();
-		ADOQuery1->SQL->Add("INSERT INTO Employees(Surname, Name, [Middle Name], Nationality, Gender, [Date Of Birth], [Country Of Birth], [Military Status], [Family Status], [Home Address], [Actual Adress], [Phone Number], Email, Image, [Passport Serial Number], [Date Of Issue Of Passport], [Place Of Issue Of Passport], [Latest Degree Speciality], [Latest Degree Earned], [Latest Degree Country], [Latest Degree Date Of Issue], [Latest Degree Serial Number], [Latest University], [Latest Degree Diploma], Department, Position) VALUES(:Surname, :Name, :MiddleName, :Nationality, :Gender, :DateOfBirth, :CountryOfBirth, :MilitaryStatus, :FamilyStatus, :HomeAddress, :ActualAdress, :PhoneNumber, :Email, :Image, :PassportSerialNumber, :DateOfIssueOfPassport, :PlaceOfIssueOfPassport, :LatestDegreeSpeciality, :LatestDegreeEarned, :LatestDegreeCountry, :LatestDegreeDateOfIssue, :LatestDegreeSerialNumber, :LatestUniversity, :LatestDegreeDiploma, :Department, :Position))");
+		ADOQuery1->SQL->Add("INSERT INTO Employees(Surname, Name, [Middle Name], Nationality, Gender, [Date Of Birth], [Country Of Birth], [Military Status], [Family Status], [Home Address], [Actual Adress], [Phone Number], Email, Image, [Passport Serial Number], [Date Of Issue Of Passport], [Place Of Issue Of Passport], [Latest Degree Speciality], [Latest Degree Earned], [Latest Degree Country], [Latest Degree Date Of Issue], [Latest Degree Serial Number], [Latest University], [Latest Degree Diploma], [Department], [Position]) VALUES(:Surname, :Name, :MiddleName, :Nationality, :Gender, :DateOfBirth, :CountryOfBirth, :MilitaryStatus, :FamilyStatus, :HomeAddress, :ActualAdress, :PhoneNumber, :Email, :Image, :PassportSerialNumber, :DateOfIssueOfPassport, :PlaceOfIssueOfPassport, :LatestDegreeSpeciality, :LatestDegreeEarned, :LatestDegreeCountry, :LatestDegreeDateOfIssue, :LatestDegreeSerialNumber, :LatestUniversity, :LatestDegreeDiploma, :Department, :Position)");
 		ADOQuery1->Parameters->ParamByName("Surname")->Value = LabeledEdit36->Text;
 		ADOQuery1->Parameters->ParamByName("Name")->Value = LabeledEdit37->Text;
 		ADOQuery1->Parameters->ParamByName("MiddleName")->Value = LabeledEdit38->Text;
@@ -1446,16 +1417,29 @@ void __fastcall TMainWindow::Button9Click(TObject *Sender)
 		ADOQuery1->Parameters->ParamByName("LatestUniversity")->Value = LabeledEdit49->Text;
 		ADOQuery1->Parameters->ParamByName("LatestDegreeCountry")->Value = LabeledEdit50->Text;
 		ADOQuery1->Parameters->ParamByName("LatestDegreeEarned")->Value = ComboBox40->Text;
-        ADOQuery1->Parameters->ParamByName("LatestDegreeSerialNumber")->Value = LabeledEdit51->Text;
+		ADOQuery1->Parameters->ParamByName("LatestDegreeSerialNumber")->Value = LabeledEdit51->Text;
 		ADOQuery1->Parameters->ParamByName("LatestDegreeDateOfIssue")->Value = FormatDateTime("yyyy-mm-dd", DateTimePicker12->Date);
 		ADOQuery1->Parameters->ParamByName("LatestDegreeSpeciality")->Value = LabeledEdit52->Text;
 		ADOQuery1->Parameters->ParamByName("Department")->Value = ComboBox41->Text;
 		ADOQuery1->Parameters->ParamByName("Position")->Value = LabeledEdit53->Text;
 
+
+		Clipboard()->AsText = ADOQuery1->SQL->Text;
+		ShowMessage("SQL text: " + ADOQuery1->SQL->Text);
+
 		ADOQuery1->ExecSQL(); delete Stream; this->Button10Click(Sender);
 	}
 }
 //---------------------------------------------------------------------------
+//		ADOQuery1->SQL->Clear();
+//		ADOQuery1->SQL->Add("INSERT INTO Employees(Surname, Name, [Middle Name], Nationality, Gender, [Date Of Birth], [Country Of Birth], [Military Status], [Family Status], [Home Address], [Actual Adress], [Phone Number], Email, Image, [Passport Serial Number], [Date Of Issue Of Passport], [Place Of Issue Of Passport], [Latest Degree Speciality], [Latest Degree Earned], [Latest Degree Country], [Latest Degree Date Of Issue], [Latest Degree Serial Number], [Latest University], [Latest Degree Diploma], Department, Position) VALUES('" + LabeledEdit36->Text + "', '" + LabeledEdit37->Text + "', '" + LabeledEdit38->Text + "', '" + LabeledEdit39->Text + "', " + IntToStr(ComboBox38->ItemIndex) + ", '" + FormatDateTime("yyyy-mm-dd", DateTimePicker10->Date) + "', '" + LabeledEdit40->Text + "', '" + ComboBox39->Text + "', '" + LabeledEdit41->Text + "', '" + LabeledEdit42->Text + "', '" + LabeledEdit43->Text + "', '" + LabeledEdit44->Text + "', '" + LabeledEdit45->Text + "', :Image, '" + LabeledEdit46->Text + "', '" + FormatDateTime("yyyy-mm-dd", DateTimePicker11->Date) + "', '" + LabeledEdit47->Text + "', '" + LabeledEdit52->Text + "', '" + ComboBox40->Text+ "', '" +LabeledEdit50->Text+ "', '" + FormatDateTime("yyyy-mm-dd", DateTimePicker12->Date) + "', '"+  LabeledEdit51->Text+ "', '"+  LabeledEdit49->Text+ "', :LatestDegreeDiploma, '"+ ComboBox41->Text+ "', '" + LabeledEdit53->Text+ "')");
+//		// IMAGE
+//		TMemoryStream *Stream = new TMemoryStream();
+//		Image2->Picture->SaveToStream(Stream);
+//		Stream->Position = 0;
+//		ADOQuery1->Parameters->ParamByName("Image")->LoadFromStream(Stream, ftGraphic);
+//		//IMAGE
+//		ADOQuery1->Parameters->ParamByName("LatestDegreeDiploma")->Value = LabeledEdit48->Text;
 
 void __fastcall TMainWindow::Button10Click(TObject *Sender)
 {
@@ -1695,15 +1679,67 @@ void __fastcall TMainWindow::Label632Click(TObject *Sender)
 
 void __fastcall TMainWindow::Label633Click(TObject *Sender)
 {
-	ScorllBoxAddTeacher->Visible = true;
-	ScorllBoxAddTeacher->BringToFront();
+	ScrollBoxAddTeacher->Visible = true;
+	ScrollBoxAddTeacher->BringToFront();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMainWindow::Label634Click(TObject *Sender)
 {
-	ScorllBoxAddStaff->Visible = true;
-	ScorllBoxAddStaff->BringToFront();
+	ScrollBoxAddStaff->Visible = true;
+	ScrollBoxAddStaff->BringToFront();
+}
+//---------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------
+
+void __fastcall TMainWindow::Image1Click(TObject *Sender)
+{
+	if(OpenPictureDialog1->Execute()) Image1->Picture->LoadFromFile(OpenPictureDialog1->FileName);
+    Label602->Visible = false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainWindow::ScrollBoxAddStaffMouseWheel(TObject *Sender, TShiftState Shift,
+          int WheelDelta, TPoint &MousePos, bool &Handled)
+{
+	ScrollBoxAddStaff->VertScrollBar->Position -= WheelDelta;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainWindow::ScrollBoxAddTeacherMouseWheel(TObject *Sender, TShiftState Shift,
+          int WheelDelta, TPoint &MousePos, bool &Handled)
+{
+    ScrollBoxAddTeacher->VertScrollBar->Position -= WheelDelta;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMainWindow::FormResize(TObject *Sender)
+{
+	MainWindow->Constraints->MinWidth = 1120;
+	MainWindow->Constraints->MinHeight = 740;
+
+	// Calculate the new scale factor based on the current size of the form
+	double newScaleX = double(MainWindow->Width) / double(MainWindow->Constraints->MinWidth);
+	double newScaleY = (double)MainWindow->Height / double(MainWindow->Constraints->MinHeight);
+
+    // Call the ScaleBy method to resize all components on the form
+	MainWindow->ScaleBy(newScaleX, newScaleY);
+	PanelMainMenu->ScaleBy(newScaleX, newScaleY);
+	PanelMainMenuSidebar->ScaleBy(newScaleX, newScaleY);
+	PanelForStudents->ScaleBy(newScaleX, newScaleY);
+	PanelForStudentsSidebar->ScaleBy(newScaleX, newScaleY);
+	ScrollBoxTimeTable->ScaleBy(newScaleX, newScaleY);
+	ScrollBoxTeachersLessons->ScaleBy(newScaleX, newScaleY);
+	PanelForStaff->ScaleBy(newScaleX, newScaleY);
+    PanelForStaffSidebar->ScaleBy(newScaleX, newScaleY);
+	LessonConstructor->ScaleBy(newScaleX, newScaleY);
+    LessonEditor->ScaleBy(newScaleX, newScaleY);
+	PanelForAdmins->ScaleBy(newScaleX, newScaleY);
+    PanelForAdminsSidebar->ScaleBy(newScaleX, newScaleY);
+	ScrollBoxAddStudent->ScaleBy(newScaleX, newScaleY);
+	ScrollBoxAddTeacher->ScaleBy(newScaleX, newScaleY);
+	ScrollBoxAddStaff->ScaleBy(newScaleX, newScaleY);
 }
 //---------------------------------------------------------------------------
 

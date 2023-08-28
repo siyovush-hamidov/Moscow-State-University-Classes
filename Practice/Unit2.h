@@ -25,7 +25,6 @@ __published:	// IDE-managed Components
 	TEdit *Edit1;
 	TVirtualImage *VirtualImage1;
 	TButton *Button1;
-	TLabel *Label1;
 	TLabel *Label2;
 	TVirtualImage *VirtualImage2;
 	TCheckBox *CheckBox1;

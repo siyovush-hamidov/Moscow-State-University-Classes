@@ -6,10 +6,9 @@
 //---------------------------------------------------------------------------
 #include <Vcl.Styles.hpp>
 #include <Vcl.Themes.hpp>
+USEFORM("Unit3.cpp", StudentRegistration);
 USEFORM("Unit4.cpp", MainWindow);
 USEFORM("Unit5.cpp", SplashScreen);
-USEFORM("Unit6.cpp", Form6);
-USEFORM("Unit3.cpp", StudentRegistration);
 USEFORM("Unit1.cpp", Form1);
 USEFORM("Unit2.cpp", PasswordWindow);
 //---------------------------------------------------------------------------
@@ -25,7 +24,6 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 		Application->CreateForm(__classid(TMainWindow), &MainWindow);
 		Application->CreateForm(__classid(TPasswordWindow), &PasswordWindow);
 		Application->CreateForm(__classid(TStudentRegistration), &StudentRegistration);
-		Application->CreateForm(__classid(TForm6), &Form6);
 		SplashScreen->Hide();
 		SplashScreen->Free();
 		Application->Run();

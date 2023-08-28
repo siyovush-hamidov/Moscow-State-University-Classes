@@ -5,8 +5,8 @@
     <Transaction>2023/08/17 09:18:24.000.098,=C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
     <Transaction>2023/08/17 09:18:40.000.673,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\ProjectPCH1.h</Transaction>
     <Transaction>2023/08/17 09:18:40.000.685,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Project.cbproj</Transaction>
-    <Transaction>2023/08/17 09:19:08.000.426,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.h=D:\Desktop\MSU\ForthSemester\Practice\Unit1.h</Transaction>
     <Transaction>2023/08/17 09:19:08.000.426,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Desktop\MSU\ForthSemester\Practice\Unit1.dfm</Transaction>
+    <Transaction>2023/08/17 09:19:08.000.426,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.h=D:\Desktop\MSU\ForthSemester\Practice\Unit1.h</Transaction>
     <Transaction>2023/08/17 09:19:08.000.351,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\ProjectPCH1.h=D:\Desktop\MSU\ForthSemester\Practice\ProjectPCH2.h</Transaction>
     <Transaction>2023/08/17 09:19:08.000.426,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.cpp=D:\Desktop\MSU\ForthSemester\Practice\Unit1.cpp</Transaction>
     <Transaction>2023/08/17 09:19:08.000.479,C:\Users\siyov\OneDrive\Documents\Embarcadero\Studio\Projects\Project.cbproj=D:\Desktop\MSU\ForthSemester\Practice\Project.cbproj</Transaction>
@@ -20,7 +20,8 @@
     <Transaction>2023/08/17 09:21:52.000.884,=D:\Desktop\MSU\ForthSemester\Practice\Unit8.cpp</Transaction>
     <Transaction>2023/08/17 09:21:53.000.118,=D:\Desktop\MSU\ForthSemester\Practice\Unit9.cpp</Transaction>
     <Transaction>2023/08/22 17:02:39.000.960,=D:\Desktop\MSU\ForthSemester\Practice\Unit10.cpp</Transaction>
-    <Transaction>2023/08/24 15:42:27.000.699,D:\Desktop\MSU\ForthSemester\Practice\Unit8.cpp=</Transaction>
     <Transaction>2023/08/24 15:42:27.000.501,D:\Desktop\MSU\ForthSemester\Practice\Unit7.cpp=</Transaction>
+    <Transaction>2023/08/24 15:42:27.000.699,D:\Desktop\MSU\ForthSemester\Practice\Unit8.cpp=</Transaction>
+    <Transaction>2023/08/26 13:35:11.000.954,D:\Desktop\MSU\ForthSemester\Practice\Unit6.cpp=</Transaction>
   </Transactions>
 </BorlandProject>
