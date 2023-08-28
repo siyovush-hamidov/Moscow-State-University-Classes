@@ -1,1 +1,1 @@
-![alt text] (https://github.com/siyovushchik1414/Moscow-State-University-Classes/Practice/Фотографии/Github/image_2023-08-28_15-18-57.png)
+![photo](https://raw.githubusercontent.com/siyovushchik1414/Moscow-State-University-Classes/Practice/Фотографии/Github/image_2023-08-28_15-18-57.png)
