@@ -1,7 +1,7 @@
 CREATE TABLE [dbo].[Employees]
 (
-	[EmployeeId] [uniqueidentifier] not null,
-	[RegId] [uniqueidentifier] NULL,
+	[EmployeeId] int identity(1,1) not null,
+	[RegId] int NULL,
 	[Surname] [nvarchar](100) NULL,
 	[Name] [nvarchar](100) NULL,
 	[Middle Name] [nvarchar](100) NULL,
