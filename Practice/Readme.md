@@ -1,2 +1,3 @@
-Это ридми файл
-![Описание](https://github.com/siyovushchik1414/Moscow-State-University-Classes/blob/main/Practice/%D0%A4%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%B8/Github/image_2023-08-28_15-18-57.png)
+
+![Сплэщ скрин](https://github.com/siyovushchik1414/Moscow-State-University-Classes/blob/main/Practice/%D0%A4%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%B8/Github/image_2023-08-28_15-18-57.png)
+![Создание аккаунта](https://github.com/siyovushchik1414/Moscow-State-University-Classes/blob/main/Practice/Фотографии/Github/image_2023-08-28_15-42-02%20(2).png)
