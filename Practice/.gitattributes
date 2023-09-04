@@ -1,1 +1,4 @@
-*.rb linguist-language=cpp
+*.dfm linguist-language=cpp
+*.h linguist-language=cpp
+*.vlb linguist-language=cpp
+*.cbproj linguist-language=cpp
