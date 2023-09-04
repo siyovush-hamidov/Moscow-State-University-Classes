@@ -1,0 +1,12 @@
+/ String b;
+    // // b.s = s;
+    // // b + r;
+    // char a[100] = {};
+    // String b, b1;
+    // b1.s = s;
+    // for (int i = 0; i <b1.length(); i++) a[i] = bs[i];
+    // for (int j = 0; j < d.length(); j++) a[j+b1.length()] = d.s[j];
+    // a[b1.length() + d.length()] = '\0';
+    // b.s = a;
+    // s = b.s;
+    // return b;
