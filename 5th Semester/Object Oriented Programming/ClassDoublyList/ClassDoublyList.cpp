@@ -26,7 +26,6 @@ public:
             ans++;
             current = current->PointerToPrevious;
         }
-        std :: cout << "The quantity of records is " << ans << '\n';
         return ans;
     }
     
@@ -61,7 +60,7 @@ public:
             if(Current->Index == index) return Current->Value;
             Current = Current->PointerToPrevious;
         }
-        std :: cout << "No index was found..."; return NULL;
+        std :: cout << "No index was found..."; return Current->Value;
     }
 
     void add_end(int index, T value)
@@ -88,6 +87,10 @@ public:
             NewRecord->PointerToPrevious = PointerToLast;
             PointerToLast->PointerToNext = NewRecord;
             PointerToLast = NewRecord;
+        }
+        while(PointerToLast->PointerToNext != nullptr)
+        {
+            PointerToLast = PointerToLast->PointerToNext;
         }
         std :: cout << "The element was added to the end successfully.\n"; 
     }
@@ -119,6 +122,10 @@ public:
             }
             NewRecord->PointerToNext = temp;
             temp->PointerToPrevious = NewRecord;
+        }
+        while(PointerToLast->PointerToNext != nullptr)
+        {
+            PointerToLast = PointerToLast->PointerToNext;
         }
         std :: cout << "The element was added to the beginning successfully.\n";        
     }
@@ -157,7 +164,7 @@ public:
                 temp = temp->PointerToPrevious;
             }
 
-            if (closest->Index > index)
+            if (closest->Index < index)
             {
                 NewRecord->PointerToNext = closest->PointerToNext;
                 NewRecord->PointerToPrevious = closest;
@@ -177,6 +184,10 @@ public:
                 }
                 closest->PointerToPrevious = NewRecord;
             }
+        }
+        while(PointerToLast->PointerToNext != nullptr)
+        {
+            PointerToLast = PointerToLast->PointerToNext;
         }
         std :: cout << "The element was inserted successfully.\n";
     }
@@ -280,13 +291,56 @@ public:
         std :: cout << "The list was erased succesfully.\n";
     }
 
-    void load_from_file()
+    void sort_list()
     {
-        this->erase_all();
-        std :: ifstream file('LoadFrom.txt');
-
+        std :: cout << "ASC - 1 | DESC - 2\nChoose order: "; int choice; std :: cin >> choice;
+        switch (choice)
+        {
+        case 1:
+            for(int i = 0; i < count() - 1; i++)
+            {
+                List *temp = PointerToLast;
+                while(temp->PointerToPrevious != nullptr)
+                {
+                    if(temp->Value < temp->PointerToPrevious->Value)
+                    {
+                        int temp_index = temp->Index, temp_previous_index = temp->PointerToPrevious->Index;
+                        T temp_value = temp->Value, temp_previous_value = temp->PointerToPrevious->Value;
+                        
+                        temp->Index = temp_previous_index;
+                        temp->Value = temp_previous_value;
+                        temp->PointerToPrevious->Index = temp_index;
+                        temp->PointerToPrevious->Value = temp_value;
+                    }
+                    temp = temp->PointerToPrevious;
+                }
+            }
+            break;
+        case 2:
+            for(int i = 0; i < count() - 1; i++)
+            {
+                List *temp = PointerToLast;
+                while(temp->PointerToPrevious != nullptr)
+                {
+                    if(temp->Value > temp->PointerToPrevious->Value)
+                    {
+                        int temp_index = temp->Index, temp_previous_index = temp->PointerToPrevious->Index;
+                        T temp_value = temp->Value, temp_previous_value = temp->PointerToPrevious->Value;
+                        
+                        temp->Index = temp_previous_index;
+                        temp->Value = temp_previous_value;
+                        temp->PointerToPrevious->Index = temp_index;
+                        temp->PointerToPrevious->Value = temp_value;
+                    }
+                    temp = temp->PointerToPrevious;
+                }
+            }
+            break;
+        default: std :: cout << "Invalid order. Please, try again." << std::endl;
+        }
+        
+        Forward();
     }
-
 };
 
 using namespace std;
@@ -294,10 +348,13 @@ using namespace std;
 int main()
 {
     DoublyList<int> List;
-    List.add_end(5, 7);
-    List.add_end(3, 4);
-    List.add_begin(6, 5);
-    List.insert_list(3,2);
+    List.add_end(7, 7);
+    List.add_end(2, 4);
+    List.add_end(9, 7);
+    List.add_begin(8, 5);
+    List.insert_list(1,2);
+    List.insert_list(10,10);
+    // List.insert_list(20,20);
     List.Forward();
     bool running = true;
     int operation = 0; 
@@ -315,9 +372,8 @@ int main()
         << "7. Refresh indexes\n"
         << "8. Display the quantity of records\n"
         << "9. Erase the whole list\n"
-        << "10. Load from file\n"
-        << "11. Save to file\n"
-        << "12. Terminate the programm\n"
+        << "10. Sort the list\n"
+        << "11. Terminate the programm\n"
         << "=================================\n"
         << "Choose an operation: ";
         cin >> operation;
@@ -352,6 +408,7 @@ int main()
                 cout << "Enter an index to delete: ";
                 int index; cin >> index;
                 List.delete_list(index); 
+                List.Forward();
                 break;
             }
             case 5:
@@ -373,13 +430,25 @@ int main()
             }
             case 8: 
             {
-                List.count();
+                int ans = List.count();
+                cout << "The quantity of records is " << ans << '\n';
                 break;
             }
             case 9:
             {
                 List.erase_all();  
                 break;
+            }
+            case 10:
+            {
+                List.sort_list();  
+                break;
+            }
+            case 11:
+            {
+                cout << "Terminating the program...";
+                running = false;
+                exit(0);
             }
             default: cout << "Invalid option. Please, try again." << std::endl;
         }
