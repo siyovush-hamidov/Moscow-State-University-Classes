@@ -60,7 +60,7 @@ public:
             if(Current->Index == index) return Current->Value;
             Current = Current->PointerToPrevious;
         }
-        std :: cout << "No index was found..."; return Current->Value;
+        std :: cout << "No index was found...";
     }
 
     void add_end(int index, T value)
@@ -243,7 +243,7 @@ public:
         std ::cout << "\nIndex   Value\n";
         while (temp != nullptr)
         {
-            std ::cout << temp->Index << "       " << temp->Value << '\n';
+            std ::cout << temp->Index << "       " << temp->Value << ' ' << temp->PointerToPrevious << ' ' << temp << ' ' << temp->PointerToNext << '\n';
             temp = temp->PointerToNext;
         }
         std :: cout << "Elements were displayed sequentially.\n";
@@ -297,7 +297,7 @@ public:
         switch (choice)
         {
         case 1:
-            for(int i = 0; i < count() - 1; i++)
+            for(int i = 0; i < count(); i++)
             {
                 List *temp = PointerToLast;
                 while(temp->PointerToPrevious != nullptr)
@@ -317,7 +317,7 @@ public:
             }
             break;
         case 2:
-            for(int i = 0; i < count() - 1; i++)
+            for(int i = 0; i < count(); i++)
             {
                 List *temp = PointerToLast;
                 while(temp->PointerToPrevious != nullptr)
@@ -354,7 +354,6 @@ int main()
     List.add_begin(8, 5);
     List.insert_list(1,2);
     List.insert_list(10,10);
-    // List.insert_list(20,20);
     List.Forward();
     bool running = true;
     int operation = 0; 
