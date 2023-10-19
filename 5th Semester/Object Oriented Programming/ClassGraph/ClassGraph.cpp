@@ -33,45 +33,90 @@ public:
         cout << endl;
     }
 
-    double Dijkstra(double *A, int vertices, int start)
+    double Dijkstra(double *A, int vertices, int from, int to)
     {
-        // Инициализируем массив `distances` нулями, а массив `visited` - значениями `false`.
-        double distances[vertices];
+        // // Инициализируем массив `distances` нулями, а массив `visited` - значениями `false`.
+        // double distances[vertices], distance, new_distance;
+        // bool visited[vertices];
+        // int vertex, neighbor, i;
+        // for (i = 0; i < vertices; i++)
+        // {
+        //     distances[i] = numeric_limits<double>::max();
+        //     visited[i] = false;
+        // }
+
+        // // Добавляем стартовую вершину в очередь приоритетов.
+        // priority_queue<pair<double, int>, vector<pair<double, int>>, greater<pair<double, int>>> queue;
+        // queue.push({0, from});
+
+        // // Пока очередь не пуста:
+        // while (!queue.empty())
+        // {
+        //     // Извлекаем вершину из очереди с приоритетом.
+        //     distance = queue.top().first;
+        //     vertex = queue.top().second;
+        //     queue.pop();
+
+        //     // Если вершина уже посещена, пропускаем ее.
+        //     if (visited[vertex])
+        //     {
+        //         continue;
+        //     }
+
+        //     // Для каждой вершины, смежной с текущей вершиной:
+
+        //     for (neighbor = 0; neighbor < vertices; neighbor++)
+        //     {
+        //         // Если вершина не посещена:
+        //         if (!visited[neighbor])
+        //         {
+        //             // Обновляем значение расстояния до вершины, используя формулу Дейкстры.
+        //             new_distance = distance + A[vertex * vertices + neighbor];
+
+        //             // Если новое расстояние меньше, чем ранее найденное расстояние:
+        //             if (new_distance < distances[neighbor])
+        //             {
+        //                 distances[neighbor] = new_distance;
+        //                 queue.push({new_distance, neighbor});
+        //             }
+        //         }
+        //     }
+
+        //     // Отмечаем вершину как посещенную.
+        //     visited[vertex] = true;
+        // }
+
+        // // Возвращаем кратчайшее расстояние от `from` до `to`.
+        // return distances[to];
+
+        double distances[vertices], distance, new_distance;
         bool visited[vertices];
-        for (int i = 0; i < vertices; i++)
+        int i, vertex, neighbor;
+
+        for (i = 0; i < vertices; i++)
         {
-            distances[i] = numeric_limits<double>::max();
+            distances[i] = MAX_DOUBLE;
             visited[i] = false;
         }
 
-        // Добавляем стартовую вершину в очередь приоритетов.
         priority_queue<pair<double, int>, vector<pair<double, int>>, greater<pair<double, int>>> queue;
-        queue.push({0, start});
+        queue.push({0, from});
 
-        // Пока очередь не пуста:
         while (!queue.empty())
         {
-            // Извлекаем вершину из очереди с приоритетом.
-            double distance = queue.top().first;
-            int vertex = queue.top().second;
+            distance = queue.top().first;
+            vertex = queue.top().second;
             queue.pop();
 
-            // Если вершина уже посещена, пропускаем ее.
             if (visited[vertex])
-            {
                 continue;
-            }
 
-            // Для каждой вершины, смежной с текущей вершиной:
-            for (int neighbor = 0; neighbor < vertices; neighbor++)
+            for (neighbor = 0; neighbor < vertices; neighbor++)
             {
-                // Если вершина не посещена:
                 if (!visited[neighbor])
                 {
-                    // Обновляем значение расстояния до вершины, используя формулу Дейкстры.
-                    double new_distance = distance + A[vertex * vertices + neighbor];
+                    new_distance = distance + A[vertex * vertices + neighbor];
 
-                    // Если новое расстояние меньше, чем ранее найденное расстояние:
                     if (new_distance < distances[neighbor])
                     {
                         distances[neighbor] = new_distance;
@@ -79,32 +124,16 @@ public:
                     }
                 }
             }
-
-            // Отмечаем вершину как посещенную.
-            visited[vertex] = true;
+            visited[vertex] = 1;
         }
-
-        // Возвращаем массив `distances`.
-        return distances[start];
+        return distances[to];
     }
-
-    Пример использования:
-
-0 2 3.2 7.2 4
-Дополнительные пояснения:
-
-В строке double distances[vertices]; мы объявляем массив distances, в котором будем хранить расстояния до каждой вершины.
-В строке bool visited[vertices]; мы объявляем массив visited, в котором будем хранить флаги посещения вершин.
-В строке queue.push({0, start}); мы добавляем стартовую вершину в очередь приоритетов с расстоянием 0.
-В строке distance = queue.top().first; мы извлекаем из очереди вершину с наименьшим расстоянием.
-В строке distances[neighbor] = new_distance; мы обновляем значение расстояния до вершины neighbor на новое значение.
-В строке queue.push({new_distance, neighbor}); мы добавляем вершину neighbor в очередь приоритетов с новым расстоянием.
 };
 
 int main()
 {
     Dushanbe obj;
-    double *A, *matrix_for_dijkstra, vector_of_weights[] = {2, 3, 5, 1, 7, 3.2, 7, 4}, result;
+    double *A, vector_of_weights[] = {2.5, 3.5, 5.5, 1.5, 7.5, 3.5, 7.5, 4.5}, result;
     int vertices = 5, edges = 8, i, j, indices[] = {0, 1, 0, 3, 1, 3, 1, 4, 2, 3, 3, 0, 3, 1, 4, 1};
 
     if (!(A = (double *)calloc(vertices * vertices, sizeof(double))))
@@ -112,15 +141,6 @@ int main()
         cout << "Memory allocation failed!\n";
         return -1;
     }
-
-    if (!(matrix_for_dijkstra = (double *)calloc(vertices * vertices, sizeof(double))))
-    {
-        cout << "Memory allocation failed!\n";
-        return -1;
-    }
-
-    for (i = 0; i < vertices * vertices; i++)
-        matrix_for_dijkstra[i] = MAX_DOUBLE;
 
     for (i = 0; i < sizeof(indices) / sizeof(indices[0]); i += 2)
     {
@@ -131,8 +151,13 @@ int main()
     {
         if (A[i] == 1)
             A[i] = vector_of_weights[j++];
+        else
+            A[i] = MAX_DOUBLE;
     }
-    result = obj.Dijkstra(A, matrix_for_dijkstra, vertices);
-}
 
-#include <queue>
+    obj.print_matrix(A, vertices);
+
+    result = obj.Dijkstra(A, vertices, 2, 4);
+
+    cout << result;
+}
